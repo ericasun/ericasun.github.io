@@ -59,6 +59,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -79,6 +82,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+  </ul>
+</nav>
 
 
 
@@ -231,7 +238,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/08/22/2018/Hello%20World/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2018/08/22/2018/Next%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -249,7 +256,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2018/08/22/2018/Hello%20World/" class="post-title-link" itemprop="url">开博大吉</a>
+          <a href="/2018/08/22/2018/Next%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo主题Next相关配置</a>
         </h2>
 
         <div class="post-meta-container">
@@ -267,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 15:13:26" itemprop="dateModified" datetime="2024-03-15T15:13:26+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 15:50:39" itemprop="dateModified" datetime="2024-03-15T15:50:39+08:00">2024-03-15</time>
     </span>
 
   
@@ -280,7 +287,60 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>一.配置分类</p>
+<ol>
+<li>在主题里配置好分类<br>首先我们得先在主题里把分类这个选项打开，例如在 Next 主题下找到hexo 博客项目文件夹下 \themes\next_config.yml 这个路径得配置文件,然后打开这个文件并找到下面得代码</li>
+</ol>
+<p>menu:<br>  home: &#x2F; || fa fa-home</p>
+<h1 id="about-about-fa-fa-user"><a href="#about-about-fa-fa-user" class="headerlink" title="about: &#x2F;about&#x2F; || fa fa-user"></a>about: &#x2F;about&#x2F; || fa fa-user</h1><p>  tags: &#x2F;tags&#x2F; || fa fa-tags<br>  categories: &#x2F;categories&#x2F; || fa fa-th<br>  archives: &#x2F;archives&#x2F; || fa fa-archive</p>
+<h1 id="schedule-schedule-fa-fa-calendar"><a href="#schedule-schedule-fa-fa-calendar" class="headerlink" title="schedule: &#x2F;schedule&#x2F; || fa fa-calendar"></a>schedule: &#x2F;schedule&#x2F; || fa fa-calendar</h1><h1 id="sitemap-sitemap-xml-fa-fa-sitemap"><a href="#sitemap-sitemap-xml-fa-fa-sitemap" class="headerlink" title="sitemap: &#x2F;sitemap.xml || fa fa-sitemap"></a>sitemap: &#x2F;sitemap.xml || fa fa-sitemap</h1><h1 id="commonweal-404-fa-fa-heartbeat"><a href="#commonweal-404-fa-fa-heartbeat" class="headerlink" title="commonweal: &#x2F;404&#x2F; || fa fa-heartbeat"></a>commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</h1><p>然后放开 categories: &#x2F;categories&#x2F; || fa fa-th 这行代码就已经配置好里分类。</p>
+<ol start="2">
+<li>创建分类目录文件<br>因为分类页是没有默认页面的所以需要我们手动创建分类页。</li>
+</ol>
+<p>打开命令行，进入博客项目所在的文件夹下，执行以下命令</p>
+<p>$ hexo new page categories<br>成功后会提示：</p>
+<p>INFO  Created: ~&#x2F;blog&#x2F;source&#x2F;categories&#x2F;index.md<br>这样我们就创建好了分类页面了。但是这个时候主题还不会识别这个页面为分类页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示分类。</p>
+<ol start="3">
+<li>编辑页面让主题识别页面为分类页面<br>上文说到需要编辑页面才能让主题识别这个页面为分类页面，我们只需要根据成功后到提示路径打开index.md这个页面文件，打开后默认内容是</li>
+</ol>
+<hr>
+<h2 id="title-文章分类date-2021-01-25-22-37-25"><a href="#title-文章分类date-2021-01-25-22-37-25" class="headerlink" title="title: 文章分类date: 2021-01-25 22:37:25"></a>title: 文章分类<br>date: 2021-01-25 22:37:25</h2><p>我们需要添加上type: “categories”这段代码就能让主题识别该页面为分类页面了</p>
+<hr>
+<h2 id="title-文章分类date-2021-01-25-22-37-25type-“categories”"><a href="#title-文章分类date-2021-01-25-22-37-25type-“categories”" class="headerlink" title="title: 文章分类date: 2021-01-25 22:37:25type: “categories”"></a>title: 文章分类<br>date: 2021-01-25 22:37:25<br>type: “categories”</h2><p>我们就完成了整个分类页面的配置了</p>
+<ol start="4">
+<li>给文章设置分类属性<br>首先打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了</li>
+</ol>
+<hr>
+<h2 id="categories-Android"><a href="#categories-Android" class="headerlink" title="categories:- Android"></a>categories:<br>- Android</h2><p>如上categories:Android表示添加这边文章到 “Android” 这个分类下。<br>然后我们就可以在博客到分类里看到该分类了。</p>
+<h2 id="设置二级分类"><a href="#设置二级分类" class="headerlink" title="&#x2F;&#x2F;设置二级分类"></a>&#x2F;&#x2F;设置二级分类</h2><h2 id="categories-Android-xxx"><a href="#categories-Android-xxx" class="headerlink" title="categories:- Android- xxx"></a>categories:<br>- Android<br>- xxx</h2><p>如上设置二级分类则该篇文章为 Android 分类下的 XXX 分类下。</p>
+<p>二.配置标签</p>
+<ol>
+<li>在主题里配置好标签<br>首先我们得先在主题里把分类这个选项打开，例如在 Next 主题下找到hexo 博客项目文件夹下 \themes\next_config.yml 这个路径得配置文件,然后打开这个文件并找到下面得代码</li>
+</ol>
+<p>menu:<br>  home: &#x2F; || fa fa-home</p>
+<h1 id="about-about-fa-fa-user-1"><a href="#about-about-fa-fa-user-1" class="headerlink" title="about: &#x2F;about&#x2F; || fa fa-user"></a>about: &#x2F;about&#x2F; || fa fa-user</h1><p>  tags: &#x2F;tags&#x2F; || fa fa-tags<br>  categories: &#x2F;categories&#x2F; || fa fa-th<br>  archives: &#x2F;archives&#x2F; || fa fa-archive</p>
+<h1 id="schedule-schedule-fa-fa-calendar-1"><a href="#schedule-schedule-fa-fa-calendar-1" class="headerlink" title="schedule: &#x2F;schedule&#x2F; || fa fa-calendar"></a>schedule: &#x2F;schedule&#x2F; || fa fa-calendar</h1><h1 id="sitemap-sitemap-xml-fa-fa-sitemap-1"><a href="#sitemap-sitemap-xml-fa-fa-sitemap-1" class="headerlink" title="sitemap: &#x2F;sitemap.xml || fa fa-sitemap"></a>sitemap: &#x2F;sitemap.xml || fa fa-sitemap</h1><h1 id="commonweal-404-fa-fa-heartbeat-1"><a href="#commonweal-404-fa-fa-heartbeat-1" class="headerlink" title="commonweal: &#x2F;404&#x2F; || fa fa-heartbeat"></a>commonweal: &#x2F;404&#x2F; || fa fa-heartbeat</h1><p>然后放开 tags: &#x2F;tags&#x2F; || fa fa-tags 这行代码就已经配置好里分类。</p>
+<ol start="2">
+<li>创建标签目录文件<br>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</li>
+</ol>
+<p>打开命令行，进入博客项目所在的文件夹下，执行以下命令</p>
+<p>$ hexo new page tags<br>成功后会提示：</p>
+<p>INFO  Created: ~&#x2F;blog&#x2F;source&#x2F;tags&#x2F;index.md<br>这样我们就创建好了标签页面了。但是这个时候主题还不会识别这个页面为标签页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示标签。</p>
+<ol start="3">
+<li>编辑页面让主题识别页面为标签页面<br>上文说到需要编辑页面才能让主题识别这个页面为标签页面，我们只需要根据成功后到提示路径打开index.md这个页面文件，打开后默认内容是</li>
+</ol>
+<hr>
+<h2 id="title-标签date-2021-01-25-22-54-58"><a href="#title-标签date-2021-01-25-22-54-58" class="headerlink" title="title: 标签date: 2021-01-25 22:54:58"></a>title: 标签<br>date: 2021-01-25 22:54:58</h2><p>我们需要添加上type: “tags”这段代码就能让主题识别该页面为标签页面了</p>
+<hr>
+<h2 id="title-标签date-2021-01-25-22-54-58type-“tags”"><a href="#title-标签date-2021-01-25-22-54-58type-“tags”" class="headerlink" title="title: 标签date: 2021-01-25 22:54:58type: “tags”"></a>title: 标签<br>date: 2021-01-25 22:54:58<br>type: “tags”</h2><p>我们就完成了整个标签页面的配置了</p>
+<ol start="4">
+<li>给文章设置标签属性<br>首先打开需要添加标签的文章，在文章里添加上以下文案，就设置好标签里了</li>
+</ol>
+<h2 id="设置单标签"><a href="#设置单标签" class="headerlink" title="&#x2F;&#x2F;设置单标签"></a>&#x2F;&#x2F;设置单标签</h2><h2 id="tags-Facebook配置"><a href="#tags-Facebook配置" class="headerlink" title="tags:- Facebook配置"></a>tags:<br>- Facebook配置</h2><h2 id="设置多标签-并同时设置分类"><a href="#设置多标签-并同时设置分类" class="headerlink" title="&#x2F;&#x2F;设置多标签 并同时设置分类"></a>&#x2F;&#x2F;设置多标签 并同时设置分类</h2><h2 id="categories-Androidtags-Android-RecyclerView"><a href="#categories-Androidtags-Android-RecyclerView" class="headerlink" title="categories:- Androidtags:- Android- RecyclerView"></a>categories:<br>- Android<br>tags:<br>- Android<br>- RecyclerView</h2><p>如上tags:- Facebook配置表示给这篇文章添加 “Facebook配置” 这个分标签。<br>然后我们就可以在博客到标签里看到该标签了。</p>
+<p>三.结语<br>这样我们就完成了分类和标签的配置，可以看出分类和标签的配置流程基本一样。</p>
+<p>关于Next的更多配置请查看官方文档 <a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/theme-settings.html">https://theme-next.iissnan.com/theme-settings.html</a></p>
+<p>四.延伸<br>在上面我们配置对文件最上方以 —分割对区域，是用来指定个别文件的配置变量区域，名称为 Front-matter</p>
+
       
     </div>
 
