@@ -290,7 +290,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 17:16:27" itemprop="dateModified" datetime="2024-03-15T17:16:27+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 17:25:33" itemprop="dateModified" datetime="2024-03-15T17:25:33+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -329,13 +329,13 @@
 <p>这样我们就创建好了分类页面了。但是这个时候主题还不会识别这个页面为分类页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示分类。</p>
 <h2 id="3-编辑页面让主题识别页面为分类页面"><a href="#3-编辑页面让主题识别页面为分类页面" class="headerlink" title="3. 编辑页面让主题识别页面为分类页面"></a>3. 编辑页面让主题识别页面为分类页面</h2><p>上文说到需要编辑页面才能让主题识别这个页面为分类页面，我们只需要根据成功后到提示路径打开index.md这个页面文件，打开后默认内容是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2018-03-25 12:35:35</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>我们需要添加上type: “categories”这段代码就能让主题识别该页面为分类页面了</p>
+<p>添加上type: “categories”这段代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2018-03-25 12:35:35</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>我们就完成了整个分类页面的配置了</p>
-<h2 id="4-给文章设置分类属性"><a href="#4-给文章设置分类属性" class="headerlink" title="4. 给文章设置分类属性"></a>4. 给文章设置分类属性</h2><p>首先打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了</p>
-<hr>
-<h2 id="categories-Android"><a href="#categories-Android" class="headerlink" title="categories:- Android"></a>categories:<br>- Android</h2><p>如上categories:Android表示添加这边文章到 “Android” 这个分类下。<br>然后我们就可以在博客到分类里看到该分类了。</p>
-<h2 id="设置二级分类"><a href="#设置二级分类" class="headerlink" title="&#x2F;&#x2F;设置二级分类"></a>&#x2F;&#x2F;设置二级分类</h2><h2 id="categories-Android-xxx"><a href="#categories-Android-xxx" class="headerlink" title="categories:- Android- xxx"></a>categories:<br>- Android<br>- xxx</h2><p>如上设置二级分类则该篇文章为 Android 分类下的 XXX 分类下。</p>
+<p>这样就完成了分类页面的配置了</p>
+<h2 id="4-给文章设置分类属性"><a href="#4-给文章设置分类属性" class="headerlink" title="4. 给文章设置分类属性"></a>4. 给文章设置分类属性</h2><h3 id="4-1-打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了"><a href="#4-1-打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了" class="headerlink" title="4.1 打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了"></a>4.1 打开需要添加分类的文章，在文章里添加上以下文案就设置好分类了</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如<code>categories:Hexo</code>表示添加该文章到 “Hexo” 这个分类下。然后我们就可以在博客到分类里看到该分类了。</p>
+<h3 id="4-2-设置二级分类"><a href="#4-2-设置二级分类" class="headerlink" title="4.2 设置二级分类"></a>4.2 设置二级分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如上设置二级分类则该篇文章为 Blog 分类下的 Hexo 分类下。</p>
 <h1 id="四-配置标签"><a href="#四-配置标签" class="headerlink" title="四.配置标签"></a>四.配置标签</h1><h2 id="1-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可"><a href="#1-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可" class="headerlink" title="1. 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可"></a>1. 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-创建标签目录文件"><a href="#2-创建标签目录文件" class="headerlink" title="2. 创建标签目录文件"></a>2. 创建标签目录文件</h2><p>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</p>
@@ -346,12 +346,16 @@
 <p>这样我们就创建好了标签页面了。但是这个时候主题还不会识别这个页面为标签页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示标签。</p>
 <h2 id="3-编辑页面让主题识别页面为标签页面"><a href="#3-编辑页面让主题识别页面为标签页面" class="headerlink" title="3. 编辑页面让主题识别页面为标签页面"></a>3. 编辑页面让主题识别页面为标签页面</h2><p>上文说到需要编辑页面才能让主题识别这个页面为标签页面，我们只需要根据成功后到提示路径打开index.md这个页面文件，打开后默认内容是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>我们需要添加上type: “tags”这段代码就能让主题识别该页面为标签页面了</p>
+<p>添加上type: “tags”这段代码，这样就能让主题识别该页面为标签页面了</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>我们就完成了整个标签页面的配置了</p>
-<h2 id="4-给文章设置标签属性"><a href="#4-给文章设置标签属性" class="headerlink" title="4. 给文章设置标签属性"></a>4. 给文章设置标签属性</h2><p>首先打开需要添加标签的文章，在文章里添加上以下文案，就设置好标签里了</p>
-<h2 id="设置单标签"><a href="#设置单标签" class="headerlink" title="&#x2F;&#x2F;设置单标签"></a>&#x2F;&#x2F;设置单标签</h2><h2 id="tags-Facebook配置"><a href="#tags-Facebook配置" class="headerlink" title="tags:- Facebook配置"></a>tags:<br>- Facebook配置</h2><h2 id="设置多标签-并同时设置分类"><a href="#设置多标签-并同时设置分类" class="headerlink" title="&#x2F;&#x2F;设置多标签 并同时设置分类"></a>&#x2F;&#x2F;设置多标签 并同时设置分类</h2><h2 id="categories-Androidtags-Android-RecyclerView"><a href="#categories-Androidtags-Android-RecyclerView" class="headerlink" title="categories:- Androidtags:- Android- RecyclerView"></a>categories:<br>- Android<br>tags:<br>- Android<br>- RecyclerView</h2><p>如上tags:- Facebook配置表示给这篇文章添加 “Facebook配置” 这个分标签。<br>然后我们就可以在博客到标签里看到该标签了。</p>
+
+<h2 id="4-给文章设置标签属性"><a href="#4-给文章设置标签属性" class="headerlink" title="4. 给文章设置标签属性"></a>4. 给文章设置标签属性</h2><p>打开需要添加标签的文章，在顶部两个<code>---</code>中设置好标签</p>
+<h3 id="4-1-设置单标签"><a href="#4-1-设置单标签" class="headerlink" title="4.1 设置单标签"></a>4.1 设置单标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-设置多标签-并同时设置分类"><a href="#4-2-设置多标签-并同时设置分类" class="headerlink" title="4.2 设置多标签 并同时设置分类"></a>4.2 设置多标签 并同时设置分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">- Blog</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>注：“-”后面有个空格</p>
 <h1 id="五-延伸"><a href="#五-延伸" class="headerlink" title="五.延伸"></a>五.延伸</h1><p>在上面我们配置对文件最上方以 —分割对区域，是用来指定个别文件的配置变量区域，名称为 Front-matter</p>
+<hr>
 
       
     </div>
@@ -414,7 +418,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 16:31:47" itemprop="dateModified" datetime="2024-03-15T16:31:47+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 17:25:20" itemprop="dateModified" datetime="2024-03-15T17:25:20+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -445,6 +449,7 @@
 <h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的根目录下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
 <h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
 <p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+<hr>
 
       
     </div>
@@ -623,7 +628,7 @@ Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 16:49:00" itemprop="dateModified" datetime="2024-03-15T16:49:00+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 17:25:15" itemprop="dateModified" datetime="2024-03-15T17:25:15+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -658,6 +663,7 @@ Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
 
       
     </div>
