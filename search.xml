@@ -240,9 +240,9 @@
 </li>
 <li><p>问题3：评论区一直加载不上：配置中的proxy地址不正确或已经失效。<br>解决方法：官网默认地址是 <a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token%E3%80%82">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。</a> 如果你使用的是Next主题，请确保也是这个地址</p>
 </li>
-<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code><br>解决方法：</p>
+<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code></p>
 </li>
-<li><p>问题5：评论区点击使用Github登陆报错404</p>
+<li><p>问题5：评论区点击使用Github登陆报错404<br>解决方法：</p>
 </li>
 </ul>
 <hr>
