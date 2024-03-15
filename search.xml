@@ -38,6 +38,27 @@
       </tags>
   </entry>
   <entry>
+    <title>如何更换Hexo主题</title>
+    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
+<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
+<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
+<pre><code>git clone https://github.com/theme-author/theme-name.git themes/theme-name
+</code></pre>
+<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
+<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的根目录下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
+<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
+<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何使用Hexo搭建博客</title>
     <url>/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1>一、初始化你的Hexo博客</h1>
@@ -81,27 +102,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何更换Hexo主题</title>
-    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
-<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
-<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
-<pre><code>git clone https://github.com/theme-author/theme-name.git themes/theme-name
-</code></pre>
-<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
-<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的根目录下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
-<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
-<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>开博大吉</title>
     <url>/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -125,11 +125,6 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hexo添加评论系统</title>
-    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hexo主题Next相关配置</title>
@@ -205,5 +200,10 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加评论系统</title>
+    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
