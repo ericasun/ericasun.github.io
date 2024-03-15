@@ -120,7 +120,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -148,6 +148,74 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">Hexo添加评论系统</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-03-15 18:16:12" itemprop="dateCreated datePublished" datetime="2024-03-15T18:16:12+08:00">2024-03-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -290,7 +358,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 17:55:38" itemprop="dateModified" datetime="2024-03-15T17:55:38+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 18:18:54" itemprop="dateModified" datetime="2024-03-15T18:18:54+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,7 +401,7 @@
 <p>添加上<code>type: &quot;categories&quot;</code>这段代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2018-03-25 12:35:35</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>这样就完成了分类页面的配置了</p>
-<h2 id="4-给文章设置分类属性"><a href="#4-给文章设置分类属性" class="headerlink" title="4. 给文章设置分类属性"></a>4. 给文章设置分类属性</h2><p>打开需要添加分类的文章，在文章顶部两个<code>---</code>中，添加categories设置分类</p>
+<h2 id="4-给文章设置分类属性"><a href="#4-给文章设置分类属性" class="headerlink" title="4. 给文章设置分类属性"></a>4. 给文章设置分类属性</h2><p>打开需要添加分类的文章，在文章Front-matter区域，也就是顶部两个<code>---</code>中，添加categories设置分类</p>
 <p>注：“-”后面有个空格</p>
 <h3 id="4-1-设置一级分类"><a href="#4-1-设置一级分类" class="headerlink" title="4.1 设置一级分类"></a>4.1 设置一级分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>如<code>categories:Hexo</code>表示添加该文章到 “Hexo” 这个分类下。</p>
@@ -356,13 +424,12 @@
 <p>添加上<code>type: &quot;tags&quot;</code>这段代码，这样就能让主题识别该页面为标签页面了</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h2 id="4、-给文章设置标签属性"><a href="#4、-给文章设置标签属性" class="headerlink" title="4、 给文章设置标签属性"></a>4、 给文章设置标签属性</h2><p>打开需要添加标签的文章，在顶部两个<code>---</code>中，添加tags设置标签</p>
+<h2 id="4、-给文章设置标签属性"><a href="#4、-给文章设置标签属性" class="headerlink" title="4、 给文章设置标签属性"></a>4、 给文章设置标签属性</h2><p>打开需要添加标签的文章，在Front-matter区域，顶部两个<code>---</code>中，添加tags设置标签</p>
 <p>注：“-”后面有个空格</p>
 <h3 id="4-1-设置单标签"><a href="#4-1-设置单标签" class="headerlink" title="4.1 设置单标签"></a>4.1 设置单标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-2-设置多标签-并同时设置分类"><a href="#4-2-设置多标签-并同时设置分类" class="headerlink" title="4.2 设置多标签 并同时设置分类"></a>4.2 设置多标签 并同时设置分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">- Blog</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h1 id="五、延伸"><a href="#五、延伸" class="headerlink" title="五、延伸"></a>五、延伸</h1><p>在上面我们配置对文件最上方以 —分割对区域，是用来指定个别文件的配置变量区域，名称为 Front-matter</p>
 <hr>
 
       
