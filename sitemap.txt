@@ -6,8 +6,8 @@ http://example.com/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo
 http://example.com/tags/index.html
 http://example.com/categories/index.html
 http://example.com/
+http://example.com/tags/Hexo/
 http://example.com/tags/Vite/
 http://example.com/tags/Vue/
 http://example.com/tags/Front-end/
-http://example.com/tags/Hexo/
 http://example.com/categories/Hexo/
