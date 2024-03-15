@@ -290,7 +290,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 17:39:35" itemprop="dateModified" datetime="2024-03-15T17:39:35+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 17:47:11" itemprop="dateModified" datetime="2024-03-15T17:47:11+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -338,6 +338,9 @@
 <p>然后我们就可以在博客到分类里看到该分类了。</p>
 <h3 id="4-2-设置二级分类"><a href="#4-2-设置二级分类" class="headerlink" title="4.2 设置二级分类"></a>4.2 设置二级分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>如上设置二级分类则该篇文章为 Blog 分类下的 Hexo 分类下。</p>
+<h3 id="4-3-并列-子分类"><a href="#4-3-并列-子分类" class="headerlink" title="4.3 并列+子分类"></a>4.3 并列+子分类</h3><p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories:</span><br><span class="line">- [Diary, PlayStation]</span><br><span class="line">- [Diary, Games]</span><br><span class="line">- [Life]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
 <h1 id="四、配置标签"><a href="#四、配置标签" class="headerlink" title="四、配置标签"></a>四、配置标签</h1><h2 id="1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可"><a href="#1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可" class="headerlink" title="1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可"></a>1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br></pre></td></tr></table></figure>
 
 <h2 id="2、-创建标签目录文件"><a href="#2、-创建标签目录文件" class="headerlink" title="2、 创建标签目录文件"></a>2、 创建标签目录文件</h2><p>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</p>
@@ -346,9 +349,9 @@
 <p>成功后会提示：</p>
 <p><code>INFO  Created: ~/blog/source/tags/index.md</code></p>
 <p>这样我们就创建好了标签页面了。但是这个时候主题还不会识别这个页面为标签页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示标签。</p>
-<h2 id="3、-编辑页面让主题识别页面为标签页面"><a href="#3、-编辑页面让主题识别页面为标签页面" class="headerlink" title="3、 编辑页面让主题识别页面为标签页面"></a>3、 编辑页面让主题识别页面为标签页面</h2><p>上文说到需要编辑页面才能让主题识别这个页面为标签页面，我们只需要根据成功后到提示路径打开index.md这个页面文件，打开后默认内容是</p>
+<h2 id="3、-编辑页面让主题识别页面为标签页面"><a href="#3、-编辑页面让主题识别页面为标签页面" class="headerlink" title="3、 编辑页面让主题识别页面为标签页面"></a>3、 编辑页面让主题识别页面为标签页面</h2><p>上文说到需要编辑页面才能让主题识别这个页面为标签页面，我们只需要根据成功后到提示路径打开<code>index.md</code>这个页面文件，打开后默认内容是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>添加上type: “tags”这段代码，这样就能让主题识别该页面为标签页面了</p>
+<p>添加上<code>type: &quot;tags&quot;</code>这段代码，这样就能让主题识别该页面为标签页面了</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <h2 id="4、-给文章设置标签属性"><a href="#4、-给文章设置标签属性" class="headerlink" title="4、 给文章设置标签属性"></a>4、 给文章设置标签属性</h2><p>打开需要添加标签的文章，在顶部两个<code>---</code>中，添加tags设置标签</p>
