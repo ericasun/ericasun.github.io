@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="一、申请GitHub应用1. 注册一个新应用https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;applications&#x2F;new 有三项内容必须填写 123Application name：这个随意填写Homepage URL：你的网站的URL地址，包含http部分。Authorization callback URL：你的网站的URL地址，包含http部分，和上面的 Homepage URL">
+    <meta name="description" content="一、申请GitHub应用1. 注册一个新应用这三项内容必须填写 123Application name：这个随意填写Homepage URL：你的网站的URL地址，包含http部分。Authorization callback URL：你的网站的URL地址，包含http部分，和上面的 Homepage URL 一致就行  2. Homepage URL与Authorization callback">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo添加评论系统gitalk">
 <meta property="og:url" content="http://example.com/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="ericasun的Hexo博客">
-<meta property="og:description" content="一、申请GitHub应用1. 注册一个新应用https:&#x2F;&#x2F;github.com&#x2F;settings&#x2F;applications&#x2F;new 有三项内容必须填写 123Application name：这个随意填写Homepage URL：你的网站的URL地址，包含http部分。Authorization callback URL：你的网站的URL地址，包含http部分，和上面的 Homepage URL">
+<meta property="og:description" content="一、申请GitHub应用1. 注册一个新应用这三项内容必须填写 123Application name：这个随意填写Homepage URL：你的网站的URL地址，包含http部分。Authorization callback URL：你的网站的URL地址，包含http部分，和上面的 Homepage URL 一致就行  2. Homepage URL与Authorization callback">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-15T10:16:12.000Z">
-<meta property="article:modified_time" content="2024-03-15T12:23:12.077Z">
+<meta property="article:modified_time" content="2024-03-15T12:25:12.976Z">
 <meta property="article:author" content="ericasun">
 <meta name="twitter:card" content="summary">
 
@@ -139,7 +139,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%B3%E8%AF%B7GitHub%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">一、申请GitHub应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E6%96%B0%E5%BA%94%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">1. 注册一个新应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Homepage-URL%E4%B8%8EAuthorization-callback-URL%E7%9A%84%E5%A1%AB%E5%86%99"><span class="nav-number">1.2.</span> <span class="nav-text">2. Homepage URL与Authorization callback URL的填写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%94%9F%E6%88%90Client%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">3. 生成Client信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AEGitalk"><span class="nav-number">2.</span> <span class="nav-text">二、配置Gitalk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87Next%E4%B8%BB%E9%A2%98%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">1、通过Next主题进行配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%98%E7%BD%91%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">2、使用官网配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="nav-number">3.</span> <span class="nav-text">三、参数说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">四、遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Error-Not-Found%EF%BC%9A%E4%B8%80%E8%88%AC%E6%98%AF%E4%BB%93%E5%BA%93%E5%90%8D%E7%A7%B0%E6%B2%A1%E6%9C%89%E6%AD%A3%E7%A1%AE%E8%AE%BE%E7%BD%AE%EF%BC%8C%E8%AF%B7%E4%BE%9D%E6%8D%AE%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E%E9%83%A8%E5%88%86%E8%BF%9B%E8%A1%8C%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">1. Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Related-Issues-not-found%EF%BC%9A%E6%9C%AA%E6%89%BE%E5%88%B0%E7%9B%B8%E5%85%B3%E7%9A%84issue%E8%BF%9B%E8%A1%8C%E8%AF%84%E8%AE%BA%EF%BC%8C%E5%87%BA%E7%8E%B0%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%E6%98%AF%E5%9B%A0%E4%B8%BA%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA%E8%BF%98%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%8C%E5%8F%AA%E9%9C%80%E8%A6%81%E7%82%B9%E5%87%BB%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%8C%89%E9%92%AE%EF%BC%8C%E7%99%BB%E5%BD%95-GitHub-%E8%B4%A6%E6%88%B7%E5%8D%B3%E5%8F%AF"><span class="nav-number">4.2.</span> <span class="nav-text">2. Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%AF%84%E8%AE%BA%E5%8C%BA%E4%B8%80%E7%9B%B4%E5%8A%A0%E8%BD%BD%E4%B8%8D%E4%B8%8A%EF%BC%9A%E9%85%8D%E7%BD%AE%E4%B8%AD%E7%9A%84proxy%E5%9C%B0%E5%9D%80%E4%B8%8D%E6%AD%A3%E7%A1%AE%E6%88%96%E5%B7%B2%E7%BB%8F%E5%A4%B1%E6%95%88%E3%80%82%E5%AE%98%E7%BD%91%E9%BB%98%E8%AE%A4%E5%9C%B0%E5%9D%80%E6%98%AFhttps-cors-anywhere-azm-workers-dev-https-github-com-login-oauth-access-token%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFNext%E4%B8%BB%E9%A2%98%EF%BC%8C%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80"><span class="nav-number">4.3.</span> <span class="nav-text">3. 评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是https:&#x2F;&#x2F;cors-anywhere.azm.workers.dev&#x2F;https:&#x2F;&#x2F;github.com&#x2F;login&#x2F;oauth&#x2F;access_token。如果你使用的是Next主题，请确保也是这个地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%AF%84%E8%AE%BA%E6%97%B6%E6%98%AF%E9%BB%91%E8%89%B2%E7%9A%84%EF%BC%9A%E8%AE%BE%E7%BD%AEdistractionFreeMode%E4%B8%BAfalse"><span class="nav-number">4.4.</span> <span class="nav-text">4. 评论时是黑色的：设置distractionFreeMode为false</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%B3%E8%AF%B7GitHub%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">一、申请GitHub应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%B3%A8%E5%86%8C%E4%B8%80%E4%B8%AA%E6%96%B0%E5%BA%94%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">1. 注册一个新应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Homepage-URL%E4%B8%8EAuthorization-callback-URL%E7%9A%84%E5%A1%AB%E5%86%99"><span class="nav-number">1.2.</span> <span class="nav-text">2. Homepage URL与Authorization callback URL的填写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%94%9F%E6%88%90Client%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">3. 生成Client信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AEGitalk"><span class="nav-number">2.</span> <span class="nav-text">二、配置Gitalk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E9%80%9A%E8%BF%87Next%E4%B8%BB%E9%A2%98%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">1、通过Next主题进行配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%98%E7%BD%91%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">2、使用官网配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="nav-number">3.</span> <span class="nav-text">三、参数说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">四、遇到的问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -220,7 +220,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-15 18:16:12 / Modified: 20:23:12" itemprop="dateCreated datePublished" datetime="2024-03-15T18:16:12+08:00">2024-03-15</time>
+      <time title="Created: 2024-03-15 18:16:12 / Modified: 20:25:12" itemprop="dateCreated datePublished" datetime="2024-03-15T18:16:12+08:00">2024-03-15</time>
     </span>
 
   
@@ -232,7 +232,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用"><a href="#1-注册一个新应用" class="headerlink" title="1. 注册一个新应用"></a>1. 注册一个新应用</h2><p><a target="_blank" rel="noopener" href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a> 有三项内容必须填写</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用"><a href="#1-注册一个新应用" class="headerlink" title="1. 注册一个新应用"></a>1. <a target="_blank" rel="noopener" href="https://github.com/settings/applications/new">注册一个新应用</a></h2><p>这三项内容必须填写</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Application name：这个随意填写</span><br><span class="line">Homepage URL：你的网站的URL地址，包含http部分。</span><br><span class="line">Authorization callback URL：你的网站的URL地址，包含http部分，和上面的 Homepage URL 一致就行</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-Homepage-URL与Authorization-callback-URL的填写"><a href="#2-Homepage-URL与Authorization-callback-URL的填写" class="headerlink" title="2. Homepage URL与Authorization callback URL的填写"></a>2. Homepage URL与Authorization callback URL的填写</h2><p>2.1 如果你的网站是host在github上的，是通过github分配给你的网址进行访问的，直接填写github分配给你的网站就可以，类似 yourgithub.github.io<br>2.2 如果你有自己的域名，但网站内容是host在github上的，是通过cname的方式访问的，那么这两项都填你的域名<br>2.3 如果你有自己的域名，也有自己的站点，那么这两项都填你的域名<br>在调试阶段，可以把这两项设置为你的本地地址，这样方便测试，而不用一次又一次的部署网站，等测试好之后再统一部署。</p>
@@ -254,7 +254,27 @@
 <li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
 </li>
 </ul>
-<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><h2 id="1-Error-Not-Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置"><a href="#1-Error-Not-Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置" class="headerlink" title="1. Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置"></a>1. Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</h2><h2 id="2-Related-Issues-not-found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录-GitHub-账户即可"><a href="#2-Related-Issues-not-found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录-GitHub-账户即可" class="headerlink" title="2. Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可"></a>2. Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</h2><h2 id="3-评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是https-cors-anywhere-azm-workers-dev-https-github-com-login-oauth-access-token。如果你使用的是Next主题，请确保也是这个地址"><a href="#3-评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是https-cors-anywhere-azm-workers-dev-https-github-com-login-oauth-access-token。如果你使用的是Next主题，请确保也是这个地址" class="headerlink" title="3. 评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。如果你使用的是Next主题，请确保也是这个地址"></a>3. 评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是<a target="_blank" rel="noopener" href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFNext%E4%B8%BB%E9%A2%98%EF%BC%8C%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。如果你使用的是Next主题，请确保也是这个地址</a></h2><h2 id="4-评论时是黑色的：设置distractionFreeMode为false"><a href="#4-评论时是黑色的：设置distractionFreeMode为false" class="headerlink" title="4. 评论时是黑色的：设置distractionFreeMode为false"></a>4. 评论时是黑色的：设置distractionFreeMode为false</h2><hr>
+<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
+<li><ol>
+<li>Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是<a target="_blank" rel="noopener" href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFNext%E4%B8%BB%E9%A2%98%EF%BC%8C%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。如果你使用的是Next主题，请确保也是这个地址</a></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>评论时是黑色的：设置distractionFreeMode为false</li>
+</ol>
+</li>
+<li><p>Error: Failed to execute ‘btoa’ on ‘Window’: The string to be encoded contains characters outside of the Latin1 range.</p>
+</li>
+</ul>
+<hr>
 
     </div>
 
