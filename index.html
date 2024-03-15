@@ -386,7 +386,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 19:35:29" itemprop="dateModified" datetime="2024-03-15T19:35:29+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 19:37:23" itemprop="dateModified" datetime="2024-03-15T19:37:23+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -442,9 +442,9 @@
 
 <h1 id="四、配置标签"><a href="#四、配置标签" class="headerlink" title="四、配置标签"></a>四、配置标签</h1><h2 id="1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可"><a href="#1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可" class="headerlink" title="1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可"></a>1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2、-创建标签目录文件"><a href="#2、-创建标签目录文件" class="headerlink" title="2、 创建标签目录文件"></a>2、 创建标签目录文件</h2><p>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</p>
+<h2 id="2、创建标签目录文件"><a href="#2、创建标签目录文件" class="headerlink" title="2、创建标签目录文件"></a>2、创建标签目录文件</h2><p>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</p>
 <p>打开命令行，进入博客项目所在的文件夹下，执行以下命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page tags</span><br></pre></td></tr></table></figure>
 <p>成功后会提示：</p>
 <p><code>INFO  Created: ~/blog/source/tags/index.md</code></p>
 <p>这样我们就创建好了标签页面了。但是这个时候主题还不会识别这个页面为标签页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示标签。</p>
