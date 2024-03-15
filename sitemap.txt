@@ -1,4 +1,4 @@
-http://example.com/2017/10/08/2018/Hello%20World/
+http://example.com/2018/08/22/2018/Hello%20World/
 http://example.com/2017/10/08/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/
 http://example.com/2017/10/19/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/
 http://example.com/2017/10/08/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/
