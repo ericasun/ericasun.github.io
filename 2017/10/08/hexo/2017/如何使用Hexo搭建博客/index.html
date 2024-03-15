@@ -28,7 +28,7 @@
 <meta property="og:description" content="一、初始化你的Hexo博客  Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下是 Hexo 的初始化步骤： 1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。2、安装 Hexo。打开终端，输入以下命令：1npm install -g hexo-cli  这将全局安装 Hexo。 3、创建一个新的 Hexo 项目。替换 &lt;fol">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2017-10-08T09:53:46.000Z">
-<meta property="article:modified_time" content="2024-03-15T11:39:17.002Z">
+<meta property="article:modified_time" content="2024-03-15T11:54:13.774Z">
 <meta property="article:author" content="ericasun">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-15 19:39:17" itemprop="dateModified" datetime="2024-03-15T19:39:17+08:00">2024-03-15</time>
+      <time title="Modified: 2024-03-15 19:54:13" itemprop="dateModified" datetime="2024-03-15T19:54:13+08:00">2024-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -274,7 +274,7 @@
 <h3 id="3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下），找到-Deployment-的部分。在这里，你需要配置如何将你的-Hexo-博客部署到-GitHub。参考以下例子进行设置："><a href="#3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下），找到-Deployment-的部分。在这里，你需要配置如何将你的-Hexo-博客部署到-GitHub。参考以下例子进行设置：" class="headerlink" title="3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下），找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置："></a>3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下），找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置：</h3><p><b>可改项：</b></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">第</span> <span class="number">6</span> <span class="string">行的</span> <span class="string">title</span> <span class="string">文章标题</span></span><br><span class="line"><span class="number">2</span><span class="string">.</span> <span class="string">第</span> <span class="number">9</span> <span class="string">行的</span> <span class="string">author</span> <span class="string">作者名</span></span><br></pre></td></tr></table></figure>
 <p><b>必改项：</b></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">type</span> <span class="string">改成</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">2. repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;（repo:</span> <span class="string">后面有个空格），在最后一行，与</span> <span class="string">type</span> <span class="string">垂直对齐，加上该行</span> </span><br><span class="line">  <span class="string">（仓库地址为firstblog所对应的地址，仓库地址以</span> <span class="string">git@github.com:开头）</span></span><br><span class="line"><span class="attr">3. branch:</span> <span class="string">&lt;branch&gt;</span> <span class="string">(可不加)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">type</span> <span class="string">改成</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">2. repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span>  <span class="string">//</span> <span class="string">加上该行</span> <span class="attr">repo:</span> <span class="string">后面有个空格与</span> <span class="string">type</span> <span class="string">垂直对齐,仓库地址为firstblog所对应的地址，仓库地址以</span> <span class="string">git@github.com:开头</span></span><br><span class="line"><span class="attr">3. branch:</span> <span class="string">&lt;branch&gt;</span>  <span class="string">//</span> <span class="string">可不加</span></span><br></pre></td></tr></table></figure>
 
 <p>这里，<code>&lt;repository url&gt;</code> 是你的 GitHub 存储库的 URL，应该类似于 <code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</code>。而 <code>&lt;branch&gt;</code> 则应设置为对应分支名或不写。</p>
 <h3 id="4、输入以下命令来生成静态文件并部署到-GitHub："><a href="#4、输入以下命令来生成静态文件并部署到-GitHub：" class="headerlink" title="4、输入以下命令来生成静态文件并部署到 GitHub："></a>4、输入以下命令来生成静态文件并部署到 GitHub：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line"><span class="comment"># 上传博客系统（包括文章）:</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
