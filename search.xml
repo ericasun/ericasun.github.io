@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>在Vite2+Vue3渲染Markdown文档(亲测有效）</title>
+    <url>/2024/03/14/Font-end/2024/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="方法1：自定义-Vite-插件"><a href="#方法1：自定义-Vite-插件" class="headerlink" title="方法1：自定义 Vite 插件"></a>方法1：自定义 Vite 插件</h2><p>原版本升级到Vite2之后会报错<code>plugin.configureServer is not a function</code> ，此插件为修改后版本，亲测有效</p>
+<h3 id="1、在项目根目录创建-md-ts-文件，填充如下内容："><a href="#1、在项目根目录创建-md-ts-文件，填充如下内容：" class="headerlink" title="1、在项目根目录创建 md.ts 文件，填充如下内容："></a>1、在项目根目录创建 md.ts 文件，填充如下内容：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import path from &#x27;path&#x27;</span><br><span class="line">import fs from &#x27;fs&#x27;</span><br><span class="line">import marked from &#x27;marked&#x27;</span><br><span class="line"></span><br><span class="line">const mdToJs = str =&gt; &#123;</span><br><span class="line">  const content = JSON.stringify(marked(str))</span><br><span class="line">  return `export default $&#123;content&#125;`</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export function md() &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    name: &#x27;md&#x27;, </span><br><span class="line">    configureServer()&#123; // 用于开发</span><br><span class="line">      async (&#123; app &#125;) =&gt; &#123;</span><br><span class="line">        app.use(async (ctx, next) =&gt; &#123; // koa</span><br><span class="line">          if (ctx.path.endsWith(&#x27;.md&#x27;)) &#123;</span><br><span class="line">            ctx.type = &#x27;js&#x27;</span><br><span class="line">            const filePath = path.join(process.cwd(), ctx.path)</span><br><span class="line">            ctx.body = mdToJs(fs.readFileSync(filePath).toString())</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            await next()</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    transform(code, id)&#123; // 用于 rollup // 插件</span><br><span class="line">      // 获取文件后缀名</span><br><span class="line">      const fileArr = id.split(&#x27;.&#x27;) //根据.分割数组</span><br><span class="line">      const fileType = fileArr[fileArr.length -1]; //取最后一个</span><br><span class="line"></span><br><span class="line">      if(/\md$/.test(fileType))&#123;</span><br><span class="line">         return mdToJs(code)</span><br><span class="line">      &#125;</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、接着修改-vite-config-ts，引入上面创建的插件"><a href="#2、接着修改-vite-config-ts，引入上面创建的插件" class="headerlink" title="2、接着修改 vite.config.ts，引入上面创建的插件"></a>2、接着修改 vite.config.ts，引入上面创建的插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123;md&#125; from &#x27;./md&#x27;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  plugins: [md()]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、在使用时，会将导入的-md-文件转换成-js-文件渲染。具体使用示例："><a href="#3、在使用时，会将导入的-md-文件转换成-js-文件渲染。具体使用示例：" class="headerlink" title="3、在使用时，会将导入的 md 文件转换成 js 文件渲染。具体使用示例："></a>3、在使用时，会将导入的 md 文件转换成 js 文件渲染。具体使用示例：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;article v-html=&quot;md&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import md from &#x27;./xxx.md&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">setup()&#123;</span><br><span class="line">  return &#123;md&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法2：使用-vite-plugin-markdown"><a href="#方法2：使用-vite-plugin-markdown" class="headerlink" title="方法2：使用 vite-plugin-markdown"></a>方法2：使用 vite-plugin-markdown</h2><p>这款第三方插件不仅支持引入并渲染 Markdown 文件，并且支持渲染成各种格式，例入 HTML 字符串、React 或 Vue 的组件等。</p>
+<h3 id="1、安装-vite-plugin-markdown"><a href="#1、安装-vite-plugin-markdown" class="headerlink" title="1、安装 vite-plugin-markdown"></a>1、安装 vite-plugin-markdown</h3><p><code>npm i vite-plugin-markdown</code><br>或<br><code>yarn add vite-plugin-markdown</code></p>
+<h3 id="2、在-vite-config-ts-中修改："><a href="#2、在-vite-config-ts-中修改：" class="headerlink" title="2、在 vite.config.ts 中修改："></a>2、在 vite.config.ts 中修改：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const mdPlugin = require(&#x27;vite-plugin-markdown&#x27;)</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    mdPlugin.plugin(&#123;</span><br><span class="line">      mode: [&#x27;html&#x27;],</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、配置中传入一个-options，选项对象，支持以下参数："><a href="#3、配置中传入一个-options，选项对象，支持以下参数：" class="headerlink" title="3、配置中传入一个 options，选项对象，支持以下参数："></a>3、配置中传入一个 options，选项对象，支持以下参数：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mode?: (&#x27;html&#x27; | &#x27;toc&#x27; | &#x27;react&#x27; | &#x27;vue&#x27;)[]</span><br><span class="line">markdown?: (body: string) =&gt; string</span><br><span class="line">markdownIt?: MarkdownIt | MarkdownIt.Options</span><br></pre></td></tr></table></figure>
+<h3 id="4、各个模式下的渲染示例："><a href="#4、各个模式下的渲染示例：" class="headerlink" title="4、各个模式下的渲染示例："></a>4、各个模式下的渲染示例：</h3><h4 id="4-1-Import-Front-Matter-attributes"><a href="#4-1-Import-Front-Matter-attributes" class="headerlink" title="4.1 Import Front Matter attributes"></a>4.1 Import Front Matter attributes</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Awesome Title</span><br><span class="line">description: Describe this awesome content</span><br><span class="line">tags:</span><br><span class="line">  - &quot;great&quot;</span><br><span class="line">  - &quot;awesome&quot;</span><br><span class="line">  - &quot;rad&quot;</span><br><span class="line">---</span><br><span class="line"># This is awesome</span><br><span class="line">Vite is an opinionated web dev build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production.</span><br><span class="line"></span><br><span class="line">import &#123; attributes &#125; from &#x27;./contents/the-doc.md&#x27;;</span><br><span class="line"></span><br><span class="line">console.log(attributes) //=&gt; &#123; title: &#x27;Awesome Title&#x27;, description: &#x27;Describe this awesome content&#x27;, tags: [&#x27;great&#x27;, &#x27;awesome&#x27;, &#x27;rad&#x27;] &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-Import-compiled-HTML-Mode-HTML"><a href="#4-2-Import-compiled-HTML-Mode-HTML" class="headerlink" title="4.2 Import compiled HTML (Mode.HTML)"></a>4.2 Import compiled HTML (Mode.HTML)</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; html &#125; from &#x27;./contents/the-doc.md&#x27;;</span><br><span class="line"></span><br><span class="line">console.log(html) </span><br><span class="line">//=&gt; &quot;This is awesomeite is an opinionated web dev build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production.&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-3-Import-ToC-metadata-Mode-TOC"><a href="#4-3-Import-ToC-metadata-Mode-TOC" class="headerlink" title="4.3 Import ToC metadata (Mode.TOC)"></a>4.3 Import ToC metadata (Mode.TOC)</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># vite</span><br><span class="line"></span><br><span class="line">Vite is an opinionated web dev build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production.</span><br><span class="line"></span><br><span class="line">## Status</span><br><span class="line"></span><br><span class="line">## Getting Started</span><br><span class="line"></span><br><span class="line"># Notes</span><br><span class="line"></span><br><span class="line">import &#123; toc &#125; from &#x27;./contents/the-doc.md&#x27;</span><br><span class="line"></span><br><span class="line">console.log(toc)</span><br><span class="line">//=&gt; [&#123; level: &#x27;1&#x27;, content: &#x27;vite&#x27; &#125;, &#123; level: &#x27;2&#x27;, content: &#x27;Status&#x27; &#125;, &#123; level: &#x27;2&#x27;, content: &#x27;Getting Started&#x27; &#125;, &#123; level: &#x27;1&#x27;, content: &#x27;Notes&#x27; &#125;,]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-Import-as-a-React-component-Mode-REACT"><a href="#4-4-Import-as-a-React-component-Mode-REACT" class="headerlink" title="4.4 Import as a React component (Mode.REACT)"></a>4.4 Import as a React component (Mode.REACT)</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line">import &#123; ReactComponent &#125; from &#x27;./contents/the-doc.md&#x27;</span><br><span class="line"></span><br><span class="line">function MyReactApp() &#123;</span><br><span class="line">  return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">          &lt;ReactComponent /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">	)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-Import-as-a-Vue-component-Mode-VUE"><a href="#4-5-Import-as-a-Vue-component-Mode-VUE" class="headerlink" title="4.5 Import as a Vue component (Mode.VUE)"></a>4.5 Import as a Vue component (Mode.VUE)</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;article&gt;</span><br><span class="line">    &lt;markdown-content /&gt;</span><br><span class="line">  &lt;/article&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; VueComponent &#125; from &#x27;./contents/the-doc.md&#x27;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    MarkdownContent: VueComponent</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <tags>
+        <tag>Vite</tag>
+        <tag>Vue</tag>
+        <tag>Front-end</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用Hexo搭建博客</title>
+    <url>/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1>一、初始化你的Hexo博客</h1>
+Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下是 Hexo 的初始化步骤：
+
+<h3 id="1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。"><a href="#1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。" class="headerlink" title="1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。"></a>1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。</h3><h3 id="2、安装-Hexo。打开终端，输入以下命令："><a href="#2、安装-Hexo。打开终端，输入以下命令：" class="headerlink" title="2、安装 Hexo。打开终端，输入以下命令："></a>2、安装 Hexo。打开终端，输入以下命令：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p> 这将全局安装 Hexo。</p>
+<h3 id="3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入："><a href="#3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入：" class="headerlink" title="3、创建一个新的 Hexo 项目。替换 &lt;folder&gt; 为你想要的文件夹名，再输入："></a>3、创建一个新的 Hexo 项目。替换 <code>&lt;folder&gt;</code> 为你想要的文件夹名，再输入：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+<p>这将在指定的文件夹中创建一个新的 Hexo 项目，并且进入到这个文件夹内。</p>
+<h3 id="4、安装项目依赖。在终端，输入："><a href="#4、安装项目依赖。在终端，输入：" class="headerlink" title="4、安装项目依赖。在终端，输入："></a>4、安装项目依赖。在终端，输入：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>这将安装所有 Hexo 项目所需要的依赖。</p>
+<p>5、现在，你可以运行 Hexo 服务器来预览你的博客。输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>这将启动 Hexo 服务器。你可以在浏览器中输入 <code>localhost:4000</code> 来查看你的博客。</p>
+<p><b>以上步骤便是 Hexo 的基础配置和初始化。</b></p>
+<h2 id="6、创建博客（文章）"><a href="#6、创建博客（文章）" class="headerlink" title="6、创建博客（文章）"></a>6、创建博客（文章）</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>如 <code>hexo new 开博大吉</code>（开博大吉为文章标题），返回一个 md 文件的路径</p>
+<h3 id="7、编辑-md-文件"><a href="#7、编辑-md-文件" class="headerlink" title="7、编辑 md 文件"></a>7、编辑 md 文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start xxxxxxxxxxxxxxxxxxx.md</span><br></pre></td></tr></table></figure>
+<p>内容在第二个<code>---</code>之后编写， （注意：Ubuntu 系统用 xdg-open xxxxxxxxxxxxxxxxxxx.md 命令），或在 <code>source/_posts</code> 文件夹中找到它，并且开始进行编辑。</p>
+<h3 id="8、更新"><a href="#8、更新" class="headerlink" title="8、更新"></a>8、更新</h3><p>使用 <code>hexo generate</code> 或简写的 <code>hexo g</code> 来生成静态文件，再次运行 <code>hexo server</code> 就可以看到你的新文章了。</p>
+<h1>二、部署到github</h1>
+要将 Hexo 博客部署到 GitHub，你需要遵循以下步骤：
+
+<h3 id="1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）"><a href="#1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）" class="headerlink" title="1、在 GitHub 上新建一个空 repo ,repo 名称是「用户名.github.io」（仓库名一定要这个格式，不然博客跳转有问题）"></a>1、在 GitHub 上新建一个空 repo ,repo 名称是<code>「用户名.github.io」</code>（仓库名一定要这个格式，不然博客跳转有问题）</h3><h3 id="2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git："><a href="#2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git：" class="headerlink" title="2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 hexo-deployer-git："></a>2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 <code>hexo-deployer-git</code>：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>这是一个 Hexo 插件，可以帮助你直接将项目部署到 GitHub。之后再修改博客需要上传，可执行：hexo generate代替该步</p>
+<h3 id="3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下），找到-Deployment-的部分。在这里，你需要配置如何将你的-Hexo-博客部署到-GitHub。参考以下例子进行设置："><a href="#3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下），找到-Deployment-的部分。在这里，你需要配置如何将你的-Hexo-博客部署到-GitHub。参考以下例子进行设置：" class="headerlink" title="3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下），找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置："></a>3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下），找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置：</h3><p><b>可改项：</b></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第 6 行的 title 文章标题</span><br><span class="line">2. 第 9 行的 author 作者名</span><br></pre></td></tr></table></figure>
+<p><b>必改项：</b></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. type 改成 type: git</span><br><span class="line">2. repo: &lt;repository url&gt;（repo: 后面有个空格），在最后一行，与 type 垂直对齐，加上该行 </span><br><span class="line">  （仓库地址为firstblog所对应的地址，仓库地址以 git@github.com:开头）</span><br><span class="line">3. branch: &lt;branch&gt; (可不加)</span><br></pre></td></tr></table></figure>
+
+<p>这里，<code>&lt;repository url&gt;</code> 是你的 GitHub 存储库的 URL，应该类似于 <code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</code>。而 <code>&lt;branch&gt;</code> 则应设置为对应分支名或不写。</p>
+<h3 id="4、输入以下命令来生成静态文件并部署到-GitHub："><a href="#4、输入以下命令来生成静态文件并部署到-GitHub：" class="headerlink" title="4、输入以下命令来生成静态文件并部署到 GitHub："></a>4、输入以下命令来生成静态文件并部署到 GitHub：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line"># 上传博客系统（包括文章）:</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>也可以使用简写 <code>hexo d -g</code><br>现在，你应该可以通过访问 <code>https://&lt;username&gt;.github.io</code> 来查看你的 Hexo 博客网站了。<br>注意：部署到 GitHub Pages 时，你的仓库名称应遵循 <code>&lt;username&gt;.github.io</code> 的格式，<code>&lt;username&gt;</code> 要与你的 GitHub 账号名一致</p>
+<h3 id="5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接"><a href="#5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接" class="headerlink" title="5、进入 username.github.io  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接"></a>5、进入 <code>username.github.io</code>  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接</h3><hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何更换Hexo主题</title>
+    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
+<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
+<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
+<pre><code>git clone https://github.com/theme-author/theme-name.git themes/theme-name
+</code></pre>
+<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
+<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的根目录下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
+<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
+<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开博大吉</title>
+    <url>/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo主题Next相关配置</title>
+    <url>/2018/08/22/hexo/2018/Next%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="一、更改主题颜色方案"><a href="#一、更改主题颜色方案" class="headerlink" title="一、更改主题颜色方案"></a>一、更改主题颜色方案</h1><h2 id="1、打开配置文件-config-yml"><a href="#1、打开配置文件-config-yml" class="headerlink" title="1、打开配置文件_config.yml"></a>1、打开配置文件_config.yml</h2><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到Schemes这段代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、打开想要选择的颜色方案"><a href="#2、打开想要选择的颜色方案" class="headerlink" title="2、打开想要选择的颜色方案"></a>2、打开想要选择的颜色方案</h2><p>可以看到一共四个主题，这里选择的是Gemini颜色方案，把这一行前面的”#”去掉即可，重新运行后就会显示Gemini的颜色方案</p>
+<h1 id="二、在导航栏中添加主页"><a href="#二、在导航栏中添加主页" class="headerlink" title="二、在导航栏中添加主页"></a>二、在导航栏中添加主页</h1><p>安装主题后，发现导航栏没有主页</p>
+<h2 id="1、在配置文件-config-yml中找到menu这段代码，把home这一行的“-”去掉即可"><a href="#1、在配置文件-config-yml中找到menu这段代码，把home这一行的“-”去掉即可" class="headerlink" title="1、在配置文件_config.yml中找到menu这段代码，把home这一行的“#”去掉即可"></a>1、在配置文件_config.yml中找到menu这段代码，把home这一行的“#”去掉即可</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br></pre></td></tr></table></figure>
+<p>重新运行后导航栏会显示主页</p>
+<h1 id="三、配置分类"><a href="#三、配置分类" class="headerlink" title="三、配置分类"></a>三、配置分类</h1><h2 id="1、在配置文件-config-yml中找到menu这段代码-，把categories这一行的“-”去掉"><a href="#1、在配置文件-config-yml中找到menu这段代码-，把categories这一行的“-”去掉" class="headerlink" title="1、在配置文件_config.yml中找到menu这段代码 ，把categories这一行的“#”去掉"></a>1、在配置文件_config.yml中找到menu这段代码 ，把categories这一行的“#”去掉</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、创建分类目录文件"><a href="#2、创建分类目录文件" class="headerlink" title="2、创建分类目录文件"></a>2、创建分类目录文件</h2><p>因为分类页是没有默认页面的所以需要我们手动创建分类页。</p>
+<p>打开命令行，进入博客项目所在的文件夹下，执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>成功后会提示：</p>
+<p><code>INFO  Created: ~/blog/source/categories/index.md</code></p>
+<p>这样我们就创建好了分类页面了。</p>
+<p>但是这时主题还能将页面识别为分类页；所以我们需要编辑这个新建的页面，让主题识别页面，并自动为这个页面显示分类。</p>
+<h2 id="3、编辑页面让主题识别页面为分类页面"><a href="#3、编辑页面让主题识别页面为分类页面" class="headerlink" title="3、编辑页面让主题识别页面为分类页面"></a>3、编辑页面让主题识别页面为分类页面</h2><p>根据成功后提示路径打开<code>index.md</code>这个页面文件，打开后默认内容是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2018-03-25 12:35:35</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>添加上<code>type: &quot;categories&quot;</code>这段代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2018-03-25 12:35:35</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>这样就完成了分类页面的配置了</p>
+<h2 id="4-给文章设置分类属性"><a href="#4-给文章设置分类属性" class="headerlink" title="4. 给文章设置分类属性"></a>4. 给文章设置分类属性</h2><p>打开需要添加分类的文章，在文章Front-matter区域，也就是顶部两个<code>---</code>中，添加categories设置分类</p>
+<p>注：“-”后面有个空格</p>
+<h3 id="4-1-设置一级分类"><a href="#4-1-设置一级分类" class="headerlink" title="4.1 设置一级分类"></a>4.1 设置一级分类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如<code>categories:Hexo</code>表示添加该文章到 “Hexo” 这个分类下。</p>
+<p>然后我们就可以在博客到分类里看到该分类了。</p>
+<h3 id="4-2-设置二级分类"><a href="#4-2-设置二级分类" class="headerlink" title="4.2 设置二级分类"></a>4.2 设置二级分类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories: </span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如上设置二级分类，表示该篇文章为 Blog 分类下的 Hexo 分类下。</p>
+<h3 id="4-3-并列-子分类"><a href="#4-3-并列-子分类" class="headerlink" title="4.3 并列+子分类"></a>4.3 并列+子分类</h3><p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 如何更换Hexo主题</span><br><span class="line">date: 2017-10-19 22:26:23</span><br><span class="line">categories:</span><br><span class="line">- [Diary, PlayStation]</span><br><span class="line">- [Diary, Games]</span><br><span class="line">- [Life]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、配置标签"><a href="#四、配置标签" class="headerlink" title="四、配置标签"></a>四、配置标签</h1><h2 id="1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可"><a href="#1、-在配置文件-config-yml中找到menu这段代码，把tags这一行的“-”去掉即可" class="headerlink" title="1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可"></a>1、 在配置文件_config.yml中找到menu这段代码，把tags这一行的“#”去掉即可</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、-创建标签目录文件"><a href="#2、-创建标签目录文件" class="headerlink" title="2、 创建标签目录文件"></a>2、 创建标签目录文件</h2><p>和分类页一样，标签页也是没有默认页面的所以需要我们手动创建标签页。</p>
+<p>打开命令行，进入博客项目所在的文件夹下，执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>成功后会提示：</p>
+<p><code>INFO  Created: ~/blog/source/tags/index.md</code></p>
+<p>这样我们就创建好了标签页面了。但是这个时候主题还不会识别这个页面为标签页；所以我们需要编辑这个新建的页面，让主题识别这个页面，并自动为这个页面显示标签。</p>
+<h2 id="3、-编辑页面让主题识别页面为标签页面"><a href="#3、-编辑页面让主题识别页面为标签页面" class="headerlink" title="3、 编辑页面让主题识别页面为标签页面"></a>3、 编辑页面让主题识别页面为标签页面</h2><p>上文说到需要编辑页面才能让主题识别这个页面为标签页面，我们只需要根据成功后到提示路径打开<code>index.md</code>这个页面文件，打开后默认内容是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>添加上<code>type: &quot;tags&quot;</code>这段代码，这样就能让主题识别该页面为标签页面了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-01-25 22:54:58</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、-给文章设置标签属性"><a href="#4、-给文章设置标签属性" class="headerlink" title="4、 给文章设置标签属性"></a>4、 给文章设置标签属性</h2><p>打开需要添加标签的文章，在Front-matter区域，顶部两个<code>---</code>中，添加tags设置标签</p>
+<p>注：“-”后面有个空格</p>
+<h3 id="4-1-设置单标签"><a href="#4-1-设置单标签" class="headerlink" title="4.1 设置单标签"></a>4.1 设置单标签</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-设置多标签-并同时设置分类"><a href="#4-2-设置多标签-并同时设置分类" class="headerlink" title="4.2 设置多标签 并同时设置分类"></a>4.2 设置多标签 并同时设置分类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 开博大吉</span><br><span class="line">date: 2017-10-08 17:48:54</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">- Blog</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、添加本地搜索功能"><a href="#五、添加本地搜索功能" class="headerlink" title="五、添加本地搜索功能"></a>五、添加本地搜索功能</h1><h2 id="1、在-config-yml-文件中开启搜索功能"><a href="#1、在-config-yml-文件中开启搜索功能" class="headerlink" title="1、在_config.yml 文件中开启搜索功能"></a>1、在_config.yml 文件中开启搜索功能</h2><p>找到local_search，enalbe属性改为true</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、安装-hexo-generator-searchdb-插件"><a href="#2、安装-hexo-generator-searchdb-插件" class="headerlink" title="2、安装 hexo-generator-searchdb 插件"></a>2、安装 <code>hexo-generator-searchdb</code> 插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、在-config-yml-文件中配置搜索功能"><a href="#3、在-config-yml-文件中配置搜索功能" class="headerlink" title="3、在_config.yml 文件中配置搜索功能"></a>3、在_config.yml 文件中配置搜索功能</h3><p>添加以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加评论系统</title>
+    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>
