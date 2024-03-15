@@ -455,7 +455,7 @@ Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2017/10/08/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/" class="post-title-link" itemprop="url">第二篇博客</a>
+          <a href="/2017/10/08/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/" class="post-title-link" itemprop="url">如何更换Hexo主题</a>
         </h2>
 
         <div class="post-meta-container">
@@ -465,9 +465,15 @@ Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2017-10-08 17:53:46 / Modified: 17:59:05" itemprop="dateCreated datePublished" datetime="2017-10-08T17:53:46+08:00">2017-10-08</time>
+      <time title="Created: 2017-10-08 17:53:46" itemprop="dateCreated datePublished" datetime="2017-10-08T17:53:46+08:00">2017-10-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-15 14:53:19" itemprop="dateModified" datetime="2024-03-15T14:53:19+08:00">2024-03-15</time>
     </span>
 
   
@@ -480,7 +486,17 @@ Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
+<ol>如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 "Clone or download" 按钮，然后选择 "Download ZIP"。这样就可以下载下来该主题的压缩包。</ol>
+
+<p>还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
+<pre><code>git clone https://github.com/theme-author/theme-name.git themes/theme-name
+</code></pre>
+<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
+<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>打开 Hexo 博客的根目录下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
+<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
+<p>一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+
       
     </div>
 
