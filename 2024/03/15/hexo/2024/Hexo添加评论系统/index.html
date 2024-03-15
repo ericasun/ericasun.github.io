@@ -28,7 +28,7 @@
 <meta property="og:description" content="一、申请GitHub应用1. 注册一个新应用 网址这三项内容必须填写 123Application name：&#x2F;&#x2F; 这个随意填写Homepage URL：&#x2F;&#x2F; 你的网站的URL地址，包含http部分。Authorization callback URL：&#x2F;&#x2F; 你的网站的URL地址，包含http部分，和上面的 Homepage URL 一致就行  1.1 Homepage URL与Authoriza">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-15T10:16:12.000Z">
-<meta property="article:modified_time" content="2024-03-15T13:32:16.486Z">
+<meta property="article:modified_time" content="2024-03-15T13:35:10.050Z">
 <meta property="article:author" content="ericasun">
 <meta name="twitter:card" content="summary">
 
@@ -220,7 +220,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-15 18:16:12 / Modified: 21:32:16" itemprop="dateCreated datePublished" datetime="2024-03-15T18:16:12+08:00">2024-03-15</time>
+      <time title="Created: 2024-03-15 18:16:12 / Modified: 21:35:10" itemprop="dateCreated datePublished" datetime="2024-03-15T18:16:12+08:00">2024-03-15</time>
     </span>
 
   
@@ -255,29 +255,21 @@
 </li>
 <li><p>admin: 指定了可以初始化文章评论的github用户，一般只填写你自己就可以了</p>
 </li>
-<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一扁文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
+<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一遍文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。<br>在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
 </li>
 <li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
 </li>
 </ul>
 <h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
-<li><ol>
-<li>Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</li>
-</ol>
+<li><p>1、Error: Not Found：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</p>
 </li>
-<li><ol start="2">
-<li>Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</li>
-</ol>
+<li><p>2、Related Issues not found：未找到相关的issue进行评论，出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</p>
 </li>
-<li><ol start="3">
-<li>评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是<a target="_blank" rel="noopener" href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFNext%E4%B8%BB%E9%A2%98%EF%BC%8C%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。如果你使用的是Next主题，请确保也是这个地址</a></li>
-</ol>
+<li><p>3、评论区一直加载不上：配置中的proxy地址不正确或已经失效。官网默认地址是<a target="_blank" rel="noopener" href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AFNext%E4%B8%BB%E9%A2%98%EF%BC%8C%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%B9%9F%E6%98%AF%E8%BF%99%E4%B8%AA%E5%9C%B0%E5%9D%80">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token。如果你使用的是Next主题，请确保也是这个地址</a></p>
 </li>
-<li><ol start="4">
-<li>评论时是黑色的：设置distractionFreeMode为false</li>
-</ol>
+<li><p>4、评论时是黑色的：设置distractionFreeMode为false</p>
 </li>
-<li><p>Error: Failed to execute ‘btoa’ on ‘Window’: The string to be encoded contains characters outside of the Latin1 range.</p>
+<li><p>5、设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code></p>
 </li>
 </ul>
 <hr>
