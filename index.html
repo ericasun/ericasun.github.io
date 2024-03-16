@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -158,7 +158,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -175,6 +175,118 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/16/Font-end/2024/%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/03/16/Font-end/2024/%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/" class="post-title-link" itemprop="url">做了什么？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-03-16 18:28:25 / Modified: 18:29:45" itemprop="dateCreated datePublished" datetime="2024-03-16T18:28:25+08:00">2024-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="new-做了什么"><a href="#new-做了什么" class="headerlink" title="new 做了什么"></a>new 做了什么</h1><p>1、创建临时对象&#x2F;新对象<br>2、绑定原型<br>3、指定 this &#x3D; 临时对象<br>4、执行构造函数<br>5、返回临时对象</p>
+<p>想象我们在制作一个足球游戏，玩家可以创造球员。</p>
+<p>我们着重来研究一下这个游戏里面的「制造球员」环节。</p>
+<p>一个球员的在计算机里就是一堆属性<br><code>位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作)</code></p>
+<h1 id="我们只需要这样就可以制造一个球员："><a href="#我们只需要这样就可以制造一个球员：" class="headerlink" title="我们只需要这样就可以制造一个球员："></a>我们只需要这样就可以制造一个球员：</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var 球员 = &#123;</span><br><span class="line">  ID: 1, // 用于区分每个球员</span><br><span class="line">  生命值：52，</span><br><span class="line">  位置:&quot;前锋&quot;,</span><br><span class="line">  弹跳:60,</span><br><span class="line">  速度:82, </span><br><span class="line">  奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">  传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">  突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">  铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">  射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>俱乐部.制造(球员)<br>制造二十个球员</p>
+<h1 id="如果需要制造-100-个球员怎么办呢？"><a href="#如果需要制造-100-个球员怎么办呢？" class="headerlink" title="如果需要制造 100 个球员怎么办呢？"></a>如果需要制造 100 个球员怎么办呢？</h1><p>循环 100 次吧：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var 球员们 = []</span><br><span class="line">var 球员</span><br><span class="line">for(var i=0; i&lt;100; i++)&#123;</span><br><span class="line">	球员 = &#123;</span><br><span class="line">	  ID: i, //  ID 不能重复</span><br><span class="line">	  生命值：52，</span><br><span class="line">	  位置:&quot;前锋&quot;,</span><br><span class="line">	  弹跳:60,</span><br><span class="line">	  速度:82, </span><br><span class="line">	  奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">	  传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">	  突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">	  铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">	  射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">	&#125;</span><br><span class="line">  球员们.push(球员)</span><br><span class="line">&#125;</span><br><span class="line">俱乐部.批量制造(球员们)</span><br></pre></td></tr></table></figure>
+<h1 id="质疑"><a href="#质疑" class="headerlink" title="质疑"></a>质疑</h1><p>上面的代码存在一个问题：浪费了很多内存。</p>
+<p>奔跑、传球、突破、铲球、射门这五个动作对于每个球员其实是一样的，只需要各自引用同一个函数就可以了，没必要重复创建 100 个行走、100个奔跑……<br>只有 ID、生命值、弹跳、速度、位置需要创建 100 次，因为每个球员有自己的  ID、生命值、弹跳、速度、位置。</p>
+<h1 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h1><p>用原型链可以解决重复创建的问题：我们先创建一个「球员原型」，然后让「球员」的 <strong>proto</strong> 指向「球员原型」</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var 球员原型 = &#123;</span><br><span class="line">	  奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">	  传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">	  突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">	  铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">	  射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">&#125;</span><br><span class="line">var 球员们 = []</span><br><span class="line">var 球员</span><br><span class="line">for(var i=0; i&lt;100; i++)&#123;</span><br><span class="line">  球员 = &#123;</span><br><span class="line">      ID: i, //  ID 不能重复</span><br><span class="line">	  生命值：52，</span><br><span class="line">	  位置:&quot;前锋&quot;,</span><br><span class="line">	  弹跳:60,</span><br><span class="line">	  速度:82, </span><br><span class="line">  &#125;</span><br><span class="line">  球员.__proto__ = 球员原型 </span><br><span class="line">  球员们.push(球员)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">俱乐部.批量制造(球员们)</span><br></pre></td></tr></table></figure>
+
+<h1 id="优雅？"><a href="#优雅？" class="headerlink" title="优雅？"></a>优雅？</h1><p>有人指出创建一个球员的代码分散在两个地方很不优雅，于是我们用一个函数把这两部分联系起来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function 球员(ID)&#123;</span><br><span class="line">  var 临时对象 = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  临时对象.__proto__ = 球员.原型</span><br><span class="line"></span><br><span class="line">  临时对象.ID = ID</span><br><span class="line">  临时对象.生命值 = 42</span><br><span class="line">  临时对象.位置 = &#x27;前锋&#x27;</span><br><span class="line">  临时对象.弹跳 = 60</span><br><span class="line">  临时对象.速度 = 90</span><br><span class="line">  </span><br><span class="line">  return 临时对象</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">球员.原型 = &#123;</span><br><span class="line">	奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">	传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">	突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">	铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">	射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后就可以愉快地引用「球员」来创建球员了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var 球员们 = []</span><br><span class="line">for(var i=0; i&lt;100; i++)&#123;</span><br><span class="line">  球员们.push(球员(i))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">俱乐部.批量制造(球员们)</span><br></pre></td></tr></table></figure>
+
+<h1 id="用-new-关键字，可以让我们少写几行代码："><a href="#用-new-关键字，可以让我们少写几行代码：" class="headerlink" title="用 new 关键字，可以让我们少写几行代码："></a>用 new 关键字，可以让我们少写几行代码：</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function 球员(ID)&#123;</span><br><span class="line">  var 临时对象 = &#123;&#125;  // 1、我帮你创建临时对象</span><br><span class="line"></span><br><span class="line">  临时对象.__proto__ = 球员.原型  // 2、我帮你绑定原型</span><br><span class="line"></span><br><span class="line">  临时对象.ID = ID</span><br><span class="line">  临时对象.生命值 = 42</span><br><span class="line">  临时对象.位置 = &#x27;前锋&#x27;</span><br><span class="line">  临时对象.弹跳 = 60</span><br><span class="line">  临时对象.速度 = 90</span><br><span class="line">  </span><br><span class="line">  return 临时对象 // 3、我帮你return</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 4、统一叫做prototype</span><br><span class="line">球员.原型 = &#123;  </span><br><span class="line">	奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">	传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">	突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">	铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">	射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只要你在球员前面使用 new 关键字，那么可以少做四件事情：<br>1、不用创建临时对象，因为 new 会帮你做（你使用「this」就可以访问到临时对象）；<br>2、不用绑定原型，因为 new 会帮你做（new 为了知道原型在哪，所以指定原型的名字为 prototype）；<br>3、不用 return 临时对象，因为 new 会帮你做；<br>4、不要给原型想名字了，因为 new 指定名字为 prototype。</p>
+<p>这一次我们用 new 来写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function 球员(ID)&#123;</span><br><span class="line">  this.生命值 = 42</span><br><span class="line">  this.ID = ID</span><br><span class="line">  this.生命值 = 42</span><br><span class="line">  this.位置 = &quot;前锋&quot;</span><br><span class="line">  this.弹跳 = 60</span><br><span class="line">  this.速度 = 82 </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">球员.prototype = &#123;</span><br><span class="line">	奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">	传球:function()&#123; /*传球的代码*/  &#125;,</span><br><span class="line">	突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">	铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">	射门:function()&#123; /*射门的代码*/ &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后是创建球员（加了一个 new 关键字）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var 球员们 = []</span><br><span class="line">for(var i=0; i&lt;100; i++)&#123;</span><br><span class="line">  球员们.push(new 球员(i))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">俱乐部.批量制造(球员们)</span><br></pre></td></tr></table></figure>
+<p>new 的作用，就是省那么几行代码。（也就是所谓的语法糖）</p>
+<p>注意 constructor 属性<br>new 操作为了记录「临时对象是由哪个函数创建的」，所以预先给「球员.prototype」加了一个 constructor 属性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">球员.prototype = &#123;</span><br><span class="line">  constructor: 球员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果你重新对「球员.prototype」赋值，那么这个 constructor 属性就没了，所以你应该这么写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">球员.prototype.奔跑 = function()&#123; /*狂奔的代码*/  &#125;</span><br><span class="line">球员.prototype.传球 = function()&#123;  /*传球的代码*/ &#125;</span><br><span class="line">球员.prototype.突破 = function()&#123;  /*突破的代码*/  &#125;</span><br><span class="line">球员.prototype.铲球 = function()&#123;  /*铲球的代码*/  &#125;</span><br><span class="line">球员.prototype.射门 = function()&#123;  /*射门的代码*/  &#125;</span><br></pre></td></tr></table></figure>
+<p>或者你也可以自己给 constructor 重新赋值：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">球员.prototype = &#123;</span><br><span class="line">  constructor: 球员,</span><br><span class="line">  奔跑:function()&#123; /*狂奔的代码*/  &#125;,</span><br><span class="line">  传球:function()&#123; /*传球的代码*/ &#125;,</span><br><span class="line">  突破:function()&#123; /*突破的代码*/  &#125;,</span><br><span class="line">  铲球:function()&#123; /*铲球的代码*/  &#125;,</span><br><span class="line">  射门:function()&#123; /*射门的代码*/  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
