@@ -22,27 +22,27 @@
 
     <meta name="description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个球员">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS的new 做了什么？">
-<meta property="og:url" content="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%20%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/index.html">
+<meta property="og:title" content="JS的new做了什么？">
+<meta property="og:url" content="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/index.html">
 <meta property="og:site_name" content="ericasun的Hexo博客">
 <meta property="og:description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个球员">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-16T10:28:25.000Z">
-<meta property="article:modified_time" content="2024-03-16T10:33:43.089Z">
+<meta property="article:modified_time" content="2024-03-16T10:34:53.521Z">
 <meta property="article:author" content="ericasun">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Front-end">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%20%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/">
+<link rel="canonical" href="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%20%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/","path":"2024/03/16/Font-end/2024/JS的new 做了什么？/","title":"JS的new 做了什么？"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/","path":"2024/03/16/Font-end/2024/JS的new做了什么？/","title":"JS的new做了什么？"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>JS的new 做了什么？ | ericasun的Hexo博客</title>
+<title>JS的new做了什么？ | ericasun的Hexo博客</title>
   
 
 
@@ -192,7 +192,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%20%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -205,12 +205,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="JS的new 做了什么？ | ericasun的Hexo博客">
+      <meta itemprop="name" content="JS的new做了什么？ | ericasun的Hexo博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JS的new 做了什么？
+          JS的new做了什么？
         </h1>
 
         <div class="post-meta-container">
@@ -222,7 +222,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-16 18:28:25 / Modified: 18:33:43" itemprop="dateCreated datePublished" datetime="2024-03-16T18:28:25+08:00">2024-03-16</time>
+      <time title="Created: 2024-03-16 18:28:25 / Modified: 18:34:53" itemprop="dateCreated datePublished" datetime="2024-03-16T18:28:25+08:00">2024-03-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -362,7 +362,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ericasun","repo":"ericasun.github.io","client_id":"74c3c3e6de6d77fe83a6","client_secret":"11b436aa1803400da693d80bee77f961caf0de47","admin_user":"ericasun","distraction_free_mode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8896cf1881a66d293d6007a7bc559f9d"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ericasun","repo":"ericasun.github.io","client_id":"74c3c3e6de6d77fe83a6","client_secret":"11b436aa1803400da693d80bee77f961caf0de47","admin_user":"ericasun","distraction_free_mode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d41bdbb1dce4f2ca460bd54fa72f9249"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
