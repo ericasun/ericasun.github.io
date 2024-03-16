@@ -7,9 +7,9 @@ http://example.com/2018/08/22/hexo/2018/Next%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3
 http://example.com/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/
 http://example.com/categories/index.html
 http://example.com/
-http://example.com/tags/Hexo/
 http://example.com/tags/Vite/
 http://example.com/tags/Vue/
 http://example.com/tags/Front-end/
-http://example.com/categories/Hexo/
+http://example.com/tags/Hexo/
 http://example.com/categories/Front-end/
+http://example.com/categories/Hexo/
