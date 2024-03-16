@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个">
+    <meta name="description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个球员">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS的new做了什么？">
 <meta property="og:url" content="http://example.com/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/index.html">
 <meta property="og:site_name" content="ericasun的Hexo博客">
-<meta property="og:description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个">
+<meta property="og:description" content="new 做了什么1、创建临时对象&#x2F;新对象2、绑定原型3、指定 this &#x3D; 临时对象4、执行构造函数5、返回临时对象 想象我们在制作一个足球游戏，玩家可以创造球员。 我们着重来研究一下这个游戏里面的「制造球员」环节。 一个球员的在计算机里就是一堆属性位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作) 我们只需要这样就可以制造一个球员">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-16T10:28:25.000Z">
-<meta property="article:modified_time" content="2024-03-16T10:38:24.631Z">
+<meta property="article:modified_time" content="2024-03-16T10:42:10.864Z">
 <meta property="article:author" content="ericasun">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Front-end">
@@ -222,7 +222,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-16 18:28:25 / Modified: 18:38:24" itemprop="dateCreated datePublished" datetime="2024-03-16T18:28:25+08:00">2024-03-16</time>
+      <time title="Created: 2024-03-16 18:28:25 / Modified: 18:42:10" itemprop="dateCreated datePublished" datetime="2024-03-16T18:28:25+08:00">2024-03-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,9 +243,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><span id="more"></span>
-
-<h1 id="new-做了什么"><a href="#new-做了什么" class="headerlink" title="new 做了什么"></a>new 做了什么</h1><p>1、创建临时对象&#x2F;新对象<br>2、绑定原型<br>3、指定 this &#x3D; 临时对象<br>4、执行构造函数<br>5、返回临时对象</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="new-做了什么"><a href="#new-做了什么" class="headerlink" title="new 做了什么"></a>new 做了什么</h1><p>1、创建临时对象&#x2F;新对象<br>2、绑定原型<br>3、指定 this &#x3D; 临时对象<br>4、执行构造函数<br>5、返回临时对象</p>
 <p>想象我们在制作一个足球游戏，玩家可以创造球员。</p>
 <p>我们着重来研究一下这个游戏里面的「制造球员」环节。</p>
 <p>一个球员的在计算机里就是一堆属性<br><code>位置、弹跳、速度、 生命值 奔跑(动作)、传球(动作)、突破(动作)、铲球(动作)、射门(动作)</code></p>
