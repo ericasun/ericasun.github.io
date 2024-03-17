@@ -42,8 +42,8 @@
         <category>Front-end</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>Front-end</tag>
+        <tag>javascript</tag>
+        <tag>front-end</tag>
       </tags>
   </entry>
   <entry>
@@ -58,8 +58,8 @@
         <category>Front-end</category>
       </categories>
       <tags>
-        <tag>Front-end</tag>
-        <tag>Css</tag>
+        <tag>front-end</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -97,9 +97,151 @@
         <category>Front-end</category>
       </categories>
       <tags>
-        <tag>Front-end</tag>
-        <tag>Vite</tag>
-        <tag>Vue</tag>
+        <tag>front-end</tag>
+        <tag>vite</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何更换Hexo主题</title>
+    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
+<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
+<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
+<pre><code class="bash">git clone https://github.com/theme-author/theme-name.git themes/theme-name
+</code></pre>
+<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
+<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的<b>根目录</b>下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
+<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
+<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用Hexo搭建博客</title>
+    <url>/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1>一、初始化你的Hexo博客</h1>
+
+<p>Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下是 Hexo 的初始化步骤：</p>
+<h3 id="1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。"><a href="#1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。" class="headerlink" title="1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。"></a>1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。</h3><h3 id="2、安装-Hexo。打开终端，输入以下命令："><a href="#2、安装-Hexo。打开终端，输入以下命令：" class="headerlink" title="2、安装 Hexo。打开终端，输入以下命令："></a>2、安装 Hexo。打开终端，输入以下命令：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p> 这将全局安装 Hexo。</p>
+<h3 id="3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入："><a href="#3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入：" class="headerlink" title="3、创建一个新的 Hexo 项目。替换 &lt;folder&gt; 为你想要的文件夹名，再输入："></a>3、创建一个新的 Hexo 项目。替换 <code>&lt;folder&gt;</code> 为你想要的文件夹名，再输入：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+<p>这将在指定的文件夹中创建一个新的 Hexo 项目，并且进入到这个文件夹内。</p>
+<h3 id="4、安装项目依赖。在终端，输入："><a href="#4、安装项目依赖。在终端，输入：" class="headerlink" title="4、安装项目依赖。在终端，输入："></a>4、安装项目依赖。在终端，输入：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>这将安装所有 Hexo 项目所需要的依赖。</p>
+<p>5、现在，你可以运行 Hexo 服务器来预览你的博客。输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>这将启动 Hexo 服务器。你可以在浏览器中输入 <code>localhost:4000</code> 来查看你的博客。</p>
+<p><b>以上步骤便是 Hexo 的基础配置和初始化。</b></p>
+<h2 id="6、创建博客（文章）"><a href="#6、创建博客（文章）" class="headerlink" title="6、创建博客（文章）"></a>6、创建博客（文章）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>如 <code>hexo new 开博大吉</code>（开博大吉为文章标题），返回一个 md 文件的路径</p>
+<h3 id="7、编辑-md-文件"><a href="#7、编辑-md-文件" class="headerlink" title="7、编辑 md 文件"></a>7、编辑 md 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">start xxxxxxxxxxxxxxxxxxx.md</span><br></pre></td></tr></table></figure>
+<p>内容在第二个<code>---</code>之后编写， （注意：Ubuntu 系统用 xdg-open xxxxxxxxxxxxxxxxxxx.md 命令），或在 <code>source/_posts</code> 文件夹中找到它，并且开始进行编辑。</p>
+<h3 id="8、更新"><a href="#8、更新" class="headerlink" title="8、更新"></a>8、更新</h3><p>使用 <code>hexo generate</code> 或简写的 <code>hexo g</code> 来生成静态文件，再次运行 <code>hexo server</code> 就可以看到你的新文章了。</p>
+<h1>二、部署到github</h1>
+要将 Hexo 博客部署到 GitHub，你需要遵循以下步骤：
+
+<h3 id="1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）"><a href="#1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）" class="headerlink" title="1、在 GitHub 上新建一个空 repo ,repo 名称是「用户名.github.io」（仓库名一定要这个格式，不然博客跳转有问题）"></a>1、在 GitHub 上新建一个空 repo ,repo 名称是<code>「用户名.github.io」</code>（仓库名一定要这个格式，不然博客跳转有问题）</h3><h3 id="2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git："><a href="#2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git：" class="headerlink" title="2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 hexo-deployer-git："></a>2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 <code>hexo-deployer-git</code>：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>这是一个 Hexo 插件，可以帮助你直接将项目部署到 GitHub。之后再修改博客需要上传，可执行：hexo generate代替该步</p>
+<h3 id="3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下）"><a href="#3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下）" class="headerlink" title="3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下）"></a>3、编辑网站配置 <code>start _config.yml</code>（该文件在hexoblog<b>根目录</b>下）</h3><p>找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置：</p>
+<p><b>可改项：</b></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">第</span> <span class="number">6</span> <span class="string">行的</span> <span class="string">title</span> <span class="string">文章标题</span></span><br><span class="line"><span class="number">2</span><span class="string">.</span> <span class="string">第</span> <span class="number">9</span> <span class="string">行的</span> <span class="string">author</span> <span class="string">作者名</span></span><br></pre></td></tr></table></figure>
+<p><b>必改项：</b></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">type</span> <span class="string">改成</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">2. repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span>  </span><br><span class="line"><span class="number">3</span><span class="string">.</span> <span class="string">//</span> <span class="string">加上该行</span> <span class="attr">repo:</span> <span class="string">后面有个空格</span></span><br><span class="line"><span class="number">4</span><span class="string">.</span> <span class="string">//</span> <span class="string">与type垂直对齐</span></span><br><span class="line"><span class="number">5</span><span class="string">.</span> <span class="string">//</span> <span class="string">仓库地址为firstblog所对应的地址，仓库地址以</span> <span class="string">git@github.com:开头</span></span><br></pre></td></tr></table></figure>
+
+<p>这里，<code>&lt;repository url&gt;</code> 是你的 GitHub 存储库的 URL，应该类似于 <code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</code>。而 <code>&lt;branch&gt;</code> 则应设置为对应分支名或不写。</p>
+<h3 id="4、输入以下命令来生成静态文件并部署到-GitHub："><a href="#4、输入以下命令来生成静态文件并部署到-GitHub：" class="headerlink" title="4、输入以下命令来生成静态文件并部署到 GitHub："></a>4、输入以下命令来生成静态文件并部署到 GitHub：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy  // 上传博客系统（包括文章）</span><br></pre></td></tr></table></figure>
+<p>也可以使用简写 <code>hexo d -g</code><br>现在，你应该可以通过访问 <code>https://&lt;username&gt;.github.io</code> 来查看你的 Hexo 博客网站了。<br>注意：部署到 GitHub Pages 时，你的仓库名称应遵循 <code>&lt;username&gt;.github.io</code> 的格式，<code>&lt;username&gt;</code> 要与你的 GitHub 账号名一致</p>
+<h3 id="5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接"><a href="#5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接" class="headerlink" title="5、进入 username.github.io  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接"></a>5、进入 <code>username.github.io</code>  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接</h3><hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开博大吉</title>
+    <url>/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo添加评论系统gitalk</title>
+    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用-new-OAuth-application"><a href="#1-注册一个新应用-new-OAuth-application" class="headerlink" title="1. 注册一个新应用 new OAuth application"></a>1. 注册一个新应用 new OAuth application</h2><p><a href="https://github.com/settings/applications/new">注册new OAuth application网址</a>,这三项内容必须填写</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">Application</span> <span class="string">name：//</span> <span class="string">这个随意填写</span></span><br><span class="line"><span class="string">Homepage</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分。</span></span><br><span class="line"><span class="string">Authorization</span> <span class="string">callback</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分，和上面的</span> <span class="string">Homepage</span> <span class="string">URL</span> <span class="string">一致就行</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-1-Homepage-URL与Authorization-callback-URL的填写"><a href="#1-1-Homepage-URL与Authorization-callback-URL的填写" class="headerlink" title="1.1 Homepage URL与Authorization callback URL的填写"></a>1.1 Homepage URL与Authorization callback URL的填写</h2><ul>
+<li>如果你的网站是host在github上的，是通过github分配给你的网址进行访问的，直接填写github分配给你的网站就可以，类似 username.github.io</li>
+<li>如果你有自己的域名，但网站内容host是在github上的，是通过cname的方式访问的，那么这两项都填你的域名</li>
+<li>如果你有自己的域名，也有自己的站点，那么这两项都填你的域名</li>
+<li>在调试阶段，可以把这两项设置为你的本地地址，这样方便测试，而不用一次又一次的部署网站，等测试好之后再统一部署。</li>
+</ul>
+<h2 id="2-生成Client信息"><a href="#2-生成Client信息" class="headerlink" title="2. 生成Client信息"></a>2. 生成Client信息</h2><p>点击 “register application”完成注册，系统会生成Client ID和Client secrets(需要手动点一下旁边的按钮)</p>
+<h1 id="二、配置Gitalk"><a href="#二、配置Gitalk" class="headerlink" title="二、配置Gitalk"></a>二、配置Gitalk</h1><h2 id="方法1：通过Next主题进行配置"><a href="#方法1：通过Next主题进行配置" class="headerlink" title="方法1：通过Next主题进行配置"></a>方法1：通过Next主题进行配置</h2><p>Next主题已经为我们配置了gitalk，只需配置即可</p>
+<h3 id="打开当前主题下的配置文件-config-yml"><a href="#打开当前主题下的配置文件-config-yml" class="headerlink" title="打开当前主题下的配置文件_config.yml"></a>打开当前主题下的配置文件_config.yml</h3><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到下面这段代码</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github_id:</span> <span class="string">你的Github登录账号</span>    <span class="string">//</span> <span class="string">这里可以不要加引号</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalk</span> <span class="string">你的</span> <span class="string">Github仓库的名称</span>   <span class="string">//</span> <span class="string">不要写成仓库地址</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">ID</span>  </span><br><span class="line">  <span class="attr">client_secret:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">admin_user:</span> <span class="string">你的Github登录账号</span></span><br><span class="line">  <span class="attr">distraction_free_mode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">proxy:</span> <span class="string">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="方法2：使用官网配置"><a href="#方法2：使用官网配置" class="headerlink" title="方法2：使用官网配置"></a>方法2：使用官网配置</h2><p>官网地址：<a href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> gitalk = <span class="keyword">new</span> <span class="title class_">Gitalk</span>(&#123;</span><br><span class="line">  <span class="attr">clientID</span>: <span class="string">&#x27;GitHub Application Client ID&#x27;</span>,</span><br><span class="line">  <span class="attr">clientSecret</span>: <span class="string">&#x27;GitHub Application Client Secret&#x27;</span>,</span><br><span class="line">  <span class="attr">repo</span>: <span class="string">&#x27;GitHub repo&#x27;</span>,      <span class="comment">// The repository of store comments,</span></span><br><span class="line">  <span class="attr">owner</span>: <span class="string">&#x27;GitHub repo owner&#x27;</span>,</span><br><span class="line">  <span class="attr">admin</span>: [<span class="string">&#x27;GitHub repo owner and collaborators, only these guys can initialize github issues&#x27;</span>],</span><br><span class="line">  <span class="attr">id</span>: location.<span class="property">pathname</span>,      <span class="comment">// Ensure uniqueness and length less than 50</span></span><br><span class="line">  <span class="attr">distractionFreeMode</span>: <span class="literal">false</span>  <span class="comment">// Facebook-like distraction free mode</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gitalk.<span class="title function_">render</span>(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、参数说明"><a href="#三、参数说明" class="headerlink" title="三、参数说明"></a>三、参数说明</h1><p>注：官网配置的参数和Hexo主题Next的参数是通用的</p>
+<ul>
+<li><p>repo: 要求填写你的<b>Github仓库的名称</b>，这个仓库可以是你的github上的任意一个，但必须是公开的。评论内容会以 issue的形式保存到仓库的issues中，所以建议为评论单独新建一个仓库</p>
+</li>
+<li><p>admin: 指定了可以初始化文章评论的github用户，一般只填写你自己就可以了</p>
+</li>
+<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一遍文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。<br>在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
+</li>
+<li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
+</li>
+</ul>
+<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
+<li><p>问题1：<code>Error: Not Found</code><br>解决方法：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</p>
+</li>
+<li><p>问题2：<code>Related Issues not found：</code> 未找到相关的issue进行评论<br>解决方法：出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</p>
+</li>
+<li><p>问题3：评论区一直加载不上：配置中的proxy地址不正确或已经失效。<br>解决方法：官网默认地址是 <a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a>。 如果你使用的是Next主题，请确保也是这个地址</p>
+</li>
+<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code><br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
+</li>
+<li><p>问题5：评论区点击使用Github登陆报错404<br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
+</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -168,148 +310,6 @@
 <h1 id="六、设置代码样式"><a href="#六、设置代码样式" class="headerlink" title="六、设置代码样式"></a>六、设置代码样式</h1><h2 id="4-1-在当前主题下的配置文件-config-yml-中搜索到以下代码"><a href="#4-1-在当前主题下的配置文件-config-yml-中搜索到以下代码" class="headerlink" title="4.1 在当前主题下的配置文件 _config.yml 中搜索到以下代码"></a>4.1 在当前主题下的配置文件 _config.yml 中搜索到以下代码</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># All available themes: https://theme-next.js.org/highlight/</span></span><br><span class="line">  <span class="attr">theme:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">stackoverflow-light</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">stackoverflow-light</span></span><br><span class="line">  <span class="attr">prism:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">prism</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">prism-dark</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="4-2-打开网址，选择自己喜欢的样式-根据网站上的代码设置"><a href="#4-2-打开网址，选择自己喜欢的样式-根据网站上的代码设置" class="headerlink" title="4.2 打开网址，选择自己喜欢的样式,根据网站上的代码设置"></a>4.2 打开<a href="https://theme-next.js.org/highlight/">网址</a>，选择自己喜欢的样式,根据网站上的代码设置</h2><p>如这里设置了stackoverflow-light样式，使用时在代码块旁边写明什么语言，如这里是yml就写”&#96;&#96;&#96;yml”</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何使用Hexo搭建博客</title>
-    <url>/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1>一、初始化你的Hexo博客</h1>
-
-<p>Hexo 是一个基于 Node.js 的快速、简单且强大的博客框架。以下是 Hexo 的初始化步骤：</p>
-<h3 id="1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。"><a href="#1、首先你需要在电脑上安装-Node-js-和-Git。这两者是-Hexo-运行的必要环境。" class="headerlink" title="1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。"></a>1、首先你需要在电脑上安装 Node.js 和 Git。这两者是 Hexo 运行的必要环境。</h3><h3 id="2、安装-Hexo。打开终端，输入以下命令："><a href="#2、安装-Hexo。打开终端，输入以下命令：" class="headerlink" title="2、安装 Hexo。打开终端，输入以下命令："></a>2、安装 Hexo。打开终端，输入以下命令：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p> 这将全局安装 Hexo。</p>
-<h3 id="3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入："><a href="#3、创建一个新的-Hexo-项目。替换-为你想要的文件夹名，再输入：" class="headerlink" title="3、创建一个新的 Hexo 项目。替换 &lt;folder&gt; 为你想要的文件夹名，再输入："></a>3、创建一个新的 Hexo 项目。替换 <code>&lt;folder&gt;</code> 为你想要的文件夹名，再输入：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br></pre></td></tr></table></figure>
-<p>这将在指定的文件夹中创建一个新的 Hexo 项目，并且进入到这个文件夹内。</p>
-<h3 id="4、安装项目依赖。在终端，输入："><a href="#4、安装项目依赖。在终端，输入：" class="headerlink" title="4、安装项目依赖。在终端，输入："></a>4、安装项目依赖。在终端，输入：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>这将安装所有 Hexo 项目所需要的依赖。</p>
-<p>5、现在，你可以运行 Hexo 服务器来预览你的博客。输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>这将启动 Hexo 服务器。你可以在浏览器中输入 <code>localhost:4000</code> 来查看你的博客。</p>
-<p><b>以上步骤便是 Hexo 的基础配置和初始化。</b></p>
-<h2 id="6、创建博客（文章）"><a href="#6、创建博客（文章）" class="headerlink" title="6、创建博客（文章）"></a>6、创建博客（文章）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>如 <code>hexo new 开博大吉</code>（开博大吉为文章标题），返回一个 md 文件的路径</p>
-<h3 id="7、编辑-md-文件"><a href="#7、编辑-md-文件" class="headerlink" title="7、编辑 md 文件"></a>7、编辑 md 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">start xxxxxxxxxxxxxxxxxxx.md</span><br></pre></td></tr></table></figure>
-<p>内容在第二个<code>---</code>之后编写， （注意：Ubuntu 系统用 xdg-open xxxxxxxxxxxxxxxxxxx.md 命令），或在 <code>source/_posts</code> 文件夹中找到它，并且开始进行编辑。</p>
-<h3 id="8、更新"><a href="#8、更新" class="headerlink" title="8、更新"></a>8、更新</h3><p>使用 <code>hexo generate</code> 或简写的 <code>hexo g</code> 来生成静态文件，再次运行 <code>hexo server</code> 就可以看到你的新文章了。</p>
-<h1>二、部署到github</h1>
-要将 Hexo 博客部署到 GitHub，你需要遵循以下步骤：
-
-<h3 id="1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）"><a href="#1、在-GitHub-上新建一个空-repo-repo-名称是「用户名-github-io」（仓库名一定要这个格式，不然博客跳转有问题）" class="headerlink" title="1、在 GitHub 上新建一个空 repo ,repo 名称是「用户名.github.io」（仓库名一定要这个格式，不然博客跳转有问题）"></a>1、在 GitHub 上新建一个空 repo ,repo 名称是<code>「用户名.github.io」</code>（仓库名一定要这个格式，不然博客跳转有问题）</h3><h3 id="2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git："><a href="#2、在你的-Hexo-项目目录下，通过以下命令安装-git-部署插件-hexo-deployer-git：" class="headerlink" title="2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 hexo-deployer-git："></a>2、在你的 Hexo 项目目录下，通过以下命令安装 git 部署插件 <code>hexo-deployer-git</code>：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>这是一个 Hexo 插件，可以帮助你直接将项目部署到 GitHub。之后再修改博客需要上传，可执行：hexo generate代替该步</p>
-<h3 id="3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下）"><a href="#3、编辑网站配置-start-config-yml（该文件在hexoblog根目录下）" class="headerlink" title="3、编辑网站配置 start _config.yml（该文件在hexoblog根目录下）"></a>3、编辑网站配置 <code>start _config.yml</code>（该文件在hexoblog<b>根目录</b>下）</h3><p>找到 # Deployment 的部分。在这里，你需要配置如何将你的 Hexo 博客部署到 GitHub。参考以下例子进行设置：</p>
-<p><b>可改项：</b></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">第</span> <span class="number">6</span> <span class="string">行的</span> <span class="string">title</span> <span class="string">文章标题</span></span><br><span class="line"><span class="number">2</span><span class="string">.</span> <span class="string">第</span> <span class="number">9</span> <span class="string">行的</span> <span class="string">author</span> <span class="string">作者名</span></span><br></pre></td></tr></table></figure>
-<p><b>必改项：</b></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.</span> <span class="string">type</span> <span class="string">改成</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">2. repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span>  </span><br><span class="line"><span class="number">3</span><span class="string">.</span> <span class="string">//</span> <span class="string">加上该行</span> <span class="attr">repo:</span> <span class="string">后面有个空格</span></span><br><span class="line"><span class="number">4</span><span class="string">.</span> <span class="string">//</span> <span class="string">与type垂直对齐</span></span><br><span class="line"><span class="number">5</span><span class="string">.</span> <span class="string">//</span> <span class="string">仓库地址为firstblog所对应的地址，仓库地址以</span> <span class="string">git@github.com:开头</span></span><br></pre></td></tr></table></figure>
-
-<p>这里，<code>&lt;repository url&gt;</code> 是你的 GitHub 存储库的 URL，应该类似于 <code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git</code>。而 <code>&lt;branch&gt;</code> 则应设置为对应分支名或不写。</p>
-<h3 id="4、输入以下命令来生成静态文件并部署到-GitHub："><a href="#4、输入以下命令来生成静态文件并部署到-GitHub：" class="headerlink" title="4、输入以下命令来生成静态文件并部署到 GitHub："></a>4、输入以下命令来生成静态文件并部署到 GitHub：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy  // 上传博客系统（包括文章）</span><br></pre></td></tr></table></figure>
-<p>也可以使用简写 <code>hexo d -g</code><br>现在，你应该可以通过访问 <code>https://&lt;username&gt;.github.io</code> 来查看你的 Hexo 博客网站了。<br>注意：部署到 GitHub Pages 时，你的仓库名称应遵循 <code>&lt;username&gt;.github.io</code> 的格式，<code>&lt;username&gt;</code> 要与你的 GitHub 账号名一致</p>
-<h3 id="5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接"><a href="#5、进入-username-github-io-对应的-repo，打开-GitHub-Pages-功能（setting中），就可以直接点击预览链接" class="headerlink" title="5、进入 username.github.io  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接"></a>5、进入 <code>username.github.io</code>  对应的 repo，打开 GitHub Pages 功能（setting中），就可以直接点击预览链接</h3><hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何更换Hexo主题</title>
-    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
-<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
-<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
-<pre><code class="bash">git clone https://github.com/theme-author/theme-name.git themes/theme-name
-</code></pre>
-<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
-<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的<b>根目录</b>下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
-<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
-<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开博大吉</title>
-    <url>/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo添加评论系统gitalk</title>
-    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用-new-OAuth-application"><a href="#1-注册一个新应用-new-OAuth-application" class="headerlink" title="1. 注册一个新应用 new OAuth application"></a>1. 注册一个新应用 new OAuth application</h2><p><a href="https://github.com/settings/applications/new">注册new OAuth application网址</a>,这三项内容必须填写</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">Application</span> <span class="string">name：//</span> <span class="string">这个随意填写</span></span><br><span class="line"><span class="string">Homepage</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分。</span></span><br><span class="line"><span class="string">Authorization</span> <span class="string">callback</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分，和上面的</span> <span class="string">Homepage</span> <span class="string">URL</span> <span class="string">一致就行</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="1-1-Homepage-URL与Authorization-callback-URL的填写"><a href="#1-1-Homepage-URL与Authorization-callback-URL的填写" class="headerlink" title="1.1 Homepage URL与Authorization callback URL的填写"></a>1.1 Homepage URL与Authorization callback URL的填写</h2><ul>
-<li>如果你的网站是host在github上的，是通过github分配给你的网址进行访问的，直接填写github分配给你的网站就可以，类似 username.github.io</li>
-<li>如果你有自己的域名，但网站内容host是在github上的，是通过cname的方式访问的，那么这两项都填你的域名</li>
-<li>如果你有自己的域名，也有自己的站点，那么这两项都填你的域名</li>
-<li>在调试阶段，可以把这两项设置为你的本地地址，这样方便测试，而不用一次又一次的部署网站，等测试好之后再统一部署。</li>
-</ul>
-<h2 id="2-生成Client信息"><a href="#2-生成Client信息" class="headerlink" title="2. 生成Client信息"></a>2. 生成Client信息</h2><p>点击 “register application”完成注册，系统会生成Client ID和Client secrets(需要手动点一下旁边的按钮)</p>
-<h1 id="二、配置Gitalk"><a href="#二、配置Gitalk" class="headerlink" title="二、配置Gitalk"></a>二、配置Gitalk</h1><h2 id="方法1：通过Next主题进行配置"><a href="#方法1：通过Next主题进行配置" class="headerlink" title="方法1：通过Next主题进行配置"></a>方法1：通过Next主题进行配置</h2><p>Next主题已经为我们配置了gitalk，只需配置即可</p>
-<h3 id="打开当前主题下的配置文件-config-yml"><a href="#打开当前主题下的配置文件-config-yml" class="headerlink" title="打开当前主题下的配置文件_config.yml"></a>打开当前主题下的配置文件_config.yml</h3><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到下面这段代码</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github_id:</span> <span class="string">你的Github登录账号</span>    <span class="string">//</span> <span class="string">这里可以不要加引号</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalk</span> <span class="string">你的</span> <span class="string">Github仓库的名称</span>   <span class="string">//</span> <span class="string">不要写成仓库地址</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">ID</span>  </span><br><span class="line">  <span class="attr">client_secret:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">admin_user:</span> <span class="string">你的Github登录账号</span></span><br><span class="line">  <span class="attr">distraction_free_mode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">proxy:</span> <span class="string">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="方法2：使用官网配置"><a href="#方法2：使用官网配置" class="headerlink" title="方法2：使用官网配置"></a>方法2：使用官网配置</h2><p>官网地址：<a href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> gitalk = <span class="keyword">new</span> <span class="title class_">Gitalk</span>(&#123;</span><br><span class="line">  <span class="attr">clientID</span>: <span class="string">&#x27;GitHub Application Client ID&#x27;</span>,</span><br><span class="line">  <span class="attr">clientSecret</span>: <span class="string">&#x27;GitHub Application Client Secret&#x27;</span>,</span><br><span class="line">  <span class="attr">repo</span>: <span class="string">&#x27;GitHub repo&#x27;</span>,      <span class="comment">// The repository of store comments,</span></span><br><span class="line">  <span class="attr">owner</span>: <span class="string">&#x27;GitHub repo owner&#x27;</span>,</span><br><span class="line">  <span class="attr">admin</span>: [<span class="string">&#x27;GitHub repo owner and collaborators, only these guys can initialize github issues&#x27;</span>],</span><br><span class="line">  <span class="attr">id</span>: location.<span class="property">pathname</span>,      <span class="comment">// Ensure uniqueness and length less than 50</span></span><br><span class="line">  <span class="attr">distractionFreeMode</span>: <span class="literal">false</span>  <span class="comment">// Facebook-like distraction free mode</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gitalk.<span class="title function_">render</span>(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、参数说明"><a href="#三、参数说明" class="headerlink" title="三、参数说明"></a>三、参数说明</h1><p>注：官网配置的参数和Hexo主题Next的参数是通用的</p>
-<ul>
-<li><p>repo: 要求填写你的<b>Github仓库的名称</b>，这个仓库可以是你的github上的任意一个，但必须是公开的。评论内容会以 issue的形式保存到仓库的issues中，所以建议为评论单独新建一个仓库</p>
-</li>
-<li><p>admin: 指定了可以初始化文章评论的github用户，一般只填写你自己就可以了</p>
-</li>
-<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一遍文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。<br>在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
-</li>
-<li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
-</li>
-</ul>
-<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
-<li><p>问题1：<code>Error: Not Found</code><br>解决方法：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</p>
-</li>
-<li><p>问题2：<code>Related Issues not found：</code> 未找到相关的issue进行评论<br>解决方法：出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</p>
-</li>
-<li><p>问题3：评论区一直加载不上：配置中的proxy地址不正确或已经失效。<br>解决方法：官网默认地址是 <a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a>。 如果你使用的是Next主题，请确保也是这个地址</p>
-</li>
-<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code><br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
-</li>
-<li><p>问题5：评论区点击使用Github登陆报错404<br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
-</li>
-</ul>
 <hr>
 ]]></content>
       <categories>
