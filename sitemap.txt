@@ -10,9 +10,9 @@ http://example.com/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1
 http://example.com/tags/index.html
 http://example.com/categories/index.html
 http://example.com/
-http://example.com/tags/javascript/
-http://example.com/tags/front-end/
 http://example.com/tags/css/
+http://example.com/tags/front-end/
+http://example.com/tags/javascript/
 http://example.com/tags/vite/
 http://example.com/tags/vue/
 http://example.com/tags/hexo/

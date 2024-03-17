@@ -214,7 +214,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-17 14:04:10 / Modified: 14:10:56" itemprop="dateCreated datePublished" datetime="2024-03-17T14:04:10+08:00">2024-03-17</time>
+      <time title="Created: 2024-03-17 14:04:10 / Modified: 14:12:24" itemprop="dateCreated datePublished" datetime="2024-03-17T14:04:10+08:00">2024-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,7 +280,20 @@
 <p>CSS层叠给每个样式规则赋予了权重。应用几条规则时，权重最大的优先</p>
 <p>默认情况下，编写者样式表中的规则比用户样式表中的规则权重高。然而，对于”!important”规则，优先级却是相反的。所有用户和编写者规则都比UA默认样式表中的规则权重高</p>
 <h3 id="4-1-层叠顺序"><a href="#4-1-层叠顺序" class="headerlink" title="4.1 层叠顺序"></a>4.1 层叠顺序</h3><p>为了找出一个元素&#x2F;属性组合的值，用户代理必须按照下列（步骤）排序：</p>
-<p> 1、 找出目标媒体类型下，所有适用于该元素和目标属性的声明。如果关联的选择器匹配该元素，并且目标媒体类型与含有该声明的@media规则列出的所有媒体类型，以及到达样式表的路径上所有链接匹配，则声明适用（Declarations apply if the associated selector matches the element in question and the target medium matches the media list on all @media rules containing the declaration and on all links on the path through which the style sheet was reached.）<br> 2、 根据重要性（常规或重要）和来源（编写者，用户或用户代理）排序，升序优先级为：<br>     - 用户代理声明<br>     - 用户常规声明<br>     - 编写者常规声明<br>     - 编写者重要声明<br>     - 用户重要声明	<br> 3、相同重要性和来源的规则根据选择器的特殊性（specificity）排序：更特殊的选择器将重写一般的。伪元素和伪类被分别算作常规元素和类<br> 4、 最后，根据指定顺序排序：如果两个声明的权重，来源和特殊性都相同，后指定的生效。引入的样式表（译注：这里应该是指‘@import’，而不是广义的通过各种方式引入样式表）中的声明被认为在样式表自身的所有声明之前</p>
+<ol>
+<li>找出目标媒体类型下，所有适用于该元素和目标属性的声明。如果关联的选择器匹配该元素，并且目标媒体类型与含有该声明的@media规则列出的所有媒体类型，以及到达样式表的路径上所有链接匹配，则声明适用（Declarations apply if the associated selector matches the element in question and the target medium matches the media list on all @media rules containing the declaration and on all links on the path through which the style sheet was reached.）</li>
+<li>根据重要性（常规或重要）和来源（编写者，用户或用户代理）排序，升序优先级为：<ul>
+<li>用户代理声明</li>
+<li>用户常规声明</li>
+<li>编写者常规声明</li>
+<li>编写者重要声明</li>
+<li>用户重要声明</li>
+</ul>
+<p>	</p>
+</li>
+<li>相同重要性和来源的规则根据选择器的特殊性（specificity）排序：更特殊的选择器将重写一般的。伪元素和伪类被分别算作常规元素和类</li>
+<li>最后，根据指定顺序排序：如果两个声明的权重，来源和特殊性都相同，后指定的生效。引入的样式表（译注：这里应该是指‘@import’，而不是广义的通过各种方式引入样式表）中的声明被认为在样式表自身的所有声明之前</li>
+</ol>
 <p>除了给个别声明设置”!important”外，比起读者样式表，这种策略给了编写者样式表更高的权重。用户代理必须给予用户去除特定编写者样式表影响的能力，例如，通过一个下拉菜单。与UAAG 1.0 checkpoint 4.14一致的（用户代理）满足该条件[UAAG10]</p>
 <h3 id="4-2-important规则"><a href="#4-2-important规则" class="headerlink" title="4.2 !important规则"></a>4.2 !important规则</h3><p>CSS尝试在编写者和用户样式表之间建立平衡。默认情况下，编写者样式表中的规则会重写那些位于用户样式表中的（见层叠规则3）</p>
 <p>然而，为了平衡，”!important”声明（声明后面跟着分隔符token “!”和关键字”important”）比常规声明优先。编写者和用户样式表都可能含有”!important”声明，并且用户”!important”规则会重写编写者”!important”规则。通过给予用户表现上的特殊需求（大字体，颜色组合等等）控制，该CSS特性提高了文档的可访问性</p>
