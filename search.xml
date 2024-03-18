@@ -97,6 +97,22 @@
       </tags>
   </entry>
   <entry>
+    <title>两种盒模型（box-sizing）的区别？</title>
+    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
+<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
+<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
+<hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>front-end</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS的new做了什么？</title>
     <url>/2024/03/16/Font-end/2024/JS%E7%9A%84new%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/</url>
     <content><![CDATA[<h1 id="new-做了什么"><a href="#new-做了什么" class="headerlink" title="new 做了什么"></a>new 做了什么</h1><p>1、创建临时对象&#x2F;新对象<br>2、绑定原型<br>3、指定 this &#x3D; 临时对象<br>4、执行构造函数<br>5、返回临时对象</p>
@@ -183,22 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title>两种盒模型（box-sizing）的区别？</title>
-    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
-<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
-<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
-<hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>front-end</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何使用Hexo搭建博客</title>
     <url>/2017/10/08/hexo/2017/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1>一、初始化你的Hexo博客</h1>
@@ -243,6 +243,27 @@
       </tags>
   </entry>
   <entry>
+    <title>如何更换Hexo主题</title>
+    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
+<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
+<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
+<pre><code class="bash">git clone https://github.com/theme-author/theme-name.git themes/theme-name
+</code></pre>
+<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
+<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的<b>根目录</b>下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
+<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
+<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开博大吉</title>
     <url>/2017/10/08/hexo/2017/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -258,27 +279,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何更换Hexo主题</title>
-    <url>/2017/10/19/hexo/2017/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%8D%A2Hexo%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="1、下载主题"><a href="#1、下载主题" class="headerlink" title="1、下载主题"></a>1、下载主题</h2><p>&emsp;&emsp;首先，你需要选择一个你喜欢的主题并下载。在 Hexo 的官方网站（hexo.io&#x2F;themes）上可以找到许多主题。每个主题的描述旁边通常都会有一个链接，点击这个链接就可以下载这个主题。</p>
-<p>&emsp;&emsp;如果链接跳转到了 Github 仓库，你可以直接点击页面右上方的 “Clone or download” 按钮，然后选择 “Download ZIP”。这样就可以下载下来该主题的压缩包。</ol></p>
-<p>&emsp;&emsp;还有一种方式是使用 git 命令行工具克隆主题的仓库。首先你需要安装 git 工具，然后在命令行中输入类似于下面的命令：</p>
-<pre><code class="bash">git clone https://github.com/theme-author/theme-name.git themes/theme-name
-</code></pre>
-<h2 id="2、安装主题"><a href="#2、安装主题" class="headerlink" title="2、安装主题"></a>2、安装主题</h2><p>&emsp;&emsp;下载主题后，将主题的整个文件夹复制或移动到你的 Hexo 博客的 <code>themes/</code> 文件夹中。</p>
-<h2 id="3、启用主题"><a href="#3、启用主题" class="headerlink" title="3、启用主题"></a>3、启用主题</h2><p>&emsp;&emsp;打开 Hexo 博客的<b>根目录</b>下的 <code>_config.yml</code> 文件，并找到 theme 配置项。将这个配置项的值修改为你刚刚安装的主题的名字。比如，如果你安装的是 Next 主题，就将 <code>theme</code> 配置项的值修改为 <code>next</code>。</p>
-<h2 id="4、配置主题"><a href="#4、配置主题" class="headerlink" title="4、配置主题"></a>4、配置主题</h2><p>&emsp;&emsp;大部分主题都可以进行自定义配置。通常在主题的文件夹下会有一个 _config.yml 文件，这个文件用于定义主题的配置。每个主题的配置项都不尽相同，具体可以参考主题的文档说明。</p>
-<p>&emsp;&emsp;一旦你完成了上面的步骤，你的 Hexo 博客就会使用新的主题了。为了看到改变，你可能需要运行 <code>hexo clean</code> 和 <code>hexo server</code>，然后在浏览器中刷新你的博客网页。如果你在切换主题后遇到问题，记得查看新主题的文档，或者与主题的作者联系。</p>
 <hr>
 ]]></content>
       <categories>
@@ -378,13 +378,13 @@
 <h1 id="2、安装插件hexo-asset-image"><a href="#2、安装插件hexo-asset-image" class="headerlink" title="2、安装插件hexo-asset-image"></a>2、安装插件<code>hexo-asset-image</code></h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>hexo-asset-image是一个Hexo的插件，它针对的是那些为每篇博文独立设立资源文件夹（通过post_asset_folder设为true）的用户。</p>
+<li><p><code>hexo-asset-image</code>是一个Hexo的插件，它针对的是那些为每篇博文独立设立资源文件夹（通过<code>post_asset_folder</code>设为true）的用户。</p>
 </li>
 <li><p>如果你在Hexo文章中使用<code>![pic](pic.jpg)</code>这样的标记来引用图片，那么Hexo默认从根目录下的&#x2F;source&#x2F;images&#x2F;文件夹寻找图片，而非从当前文章的资源文件夹中寻找。</p>
 </li>
-<li><p>如果你安装并启用了hexo-asset-image插件，那么Hexo会改为从与文章同名的资源文件夹中寻找图片。</p>
+<li><p>如果你安装并启用了<code>hexo-asset-image</code>插件，那么Hexo会改为<b>从与文章同名的资源文件夹</b>中寻找图片。</p>
 </li>
-<li><p>当你安装并启用hexo-asset-image插件后，可以直接把图片放到文章的资源文件夹中，然后在文章中使用相对路径引用图片，比如<code>![pic](pic.jpg)</code>，Hexo会自动从文章的资源文件夹中寻找pic.jpg</p>
+<li><p>当你安装并启用<code>hexo-asset-image</code>插件后，可以直接把图片放到文章的资源文件夹中，然后在文章中使用相对路径引用图片，比如<code>![pic](pic.jpg)</code>，Hexo会自动从文章的资源文件夹中寻找pic.jpg</p>
 </li>
 </ul>
 <h1 id="3、在文章中添加图片"><a href="#3、在文章中添加图片" class="headerlink" title="3、在文章中添加图片"></a>3、在文章中添加图片</h1><h2 id="3-1-创建新文章"><a href="#3-1-创建新文章" class="headerlink" title="3.1 创建新文章"></a>3.1 创建新文章</h2><p>运行<code>hexo new xxx</code>生成的博文，此时在<code>/source/_posts</code>文件夹下,除了会生成<code>xxx.md</code>文件，还会生成一个同名文件夹</p>

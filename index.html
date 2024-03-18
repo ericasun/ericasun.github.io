@@ -214,7 +214,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-18 21:36:41 / Modified: 22:09:53" itemprop="dateCreated datePublished" datetime="2024-03-18T21:36:41+08:00">2024-03-18</time>
+      <time title="Created: 2024-03-18 21:36:41 / Modified: 22:12:47" itemprop="dateCreated datePublished" datetime="2024-03-18T21:36:41+08:00">2024-03-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -255,13 +255,13 @@
 <h1 id="2、安装插件hexo-asset-image"><a href="#2、安装插件hexo-asset-image" class="headerlink" title="2、安装插件hexo-asset-image"></a>2、安装插件<code>hexo-asset-image</code></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><p>hexo-asset-image是一个Hexo的插件，它针对的是那些为每篇博文独立设立资源文件夹（通过post_asset_folder设为true）的用户。</p>
+<li><p><code>hexo-asset-image</code>是一个Hexo的插件，它针对的是那些为每篇博文独立设立资源文件夹（通过<code>post_asset_folder</code>设为true）的用户。</p>
 </li>
 <li><p>如果你在Hexo文章中使用<code>![pic](pic.jpg)</code>这样的标记来引用图片，那么Hexo默认从根目录下的&#x2F;source&#x2F;images&#x2F;文件夹寻找图片，而非从当前文章的资源文件夹中寻找。</p>
 </li>
-<li><p>如果你安装并启用了hexo-asset-image插件，那么Hexo会改为从与文章同名的资源文件夹中寻找图片。</p>
+<li><p>如果你安装并启用了<code>hexo-asset-image</code>插件，那么Hexo会改为<b>从与文章同名的资源文件夹</b>中寻找图片。</p>
 </li>
-<li><p>当你安装并启用hexo-asset-image插件后，可以直接把图片放到文章的资源文件夹中，然后在文章中使用相对路径引用图片，比如<code>![pic](pic.jpg)</code>，Hexo会自动从文章的资源文件夹中寻找pic.jpg</p>
+<li><p>当你安装并启用<code>hexo-asset-image</code>插件后，可以直接把图片放到文章的资源文件夹中，然后在文章中使用相对路径引用图片，比如<code>![pic](pic.jpg)</code>，Hexo会自动从文章的资源文件夹中寻找pic.jpg</p>
 </li>
 </ul>
 <h1 id="3、在文章中添加图片"><a href="#3、在文章中添加图片" class="headerlink" title="3、在文章中添加图片"></a>3、在文章中添加图片</h1><h2 id="3-1-创建新文章"><a href="#3-1-创建新文章" class="headerlink" title="3.1 创建新文章"></a>3.1 创建新文章</h2><p>运行<code>hexo new xxx</code>生成的博文，此时在<code>/source/_posts</code>文件夹下,除了会生成<code>xxx.md</code>文件，还会生成一个同名文件夹</p>
