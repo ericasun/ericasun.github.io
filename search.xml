@@ -143,22 +143,6 @@
       </tags>
   </entry>
   <entry>
-    <title>两种盒模型（box-sizing）的区别？</title>
-    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
-<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
-<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
-<hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>front-end</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件</title>
     <url>/2024/03/17/Font-end/2024/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<h2 id="1、安装依赖插件vite-plugin-svg-icons"><a href="#1、安装依赖插件vite-plugin-svg-icons" class="headerlink" title="1、安装依赖插件vite-plugin-svg-icons"></a>1、安装依赖插件vite-plugin-svg-icons</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add vite-plugin-svg-icons -D </span><br></pre></td></tr></table></figure>
@@ -187,6 +171,22 @@
         <tag>front-end</tag>
         <tag>vite2</tag>
         <tag>vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两种盒模型（box-sizing）的区别？</title>
+    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
+<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
+<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
+<hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>front-end</tag>
       </tags>
   </entry>
   <entry>
