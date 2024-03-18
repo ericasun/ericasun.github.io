@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>3</title>
-    <url>/2024/03/18/3/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hexo添加评论系统livere</title>
     <url>/2024/03/18/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Flivere/</url>
     <content><![CDATA[]]></content>
@@ -153,22 +148,6 @@
       </tags>
   </entry>
   <entry>
-    <title>两种盒模型（box-sizing）的区别？</title>
-    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
-<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
-<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
-<hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>front-end</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在Vite2+Vue3渲染Markdown文档(亲测有效）</title>
     <url>/2024/03/14/Font-end/2024/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/</url>
     <content><![CDATA[<h2 id="方法1：自定义-Vite-插件"><a href="#方法1：自定义-Vite-插件" class="headerlink" title="方法1：自定义 Vite 插件"></a>方法1：自定义 Vite 插件</h2><p>原版本升级到Vite2之后会报错<code>plugin.configureServer is not a function</code> ，此插件为修改后版本，亲测有效</p>
@@ -206,6 +185,22 @@
         <tag>front-end</tag>
         <tag>vite</tag>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两种盒模型（box-sizing）的区别？</title>
+    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为"><a href="#第一种盒模型是-content-box，即-width-指定的是-content-区域宽度，而不是实际宽度，公式为" class="headerlink" title="第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为"></a>第一种盒模型是 content-box，即 width 指定的是 content 区域宽度，而不是实际宽度，公式为</h2><p><code>实际宽度 = width + padding + border </code></p>
+<h2 id="第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为"><a href="#第二种盒模型是-border-box，即-width-指定的是左右边框外侧的距离，公式为" class="headerlink" title="第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为"></a>第二种盒模型是 border-box，即 width 指定的是左右边框外侧的距离，公式为</h2><p><code>实际宽度 = width</code></p>
+<p>相同点是都是用来指定宽度的，不同点是 border-box 更好用。 </p>
+<hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>front-end</tag>
       </tags>
   </entry>
   <entry>
@@ -299,58 +294,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo添加评论系统gitalk</title>
-    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fgitalk/</url>
-    <content><![CDATA[<h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用-new-OAuth-application"><a href="#1-注册一个新应用-new-OAuth-application" class="headerlink" title="1. 注册一个新应用 new OAuth application"></a>1. 注册一个新应用 new OAuth application</h2><p><a href="https://github.com/settings/applications/new">注册new OAuth application网址</a>,这三项内容必须填写</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">Application</span> <span class="string">name：//</span> <span class="string">这个随意填写</span></span><br><span class="line"><span class="string">Homepage</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分。</span></span><br><span class="line"><span class="string">Authorization</span> <span class="string">callback</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分，和上面的</span> <span class="string">Homepage</span> <span class="string">URL</span> <span class="string">一致就行</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="1-1-Homepage-URL与Authorization-callback-URL的填写"><a href="#1-1-Homepage-URL与Authorization-callback-URL的填写" class="headerlink" title="1.1 Homepage URL与Authorization callback URL的填写"></a>1.1 Homepage URL与Authorization callback URL的填写</h2><ul>
-<li>如果你的网站是host在github上的，是通过github分配给你的网址进行访问的，直接填写github分配给你的网站就可以，类似 username.github.io</li>
-<li>如果你有自己的域名，但网站内容host是在github上的，是通过cname的方式访问的，那么这两项都填你的域名</li>
-<li>如果你有自己的域名，也有自己的站点，那么这两项都填你的域名</li>
-<li>在调试阶段，可以把这两项设置为你的本地地址，这样方便测试，而不用一次又一次的部署网站，等测试好之后再统一部署。</li>
-</ul>
-<h2 id="2-生成Client信息"><a href="#2-生成Client信息" class="headerlink" title="2. 生成Client信息"></a>2. 生成Client信息</h2><p>点击 “register application”完成注册，系统会生成Client ID和Client secrets(需要手动点一下旁边的按钮)</p>
-<h1 id="二、配置Gitalk"><a href="#二、配置Gitalk" class="headerlink" title="二、配置Gitalk"></a>二、配置Gitalk</h1><h2 id="方法1：通过Next主题进行配置"><a href="#方法1：通过Next主题进行配置" class="headerlink" title="方法1：通过Next主题进行配置"></a>方法1：通过Next主题进行配置</h2><p>Next主题已经为我们配置了gitalk，只需配置即可</p>
-<h3 id="打开当前主题下的配置文件-config-yml"><a href="#打开当前主题下的配置文件-config-yml" class="headerlink" title="打开当前主题下的配置文件_config.yml"></a>打开当前主题下的配置文件_config.yml</h3><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到下面这段代码</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github_id:</span> <span class="string">你的Github登录账号</span>    <span class="string">//</span> <span class="string">这里可以不要加引号</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalk</span> <span class="string">你的</span> <span class="string">Github仓库的名称</span>   <span class="string">//</span> <span class="string">不要写成仓库地址</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">ID</span>  </span><br><span class="line">  <span class="attr">client_secret:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">admin_user:</span> <span class="string">你的Github登录账号</span></span><br><span class="line">  <span class="attr">distraction_free_mode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">proxy:</span> <span class="string">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="方法2：使用官网配置"><a href="#方法2：使用官网配置" class="headerlink" title="方法2：使用官网配置"></a>方法2：使用官网配置</h2><p>官网地址：<a href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> gitalk = <span class="keyword">new</span> <span class="title class_">Gitalk</span>(&#123;</span><br><span class="line">  <span class="attr">clientID</span>: <span class="string">&#x27;GitHub Application Client ID&#x27;</span>,</span><br><span class="line">  <span class="attr">clientSecret</span>: <span class="string">&#x27;GitHub Application Client Secret&#x27;</span>,</span><br><span class="line">  <span class="attr">repo</span>: <span class="string">&#x27;GitHub repo&#x27;</span>,      <span class="comment">// The repository of store comments,</span></span><br><span class="line">  <span class="attr">owner</span>: <span class="string">&#x27;GitHub repo owner&#x27;</span>,</span><br><span class="line">  <span class="attr">admin</span>: [<span class="string">&#x27;GitHub repo owner and collaborators, only these guys can initialize github issues&#x27;</span>],</span><br><span class="line">  <span class="attr">id</span>: location.<span class="property">pathname</span>,      <span class="comment">// Ensure uniqueness and length less than 50</span></span><br><span class="line">  <span class="attr">distractionFreeMode</span>: <span class="literal">false</span>  <span class="comment">// Facebook-like distraction free mode</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gitalk.<span class="title function_">render</span>(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、参数说明"><a href="#三、参数说明" class="headerlink" title="三、参数说明"></a>三、参数说明</h1><p>注：官网配置的参数和Hexo主题Next的参数是通用的</p>
-<ul>
-<li><p>repo: 要求填写你的<b>Github仓库的名称</b>，这个仓库可以是你的github上的任意一个，但必须是公开的。评论内容会以 issue的形式保存到仓库的issues中，所以建议为评论单独新建一个仓库</p>
-</li>
-<li><p>admin: 指定了可以初始化文章评论的github用户，一般只填写你自己就可以了</p>
-</li>
-<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一遍文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。<br>在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
-</li>
-<li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
-</li>
-</ul>
-<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
-<li><p>问题1：<code>Error: Not Found</code><br>解决方法：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</p>
-</li>
-<li><p>问题2：<code>Related Issues not found：</code> 未找到相关的issue进行评论<br>解决方法：出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</p>
-</li>
-<li><p>问题3：评论区一直加载不上：配置中的proxy地址不正确或已经失效。<br>解决方法：官网默认地址是 <a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a>。 如果你使用的是Next主题，请确保也是这个地址</p>
-</li>
-<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code><br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
-</li>
-<li><p>问题5：评论区点击使用Github登陆报错404<br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
-</li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo主题Next相关配置</title>
     <url>/2018/08/22/hexo/2018/Next%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="一、更改主题颜色方案"><a href="#一、更改主题颜色方案" class="headerlink" title="一、更改主题颜色方案"></a>一、更改主题颜色方案</h1><h2 id="1、打开主题下的配置文件-config-yml"><a href="#1、打开主题下的配置文件-config-yml" class="headerlink" title="1、打开主题下的配置文件_config.yml"></a>1、打开主题下的配置文件_config.yml</h2><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到Schemes这段代码</p>
@@ -426,21 +369,73 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo添加评论系统gitalk</title>
+    <url>/2024/03/15/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fgitalk/</url>
+    <content><![CDATA[<h1 id="一、申请GitHub应用"><a href="#一、申请GitHub应用" class="headerlink" title="一、申请GitHub应用"></a>一、申请GitHub应用</h1><h2 id="1-注册一个新应用-new-OAuth-application"><a href="#1-注册一个新应用-new-OAuth-application" class="headerlink" title="1. 注册一个新应用 new OAuth application"></a>1. 注册一个新应用 new OAuth application</h2><p><a href="https://github.com/settings/applications/new">注册new OAuth application网址</a>,这三项内容必须填写</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">Application</span> <span class="string">name：//</span> <span class="string">这个随意填写</span></span><br><span class="line"><span class="string">Homepage</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分。</span></span><br><span class="line"><span class="string">Authorization</span> <span class="string">callback</span> <span class="string">URL：//</span> <span class="string">你的网站的URL地址，包含http部分，和上面的</span> <span class="string">Homepage</span> <span class="string">URL</span> <span class="string">一致就行</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-1-Homepage-URL与Authorization-callback-URL的填写"><a href="#1-1-Homepage-URL与Authorization-callback-URL的填写" class="headerlink" title="1.1 Homepage URL与Authorization callback URL的填写"></a>1.1 Homepage URL与Authorization callback URL的填写</h2><ul>
+<li>如果你的网站是host在github上的，是通过github分配给你的网址进行访问的，直接填写github分配给你的网站就可以，类似 username.github.io</li>
+<li>如果你有自己的域名，但网站内容host是在github上的，是通过cname的方式访问的，那么这两项都填你的域名</li>
+<li>如果你有自己的域名，也有自己的站点，那么这两项都填你的域名</li>
+<li>在调试阶段，可以把这两项设置为你的本地地址，这样方便测试，而不用一次又一次的部署网站，等测试好之后再统一部署。</li>
+</ul>
+<h2 id="2-生成Client信息"><a href="#2-生成Client信息" class="headerlink" title="2. 生成Client信息"></a>2. 生成Client信息</h2><p>点击 “register application”完成注册，系统会生成Client ID和Client secrets(需要手动点一下旁边的按钮)</p>
+<h1 id="二、配置Gitalk"><a href="#二、配置Gitalk" class="headerlink" title="二、配置Gitalk"></a>二、配置Gitalk</h1><h2 id="方法1：通过Next主题进行配置"><a href="#方法1：通过Next主题进行配置" class="headerlink" title="方法1：通过Next主题进行配置"></a>方法1：通过Next主题进行配置</h2><p>Next主题已经为我们配置了gitalk，只需配置即可</p>
+<h3 id="打开当前主题下的配置文件-config-yml"><a href="#打开当前主题下的配置文件-config-yml" class="headerlink" title="打开当前主题下的配置文件_config.yml"></a>打开当前主题下的配置文件_config.yml</h3><p>路径 <code>\themes\hexo-theme-next-master\_config.yml</code>,打开这个文件并找到下面这段代码</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">github_id:</span> <span class="string">你的Github登录账号</span>    <span class="string">//</span> <span class="string">这里可以不要加引号</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalk</span> <span class="string">你的</span> <span class="string">Github仓库的名称</span>   <span class="string">//</span> <span class="string">不要写成仓库地址</span></span><br><span class="line">  <span class="attr">client_id:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">ID</span>  </span><br><span class="line">  <span class="attr">client_secret:</span> <span class="string">上面刚刚申请的</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">admin_user:</span> <span class="string">你的Github登录账号</span></span><br><span class="line">  <span class="attr">distraction_free_mode:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">proxy:</span> <span class="string">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="方法2：使用官网配置"><a href="#方法2：使用官网配置" class="headerlink" title="方法2：使用官网配置"></a>方法2：使用官网配置</h2><p>官网地址：<a href="https://github.com/gitalk/gitalk">https://github.com/gitalk/gitalk</a></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> gitalk = <span class="keyword">new</span> <span class="title class_">Gitalk</span>(&#123;</span><br><span class="line">  <span class="attr">clientID</span>: <span class="string">&#x27;GitHub Application Client ID&#x27;</span>,</span><br><span class="line">  <span class="attr">clientSecret</span>: <span class="string">&#x27;GitHub Application Client Secret&#x27;</span>,</span><br><span class="line">  <span class="attr">repo</span>: <span class="string">&#x27;GitHub repo&#x27;</span>,      <span class="comment">// The repository of store comments,</span></span><br><span class="line">  <span class="attr">owner</span>: <span class="string">&#x27;GitHub repo owner&#x27;</span>,</span><br><span class="line">  <span class="attr">admin</span>: [<span class="string">&#x27;GitHub repo owner and collaborators, only these guys can initialize github issues&#x27;</span>],</span><br><span class="line">  <span class="attr">id</span>: location.<span class="property">pathname</span>,      <span class="comment">// Ensure uniqueness and length less than 50</span></span><br><span class="line">  <span class="attr">distractionFreeMode</span>: <span class="literal">false</span>  <span class="comment">// Facebook-like distraction free mode</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">gitalk.<span class="title function_">render</span>(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、参数说明"><a href="#三、参数说明" class="headerlink" title="三、参数说明"></a>三、参数说明</h1><p>注：官网配置的参数和Hexo主题Next的参数是通用的</p>
+<ul>
+<li><p>repo: 要求填写你的<b>Github仓库的名称</b>，这个仓库可以是你的github上的任意一个，但必须是公开的。评论内容会以 issue的形式保存到仓库的issues中，所以建议为评论单独新建一个仓库</p>
+</li>
+<li><p>admin: 指定了可以初始化文章评论的github用户，一般只填写你自己就可以了</p>
+</li>
+<li><p>id: 文章的URL路径，不包括域名，这个路径要求必须是唯一的，且不能超过50个字符(如果超过了，可以使用md5等工具对路径进行摘要缩短长度即可)。每一遍文章的评论和这个路径相关联，所以即使域名不同，只要文章的URL一样，就会显示相关联的评论。<br>在Next主题中是自动配置的Hexo主题Next的参数定义在layout&#x2F;_third-party&#x2F;comments&#x2F;gitalk.njk中</p>
+</li>
+<li><p>distractionFreeMode：是否是聚精会神模式，即评论框在写评论的时候，周围是否变成黑</p>
+</li>
+</ul>
+<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ul>
+<li><p>问题1：<code>Error: Not Found</code><br>解决方法：一般是仓库名称没有正确设置，请依据上面的参数说明部分进行设置</p>
+</li>
+<li><p>问题2：<code>Related Issues not found：</code> 未找到相关的issue进行评论<br>解决方法：出现这种情况是因为文章评论还未初始化，只需要点击下面的按钮，登录 GitHub 账户即可</p>
+</li>
+<li><p>问题3：评论区一直加载不上：配置中的proxy地址不正确或已经失效。<br>解决方法：官网默认地址是 <a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a>。 如果你使用的是Next主题，请确保也是这个地址</p>
+</li>
+<li><p>问题4：设置后报错<code>Error: Failed to execute &#39;btoa&#39; on &#39;Window&#39;: The string to be encoded contains characters outside of the Latin1 range.</code><br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
+</li>
+<li><p>问题5：评论区点击使用Github登陆报错404<br>解决方法：配置文件_config.yml中gitalk相关配置有问题</p>
+</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo添加评论系统livere</title>
     <url>/2024/03/18/hexo/2024/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Flivere/Hexo%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Flivere/</url>
     <content><![CDATA[<h1 id="注册必力账号-网页"><a href="#注册必力账号-网页" class="headerlink" title="注册必力账号  网页"></a>注册必力账号  <a href="https://livere.com/">网页</a></h1><p>点右上角头像，再点登陆，跳转页面后，点来必力注册</p>
 <p><img src="/images/02%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png" alt="登陆界面"></p>
 <p>第一行填注册邮箱，第二行用户名，第三行密码</p>
-<p><img src="/.com//04%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2.png" alt="注册界面"></p>
+<p><img src="/.com//02%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2.png" alt="注册界面"></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>在注册成功后，跳转到安装界面，选择City版本进行安装。 点击现在安装。</p>
-<p><img src="/.com//05%E5%AE%89%E8%A3%85.png" alt="安装"></p>
+<p><img src="/.com//03%E5%AE%89%E8%A3%85.png" alt="安装"></p>
 <p>输入自己的网址（带https:&#x2F;&#x2F;），网站名（随便填），和网站类型（选择个人网站）即可。</p>
-<p><img src="/.com//06%E7%BD%91%E5%9D%80%E5%A1%AB%E5%86%99.png" alt="网址"></p>
+<p><img src="/.com//04%E7%BD%91%E5%9D%80%E5%A1%AB%E5%86%99.png" alt="网址"></p>
 <h1 id="获取data-uid"><a href="#获取data-uid" class="headerlink" title="获取data-uid"></a>获取data-uid</h1><p>申请成功后，进入到代码管理界面。找到以下内容。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;lv-container&quot;</span> <span class="attr">data-id</span>=<span class="string">&quot;city&quot;</span> <span class="attr">data-uid</span>=<span class="string">&quot;xxxxxxx&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>复制<code>data-uid</code>里面的那一串字段，配置要用。</p>
-<p><img src="/.com//03%E4%BB%A3%E7%A0%81.png" alt="uid"></p>
+<p><img src="/.com//05%E4%BB%A3%E7%A0%81.png" alt="uid"></p>
 <h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><p>打开你当前主题目录下的配置文件（路径：themes&#x2F;next&#x2F;_config.yml），搜索livere，找到如下内容，把之前data-uid里面的字段复制到livere-uid:后面（注意字段和冒号中间要有空格,#号去掉）。</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># LiveRe comments system</span></span><br><span class="line"><span class="comment"># You can get your uid from https://livere.com/insight/myCode (General web site)</span></span><br><span class="line"><span class="attr">livere_uid:</span>  <span class="comment">#&lt;your_uid&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -450,7 +445,7 @@
 <h1 id="最后效果"><a href="#最后效果" class="headerlink" title="最后效果"></a>最后效果</h1><p>运行代码，效果如图</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//01%E8%AF%84%E8%AE%BA%E5%8C%BA.png" alt="评论区"></p>
+<p><img src="/.com//06%E8%AF%84%E8%AE%BA%E5%8C%BA.png" alt="评论区"></p>
 <hr>
 ]]></content>
       <categories>
