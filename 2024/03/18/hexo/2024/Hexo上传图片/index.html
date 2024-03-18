@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="方法1：设置上传图片在source文件夹下新建文件images，将图片复制到images文件夹中引入图片 方法2：在同名文件夹中上传图片 1、为每篇新建的文章生成一个与文章同名的文件夹打开本目录下的配置文件_config.yml，将post_asset_folder这个选项设置为true 1post_asset_floder: true   此时运行hexo new xxx，在&#x2F;source&#x2F;_p">
+    <meta name="description" content="方法1：将图片放置source&#x2F;images中上传图片1、在source文件夹下新建文件images2、将图片复制到images文件夹中3、引入图片注：路径以images开头 1![pic](images&#x2F;pic.png)  方法2：在同名文件夹中上传图片1、为每篇新建的文章生成一个与文章同名的文件夹打开本目录下的配置文件_config.yml，将post_asset_folder这个选">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo上传图片">
 <meta property="og:url" content="http://example.com/2024/03/18/hexo/2024/Hexo%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/index.html">
 <meta property="og:site_name" content="ericasun的Hexo博客">
-<meta property="og:description" content="方法1：设置上传图片在source文件夹下新建文件images，将图片复制到images文件夹中引入图片 方法2：在同名文件夹中上传图片 1、为每篇新建的文章生成一个与文章同名的文件夹打开本目录下的配置文件_config.yml，将post_asset_folder这个选项设置为true 1post_asset_floder: true   此时运行hexo new xxx，在&#x2F;source&#x2F;_p">
+<meta property="og:description" content="方法1：将图片放置source&#x2F;images中上传图片1、在source文件夹下新建文件images2、将图片复制到images文件夹中3、引入图片注：路径以images开头 1![pic](images&#x2F;pic.png)  方法2：在同名文件夹中上传图片1、为每篇新建的文章生成一个与文章同名的文件夹打开本目录下的配置文件_config.yml，将post_asset_folder这个选">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-18T13:36:41.000Z">
-<meta property="article:modified_time" content="2024-03-18T14:15:01.959Z">
+<meta property="article:modified_time" content="2024-03-18T14:18:56.685Z">
 <meta property="article:author" content="ericasun">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E4%B8%BA%E6%AF%8F%E7%AF%87%E6%96%B0%E5%BB%BA%E7%9A%84%E6%96%87%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E4%B8%8E%E6%96%87%E7%AB%A0%E5%90%8C%E5%90%8D%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.</span> <span class="nav-text">1、为每篇新建的文章生成一个与文章同名的文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6hexo-asset-image"><span class="nav-number">2.</span> <span class="nav-text">2、安装插件hexo-asset-image</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E3%80%81%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">3、在文章中添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 创建新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%A4%BA%E8%8C%83"><span class="nav-number">3.2.1.</span> <span class="nav-text">错误示范</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%B3%951%EF%BC%9A%E5%B0%86%E5%9B%BE%E7%89%87%E6%94%BE%E7%BD%AEsource-images%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-number">1.</span> <span class="nav-text">方法1：将图片放置source&#x2F;images中上传图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%9C%A8source%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6images"><span class="nav-number">1.1.</span> <span class="nav-text">1、在source文件夹下新建文件images</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%B0%86%E5%9B%BE%E7%89%87%E5%A4%8D%E5%88%B6%E5%88%B0images%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD"><span class="nav-number">1.2.</span> <span class="nav-text">2、将图片复制到images文件夹中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%BC%95%E5%85%A5%E5%9B%BE%E7%89%87"><span class="nav-number">1.3.</span> <span class="nav-text">3、引入图片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%B3%952%EF%BC%9A%E5%9C%A8%E5%90%8C%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-number">2.</span> <span class="nav-text">方法2：在同名文件夹中上传图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%B8%BA%E6%AF%8F%E7%AF%87%E6%96%B0%E5%BB%BA%E7%9A%84%E6%96%87%E7%AB%A0%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E4%B8%8E%E6%96%87%E7%AB%A0%E5%90%8C%E5%90%8D%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">2.1.</span> <span class="nav-text">1、为每篇新建的文章生成一个与文章同名的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6hexo-asset-image"><span class="nav-number">2.2.</span> <span class="nav-text">2、安装插件hexo-asset-image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="nav-number">2.3.</span> <span class="nav-text">3、在文章中添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 创建新文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2 添加图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%A4%BA%E8%8C%83"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">错误示范</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -221,7 +221,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-18 21:36:41 / Modified: 22:15:01" itemprop="dateCreated datePublished" datetime="2024-03-18T21:36:41+08:00">2024-03-18</time>
+      <time title="Created: 2024-03-18 21:36:41 / Modified: 22:18:56" itemprop="dateCreated datePublished" datetime="2024-03-18T21:36:41+08:00">2024-03-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -249,16 +249,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>方法1：设置上传图片<br>在source文件夹下新建文件images，将图片复制到images文件夹中<br>引入图片</p>
-<p>方法2：在同名文件夹中上传图片</p>
-<h1 id="1、为每篇新建的文章生成一个与文章同名的文件夹"><a href="#1、为每篇新建的文章生成一个与文章同名的文件夹" class="headerlink" title="1、为每篇新建的文章生成一个与文章同名的文件夹"></a>1、为每篇新建的文章生成一个与文章同名的文件夹</h1><p>打开本目录下的配置文件<code>_config.yml</code>，将<code>post_asset_folder</code>这个选项设置为true</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="方法1：将图片放置source-images中上传图片"><a href="#方法1：将图片放置source-images中上传图片" class="headerlink" title="方法1：将图片放置source&#x2F;images中上传图片"></a>方法1：将图片放置source&#x2F;images中上传图片</h1><h2 id="1、在source文件夹下新建文件images"><a href="#1、在source文件夹下新建文件images" class="headerlink" title="1、在source文件夹下新建文件images"></a>1、在source文件夹下新建文件images</h2><h2 id="2、将图片复制到images文件夹中"><a href="#2、将图片复制到images文件夹中" class="headerlink" title="2、将图片复制到images文件夹中"></a>2、将图片复制到images文件夹中</h2><h2 id="3、引入图片"><a href="#3、引入图片" class="headerlink" title="3、引入图片"></a>3、引入图片</h2><p>注：路径以images开头</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">pic</span>](<span class="link">images/pic.png</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="方法2：在同名文件夹中上传图片"><a href="#方法2：在同名文件夹中上传图片" class="headerlink" title="方法2：在同名文件夹中上传图片"></a>方法2：在同名文件夹中上传图片</h1><h2 id="1、为每篇新建的文章生成一个与文章同名的文件夹"><a href="#1、为每篇新建的文章生成一个与文章同名的文件夹" class="headerlink" title="1、为每篇新建的文章生成一个与文章同名的文件夹"></a>1、为每篇新建的文章生成一个与文章同名的文件夹</h2><p>打开本目录下的配置文件<code>_config.yml</code>，将<code>post_asset_folder</code>这个选项设置为true</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_floder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>此时运行<code>hexo new xxx</code>，在<code>/source/_posts</code>文件夹下,除了会生成<code>xxx.md</code>文件，还会生成一个同名文件夹</li>
 <li>上传代码到github时，会将同名文件夹一并上传</li>
 </ul>
-<h1 id="2、安装插件hexo-asset-image"><a href="#2、安装插件hexo-asset-image" class="headerlink" title="2、安装插件hexo-asset-image"></a>2、安装插件<code>hexo-asset-image</code></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<h2 id="2、安装插件hexo-asset-image"><a href="#2、安装插件hexo-asset-image" class="headerlink" title="2、安装插件hexo-asset-image"></a>2、安装插件<code>hexo-asset-image</code></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p><code>hexo-asset-image</code>是一个Hexo的插件，它针对的是那些为每篇博文独立设立资源文件夹（通过<code>post_asset_folder</code>设为true）的用户。</p>
@@ -270,13 +271,13 @@
 <li><p>当你安装并启用<code>hexo-asset-image</code>插件后，可以直接把图片放到文章的资源文件夹中，然后在文章中使用相对路径引用图片，比如<code>![pic](pic.jpg)</code>，Hexo会自动从文章的资源文件夹中寻找pic.jpg</p>
 </li>
 </ul>
-<h1 id="3、在文章中添加图片"><a href="#3、在文章中添加图片" class="headerlink" title="3、在文章中添加图片"></a>3、在文章中添加图片</h1><h2 id="3-1-创建新文章"><a href="#3-1-创建新文章" class="headerlink" title="3.1 创建新文章"></a>3.1 创建新文章</h2><p>运行<code>hexo new xxx</code>生成的博文，此时在<code>/source/_posts</code>文件夹下,除了会生成<code>xxx.md</code>文件，还会生成一个同名文件夹</p>
-<h2 id="3-2-添加图片"><a href="#3-2-添加图片" class="headerlink" title="3.2 添加图片"></a>3.2 添加图片</h2><p>在<code>xxx.md</code>中引入本地图片时，先把图片复制到同名文件夹下，然后在需要引用图片的地方按照markdown的格式输入</p>
+<h2 id="3、在文章中添加图片"><a href="#3、在文章中添加图片" class="headerlink" title="3、在文章中添加图片"></a>3、在文章中添加图片</h2><h3 id="3-1-创建新文章"><a href="#3-1-创建新文章" class="headerlink" title="3.1 创建新文章"></a>3.1 创建新文章</h3><p>运行<code>hexo new xxx</code>生成的博文，此时在<code>/source/_posts</code>文件夹下,除了会生成<code>xxx.md</code>文件，还会生成一个同名文件夹</p>
+<h3 id="3-2-添加图片"><a href="#3-2-添加图片" class="headerlink" title="3.2 添加图片"></a>3.2 添加图片</h3><p>在<code>xxx.md</code>中引入本地图片时，先把图片复制到同名文件夹下，然后在需要引用图片的地方按照markdown的格式输入</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片标题</span>](<span class="link">图片名.jpg</span>)</span><br></pre></td></tr></table></figure>
 
 
 <p>注：文件夹xxx与xxx.md文件在同一目录下，在xxx.md文件中引入图片时，直接输入图片名，不要输入具体路径</p>
-<h3 id="错误示范"><a href="#错误示范" class="headerlink" title="错误示范"></a>错误示范</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片标题</span>](<span class="link">./xxx/图片名.jpg</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="错误示范"><a href="#错误示范" class="headerlink" title="错误示范"></a>错误示范</h4><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片标题</span>](<span class="link">./xxx/图片名.jpg</span>)</span><br></pre></td></tr></table></figure>
 
 <hr>
 
