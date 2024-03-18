@@ -143,6 +143,22 @@
       </tags>
   </entry>
   <entry>
+    <title>两种盒模型（box-sizing）的区别？</title>
+    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
+    <content><![CDATA[<h2 id="&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-content-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;-content-&#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"><a href="#&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-content-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;-content-&#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;" class="headerlink" title="&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; content-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F; content &#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"></a>&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; content-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F; content &#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;</h2><p><code>&#x5B9E;&#x9645;&#x5BBD;&#x5EA6; = width + padding + border </code></p>
+<h2 id="&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-border-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"><a href="#&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-border-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; border-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"></a>&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; border-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;</h2><p><code>&#x5B9E;&#x9645;&#x5BBD;&#x5EA6; = width</code></p>
+<p>&#x76F8;&#x540C;&#x70B9;&#x662F;&#x90FD;&#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x70B9;&#x662F; border-box &#x66F4;&#x597D;&#x7528;&#x3002; </p>
+<hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>front-end</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在Vite2+Vue3渲染Markdown文档(亲测有效）</title>
     <url>/2024/03/14/Font-end/2024/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/</url>
     <content><![CDATA[<h2 id="&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;-Vite-&#x63D2;&#x4EF6;"><a href="#&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;-Vite-&#x63D2;&#x4EF6;" class="headerlink" title="&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49; Vite &#x63D2;&#x4EF6;"></a>&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49; Vite &#x63D2;&#x4EF6;</h2><p>&#x539F;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5230;Vite2&#x4E4B;&#x540E;&#x4F1A;&#x62A5;&#x9519;<code>plugin.configureServer is not a function</code> &#xFF0C;&#x6B64;&#x63D2;&#x4EF6;&#x4E3A;&#x4FEE;&#x6539;&#x540E;&#x7248;&#x672C;&#xFF0C;&#x4EB2;&#x6D4B;&#x6709;&#x6548;</p>
@@ -180,22 +196,6 @@
         <tag>front-end</tag>
         <tag>vite</tag>
         <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两种盒模型（box-sizing）的区别？</title>
-    <url>/2024/03/17/Font-end/2024/%E4%B8%A4%E7%A7%8D%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%88box-sizing%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F/</url>
-    <content><![CDATA[<h2 id="&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-content-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;-content-&#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"><a href="#&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-content-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;-content-&#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;" class="headerlink" title="&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; content-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F; content &#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"></a>&#x7B2C;&#x4E00;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; content-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F; content &#x533A;&#x57DF;&#x5BBD;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;</h2><p><code>&#x5B9E;&#x9645;&#x5BBD;&#x5EA6; = width + padding + border </code></p>
-<h2 id="&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-border-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"><a href="#&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F;-border-box&#xFF0C;&#x5373;-width-&#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; border-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;"></a>&#x7B2C;&#x4E8C;&#x79CD;&#x76D2;&#x6A21;&#x578B;&#x662F; border-box&#xFF0C;&#x5373; width &#x6307;&#x5B9A;&#x7684;&#x662F;&#x5DE6;&#x53F3;&#x8FB9;&#x6846;&#x5916;&#x4FA7;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;</h2><p><code>&#x5B9E;&#x9645;&#x5BBD;&#x5EA6; = width</code></p>
-<p>&#x76F8;&#x540C;&#x70B9;&#x662F;&#x90FD;&#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5BBD;&#x5EA6;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x70B9;&#x662F; border-box &#x66F4;&#x597D;&#x7528;&#x3002; </p>
-<hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>front-end</tag>
       </tags>
   </entry>
   <entry>
