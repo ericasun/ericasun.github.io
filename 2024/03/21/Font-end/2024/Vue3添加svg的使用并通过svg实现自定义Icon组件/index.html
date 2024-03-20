@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D  &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B89">
+    <meta name="description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D   &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B8">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件">
 <meta property="og:url" content="http://example.com/2024/03/21/Font-end/2024/Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="ericasun的Hexo博客">
-<meta property="og:description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D  &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B89">
+<meta property="og:description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D   &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B8">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-20T17:17:10.000Z">
-<meta property="article:modified_time" content="2024-03-20T17:17:57.008Z">
+<meta property="article:modified_time" content="2024-03-20T17:19:29.394Z">
 <meta property="article:author" content="ericasun">
 <meta property="article:tag" content="front-end">
 <meta property="article:tag" content="vite">
@@ -223,7 +223,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-03-21 01:17:10 / Modified: 01:17:57" itemprop="dateCreated datePublished" datetime="2024-03-21T01:17:10+08:00">2024-03-21</time>
+      <time title="Created: 2024-03-21 01:17:10 / Modified: 01:19:29" itemprop="dateCreated datePublished" datetime="2024-03-21T01:17:10+08:00">2024-03-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -252,13 +252,16 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"><a href="#1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons" class="headerlink" title="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"></a>1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vite-plugin-svg-icons -D </span><br></pre></td></tr></table></figure>
+
 <p>&#x6216;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vite-plugin-svg-icons -D</span><br></pre></td></tr></table></figure>
 
 <h2 id="2&#x3001;&#x5B89;&#x88C5;glob"><a href="#2&#x3001;&#x5B89;&#x88C5;glob" class="headerlink" title="2&#x3001;&#x5B89;&#x88C5;glob"></a>2&#x3001;&#x5B89;&#x88C5;glob</h2><p>&#x4E0D;&#x5B89;&#x88C5;&#x4F1A;&#x63D0;&#x793A;<code>Error: Cannot find module &apos;fast-glob&apos;</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add fast-glob -D</span><br></pre></td></tr></table></figure>
+
 <p>&#x6216;</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install fast-glob -D</span><br></pre></td></tr></table></figure>
+
 <h2 id="3&#x3001;&#x914D;&#x7F6E;vite-config-ts"><a href="#3&#x3001;&#x914D;&#x7F6E;vite-config-ts" class="headerlink" title="3&#x3001;&#x914D;&#x7F6E;vite.config.ts"></a>3&#x3001;&#x914D;&#x7F6E;vite.config.ts</h2><h3 id="3-1-iconDirs&#x6240;&#x6709;&#x7684;-svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;"><a href="#3-1-iconDirs&#x6240;&#x6709;&#x7684;-svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;" class="headerlink" title="3.1 iconDirs&#x6240;&#x6709;&#x7684; svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;"></a>3.1 iconDirs&#x6240;&#x6709;&#x7684; svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;</h3><h3 id="3-2-symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;"><a href="#3-2-symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;" class="headerlink" title="3.2 symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;"></a>3.2 symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;</h3><p>&#x5BFC;&#x51FA;&#x540D;&#x4E3A;<code>createSvgIconsPlugin</code>&#x5E76;&#x52A0;&#x5927;&#x62EC;&#x53F7;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x63D0;&#x793A;<code>TypeError: (0 , import_vite_plugin_svg_icons.default) is not a function</code></p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { defineConfig } <span class="keyword">from</span> <span class="string">&apos;vite&apos;</span></span><br><span class="line"><span class="keyword">import</span> { resolve } <span class="keyword">from</span> <span class="string">&apos;path&apos;</span></span><br><span class="line"><span class="keyword">import</span> {createSvgIconsPlugin} <span class="keyword">from</span> <span class="string">&apos;vite-plugin-svg-icons&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>({</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">createSvgIconsPlugin</span>({</span><br><span class="line">      <span class="comment">// &#x6307;&#x5B9A;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x56FE;&#x6807;&#x6587;&#x4EF6;&#x5939;</span></span><br><span class="line">      <span class="attr">iconDirs</span>: [path.<span class="title function_">resolve</span>(process.<span class="title function_">cwd</span>(), <span class="string">&apos;src/svg&apos;</span>)],</span><br><span class="line">      <span class="comment">// &#x6267;&#x884C;icon name&#x7684;&#x683C;&#x5F0F;</span></span><br><span class="line">      <span class="attr">symbolId</span>: <span class="string">&apos;icon-[name]&apos;</span>,</span><br><span class="line">    })</span><br><span class="line">  ]</span><br><span class="line">});</span><br></pre></td></tr></table></figure>
 
