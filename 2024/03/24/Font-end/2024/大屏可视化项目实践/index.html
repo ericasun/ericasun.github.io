@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; rem &#x548C; px &#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;&#x8BBE;&amp;#x8BA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大屏可视化项目实践">
+<meta property="og:url" content="http://example.com/2024/03/24/Font-end/2024/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/index.html">
+<meta property="og:site_name" content="ericasun的Hexo博客">
+<meta property="og:description" content="&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; rem &#x548C; px &#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;&#x8BBE;&amp;#x8BA">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/4a57e2e96f9447c9bf1a398e85ac8ab9.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/be1cbfc0d8184b8dba120a3994c982fa.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ca691c87672343c1958769f81de294da.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/71dce822970b4feb8b359de648e0094d.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f897800e2ca441b1bcd3f7110915eda5.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2fc862fe2c8c40868363e50f3bd68f25.png">
+<meta property="article:published_time" content="2024-03-24T13:44:43.000Z">
+<meta property="article:modified_time" content="2024-03-24T13:46:28.452Z">
+<meta property="article:author" content="ericasun">
+<meta property="article:tag" content="front-end">
+<meta property="article:tag" content="echarts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/4a57e2e96f9447c9bf1a398e85ac8ab9.png">
+
+
+<link rel="canonical" href="http://example.com/2024/03/24/Font-end/2024/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/03/24/Font-end/2024/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/","path":"2024/03/24/Font-end/2024/大屏可视化项目实践/","title":"大屏可视化项目实践"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>大屏可视化项目实践 | ericasun的Hexo博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ericasun的Hexo博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-rem-%E5%92%8C-px-%E5%87%BD%E6%95%B0%E9%80%82%E9%85%8D%E5%90%84%E7%A7%8D%E5%B1%8F%E5%B9%95"><span class="nav-number">1.</span> <span class="nav-text">一、如何使用 rem 和 px 函数适配各种屏幕</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%A6%82%E4%BD%95%E9%80%82%E9%85%8D%E5%B1%8F%E5%B9%95"><span class="nav-number">1.1.</span> <span class="nav-text">1、如何适配屏幕</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E7%A8%BF"><span class="nav-number">1.1.1.</span> <span class="nav-text">设计稿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%B1%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">大屏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%8F%E5%B9%95%E9%AB%98"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">屏幕高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%8F%E5%B9%95%E5%AE%BD"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">屏幕宽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">1.1.3.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87%EF%BC%88%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%89%E5%AE%BD%E9%AB%98"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.1  获取设备（浏览器）宽高</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%88%A4%E6%96%AD%E8%AE%BE%E5%A4%87%E5%AE%BD%E9%AB%98%E6%98%AF%E5%A4%A7%E4%BA%8E16%E6%AF%949%E8%BF%98%E6%98%AF%E5%B0%8F%E4%BA%8E16%E6%AF%949"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.2  判断设备宽高是大于16比9还是小于16比9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E8%AE%BE%E7%BD%AE1rem-100px%EF%BC%8C%E5%B9%B6%E5%86%99%E5%85%A5%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.3 设置1rem&#x3D;100px，并写入页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81-%E7%94%A8rem%E4%BB%A3%E6%9B%BF%E5%83%8F%E7%B4%A0"><span class="nav-number">1.2.</span> <span class="nav-text">2、 用rem代替像素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%AE%9A%E4%B9%89px%E7%94%A8%E6%9D%A5%E8%BD%AC%E6%8D%A2%E6%88%90rem"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 定义px用来转换成rem</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-echarts"><span class="nav-number">2.</span> <span class="nav-text">二、如何使用 echarts</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81-%E5%BC%95%E5%85%A5echarts"><span class="nav-number">2.1.</span> <span class="nav-text">1、 引入echarts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81-%E5%88%9D%E5%A7%8B%E5%8C%96echarts"><span class="nav-number">2.2.</span> <span class="nav-text">2、 初始化echarts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AEecharts"><span class="nav-number">2.3.</span> <span class="nav-text">3、设置echarts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1 基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E8%AE%BE%E7%BD%AEx%E8%BD%B4%E3%80%81y%E8%BD%B4%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.3.2.</span> <span class="nav-text">3.2 设置x轴、y轴样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E8%AE%BE%E7%BD%AE%E7%A9%BA%E7%99%BD%E5%8C%BA%E5%9F%9F"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.3 设置空白区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E4%BF%AE%E6%94%B9x%E8%BD%B4%E6%A0%87%E7%AD%BE%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.3.4.</span> <span class="nav-text">3.4 修改x轴标签样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E9%9A%90%E8%97%8Fx%E8%BD%B4%E5%9B%BE%E5%BD%A2%E6%96%87%E5%AD%97%E8%AF%B4%E6%98%8E"><span class="nav-number">2.3.5.</span> <span class="nav-text">3.5 隐藏x轴图形文字说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-%E6%9F%B1%E5%BD%A2%E5%9B%BE%E5%8A%A0%E6%B8%90%E5%8F%98"><span class="nav-number">2.3.6.</span> <span class="nav-text">3.6 柱形图加渐变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-%E5%8E%BB%E6%8E%89X%E8%BD%B4%E4%B8%8A%E7%9A%84%E5%B0%8F%E7%AB%96%E6%9D%A0"><span class="nav-number">2.3.7.</span> <span class="nav-text">3.7 去掉X轴上的小竖杠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-%E5%8E%BB%E6%8E%89X%E8%BD%B4%E4%B8%8A%E7%9A%84%E7%99%BD%E7%BA%BF"><span class="nav-number">2.3.8.</span> <span class="nav-text">3.8 去掉X轴上的白线</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ericasun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/24/Font-end/2024/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="大屏可视化项目实践 | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          大屏可视化项目实践
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-03-24 21:44:43 / Modified: 21:46:28" itemprop="dateCreated datePublished" datetime="2024-03-24T21:44:43+08:00">2024-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2024/03/24/Font-end/2024/%E5%A4%A7%E5%B1%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5/" class="post-meta-item leancloud_visitors" data-flag-title="大屏可视化项目实践" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-rem-&#x548C;-px-&#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;"><a href="#&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-rem-&#x548C;-px-&#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;" class="headerlink" title="&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; rem &#x548C; px &#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;"></a>&#x4E00;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; rem &#x548C; px &#x51FD;&#x6570;&#x9002;&#x914D;&#x5404;&#x79CD;&#x5C4F;&#x5E55;</h1><h2 id="1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;"><a href="#1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;" class="headerlink" title="1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;"></a>1&#x3001;&#x5982;&#x4F55;&#x9002;&#x914D;&#x5C4F;&#x5E55;</h2><h3 id="&#x8BBE;&#x8BA1;&#x7A3F;"><a href="#&#x8BBE;&#x8BA1;&#x7A3F;" class="headerlink" title="&#x8BBE;&#x8BA1;&#x7A3F;"></a>&#x8BBE;&#x8BA1;&#x7A3F;</h3><div align="center">
+<img src="https://img-blog.csdnimg.cn/4a57e2e96f9447c9bf1a398e85ac8ab9.png" width="35%">
+</div>
+
+<h3 id="&#x5927;&#x5C4F;"><a href="#&#x5927;&#x5C4F;" class="headerlink" title="&#x5927;&#x5C4F;"></a>&#x5927;&#x5C4F;</h3><h4 id="&#x5C4F;&#x5E55;&#x9AD8;"><a href="#&#x5C4F;&#x5E55;&#x9AD8;" class="headerlink" title="&#x5C4F;&#x5E55;&#x9AD8;"></a>&#x5C4F;&#x5E55;&#x9AD8;</h4><div align="center">
+<img src="https://img-blog.csdnimg.cn/be1cbfc0d8184b8dba120a3994c982fa.png" width="35%">
+</div>
+
+<h4 id="&#x5C4F;&#x5E55;&#x5BBD;"><a href="#&#x5C4F;&#x5E55;&#x5BBD;" class="headerlink" title="&#x5C4F;&#x5E55;&#x5BBD;"></a>&#x5C4F;&#x5E55;&#x5BBD;</h4><div align="center">
+<img src="https://img-blog.csdnimg.cn/ca691c87672343c1958769f81de294da.png" width="35%">
+</div>
+
+<p>&#x7ED3;&#x8BBA;&#xFF1A;&#x5C4F;&#x5E55;&#x5BBD;&#x5C31;&#x5DE6;&#x53F3;&#x5C45;&#x4E2D;&#xFF0C;&#x5C4F;&#x5E55;&#x9AD8;&#x5C31;&#x4E0A;&#x4E0B;&#x5C45;&#x4E2D;</p>
+<h3 id="&#x7B97;&#x6CD5;"><a href="#&#x7B97;&#x6CD5;" class="headerlink" title="&#x7B97;&#x6CD5;"></a>&#x7B97;&#x6CD5;</h3><div align="center">
+<img src="https://img-blog.csdnimg.cn/71dce822970b4feb8b359de648e0094d.png" width="35%">
+</div>
+
+<p>Wp&#x4E3A;&#x9875;&#x9762;&#x6709;&#x6548;&#x5BBD;&#x5EA6;&#xFF0C;Hp&#x4E3A;&#x9875;&#x9762;&#x6709;&#x6548;&#x9AD8;&#x5EA6;<br>&#x9875;&#x9762;&#x5DE6;&#x53F3;&#x5C45;&#x4E2D;&#xFF0C;&#x4E0A;&#x4E0B;&#x5C45;&#x4E2D;&#xFF0C;&#x56DB;&#x5468;&#x7559;&#x767D;&#x5373;&#x53EF;<br>&#x7136;&#x540E;&#x5728;head&#x91CC;&#x7528;JS&#x8BBE;&#x7F6E;1rem = Wp /100</p>
+<h3 id="1-1-&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5BBD;&#x9AD8;"><a href="#1-1-&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5BBD;&#x9AD8;" class="headerlink" title="1.1  &#x83B7;&#x53D6;&#x8BBE;&#x5907;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5BBD;&#x9AD8;"></a>1.1  &#x83B7;&#x53D6;&#x8BBE;&#x5907;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x5BBD;&#x9AD8;</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> clientWidth = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientWidth</span> </span><br><span class="line"><span class="keyword">const</span> clientHeight = <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="property">clientHeight</span> </span><br></pre></td></tr></table></figure>
+<h3 id="1-2-&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5BBD;&#x9AD8;&#x662F;&#x5927;&#x4E8E;16&#x6BD4;9&#x8FD8;&#x662F;&#x5C0F;&#x4E8E;16&#x6BD4;9"><a href="#1-2-&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5BBD;&#x9AD8;&#x662F;&#x5927;&#x4E8E;16&#x6BD4;9&#x8FD8;&#x662F;&#x5C0F;&#x4E8E;16&#x6BD4;9" class="headerlink" title="1.2  &#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5BBD;&#x9AD8;&#x662F;&#x5927;&#x4E8E;16&#x6BD4;9&#x8FD8;&#x662F;&#x5C0F;&#x4E8E;16&#x6BD4;9"></a>1.2  &#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5BBD;&#x9AD8;&#x662F;&#x5927;&#x4E8E;16&#x6BD4;9&#x8FD8;&#x662F;&#x5C0F;&#x4E8E;16&#x6BD4;9</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pageWidth = clientWidth / clientHeight &gt; <span class="number">16</span> / <span class="number">9</span> ? clientHeight * (<span class="number">16</span> / <span class="number">9</span>) : clientWidth; </span><br><span class="line"><span class="keyword">const</span> pageHeight = pageWidth / (<span class="number">16</span>/<span class="number">9</span>) </span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-&#x8BBE;&#x7F6E;1rem-100px&#xFF0C;&#x5E76;&#x5199;&#x5165;&#x9875;&#x9762;"><a href="#1-3-&#x8BBE;&#x7F6E;1rem-100px&#xFF0C;&#x5E76;&#x5199;&#x5165;&#x9875;&#x9762;" class="headerlink" title="1.3 &#x8BBE;&#x7F6E;1rem=100px&#xFF0C;&#x5E76;&#x5199;&#x5165;&#x9875;&#x9762;"></a>1.3 &#x8BBE;&#x7F6E;1rem=100px&#xFF0C;&#x5E76;&#x5199;&#x5165;&#x9875;&#x9762;</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> string = <span class="string">`&lt;style&gt;html{ </span></span><br><span class="line"><span class="string">	font-size: <span class="subst">${pageWidth / <span class="number">100</span>}</span>px </span></span><br><span class="line"><span class="string">}&lt;/style&gt;`</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(string)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2&#x3001;-&#x7528;rem&#x4EE3;&#x66FF;&#x50CF;&#x7D20;"><a href="#2&#x3001;-&#x7528;rem&#x4EE3;&#x66FF;&#x50CF;&#x7D20;" class="headerlink" title="2&#x3001; &#x7528;rem&#x4EE3;&#x66FF;&#x50CF;&#x7D20;"></a>2&#x3001; &#x7528;rem&#x4EE3;&#x66FF;&#x50CF;&#x7D20;</h2><p>&#x50CF;&#x7D20;&#x4E0D;&#x80FD;&#x7528;&#x65F6;&#x7528;rem</p>
+<div align="center">
+<img src="https://img-blog.csdnimg.cn/f897800e2ca441b1bcd3f7110915eda5.png" width="35%">
+</div>
+
+<div align="center">
+<img src="https://img-blog.csdnimg.cn/2fc862fe2c8c40868363e50f3bd68f25.png" width="35%">
+</div>
+
+<p>&#x5047;&#x8BBE;&#x67D0;div&#x5728;&#x8BBE;&#x8BA1;&#x7A3F;&#x4E2D;&#x957F;100px&#xFF0C;&#x8BBE;&#x8BA1;&#x7A3F;&#x5BBD;&#x5EA6;1920px<br>&#x90A3;&#x4E48;&#x8BE5;div&#x5728;&#x9875;&#x9762;&#x4E2D;&#x957F;&#x4E3A;100/1920 * 100 rem</p>
+<h3 id="2-1-&#x5B9A;&#x4E49;px&#x7528;&#x6765;&#x8F6C;&#x6362;&#x6210;rem"><a href="#2-1-&#x5B9A;&#x4E49;px&#x7528;&#x6765;&#x8F6C;&#x6362;&#x6210;rem" class="headerlink" title="2.1 &#x5B9A;&#x4E49;px&#x7528;&#x6765;&#x8F6C;&#x6362;&#x6210;rem"></a>2.1 &#x5B9A;&#x4E49;px&#x7528;&#x6765;&#x8F6C;&#x6362;&#x6210;rem</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">function</span> <span class="title function_">px</span>(<span class="params">$n</span>){</span><br><span class="line">  @<span class="keyword">return</span> $n /<span class="number">2420</span> * 100rem;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<br>
+
+
+<h1 id="&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-echarts"><a href="#&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-echarts" class="headerlink" title="&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; echarts"></a>&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; echarts</h1><h2 id="1&#x3001;-&#x5F15;&#x5165;echarts"><a href="#1&#x3001;-&#x5F15;&#x5165;echarts" class="headerlink" title="1&#x3001; &#x5F15;&#x5165;echarts"></a>1&#x3001; &#x5F15;&#x5165;echarts</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> echarts <span class="keyword">from</span> <span class="string">&apos;echarts&apos;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2&#x3001;-&#x521D;&#x59CB;&#x5316;echarts"><a href="#2&#x3001;-&#x521D;&#x59CB;&#x5316;echarts" class="headerlink" title="2&#x3001; &#x521D;&#x59CB;&#x5316;echarts"></a>2&#x3001; &#x521D;&#x59CB;&#x5316;echarts</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> divRef = <span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line">	<span class="title function_">useEffect</span>(<span class="function">()=&gt;</span>{</span><br><span class="line">		<span class="keyword">var</span> myChart = echarts.<span class="title function_">init</span>(divRef.<span class="property">current</span>);</span><br><span class="line">     	 &#x6B64;&#x5904;&#x6709;&#x7701;&#x7565;</span><br><span class="line">})</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> (</span><br><span class="line">	&#x6B64;&#x5904;&#x6709;&#x7701;&#x7565;</span><br><span class="line">  	&lt;div ref={divRef} className=<span class="string">&quot;chart&quot;</span>&gt; &lt;/div&gt;</span><br><span class="line">	&#x6B64;&#x5904;&#x6709;&#x7701;&#x7565;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3&#x3001;&#x8BBE;&#x7F6E;echarts"><a href="#3&#x3001;&#x8BBE;&#x7F6E;echarts" class="headerlink" title="3&#x3001;&#x8BBE;&#x7F6E;echarts"></a>3&#x3001;&#x8BBE;&#x7F6E;echarts</h2><h3 id="3-1-&#x57FA;&#x7840;&#x8BBE;&#x7F6E;"><a href="#3-1-&#x57FA;&#x7840;&#x8BBE;&#x7F6E;" class="headerlink" title="3.1 &#x57FA;&#x7840;&#x8BBE;&#x7F6E;"></a>3.1 &#x57FA;&#x7840;&#x8BBE;&#x7F6E;</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">myChart.<span class="title function_">setOption</span>({</span><br><span class="line">    <span class="attr">textStyle</span>:{</span><br><span class="line">      <span class="attr">fontSize</span>: <span class="title function_">px</span>(<span class="number">12</span>),</span><br><span class="line">      <span class="attr">color</span>: <span class="string">&apos;#79839E&apos;</span></span><br><span class="line">    },</span><br><span class="line">    <span class="attr">title</span>:{ <span class="attr">show</span>: <span class="literal">false</span>},</span><br><span class="line">    <span class="attr">legend</span>: {<span class="attr">show</span>: <span class="literal">false</span>},</span><br><span class="line">    &#x6B64;&#x5904;&#x6709;&#x7701;&#x7565;</span><br><span class="line">    <span class="attr">series</span>:[{</span><br><span class="line">      <span class="attr">name</span>:<span class="string">&apos;&#x9500;&#x91CF;&apos;</span>,</span><br><span class="line">      <span class="attr">type</span>:<span class="string">&apos;bar&apos;</span>,</span><br><span class="line">      <span class="attr">data</span>:[<span class="number">5</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">20</span>]</span><br><span class="line">    }]</span><br><span class="line">  })</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-&#x8BBE;&#x7F6E;x&#x8F74;&#x3001;y&#x8F74;&#x6837;&#x5F0F;"><a href="#3-2-&#x8BBE;&#x7F6E;x&#x8F74;&#x3001;y&#x8F74;&#x6837;&#x5F0F;" class="headerlink" title="3.2 &#x8BBE;&#x7F6E;x&#x8F74;&#x3001;y&#x8F74;&#x6837;&#x5F0F;"></a>3.2 &#x8BBE;&#x7F6E;x&#x8F74;&#x3001;y&#x8F74;&#x6837;&#x5F0F;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// x&#x8F74;&#x6837;&#x5F0F; </span><br><span class="line">xAxis:{</span><br><span class="line">     axisLabel:{</span><br><span class="line">       fontSize: <span class="built_in">px</span>(<span class="number">12</span>)</span><br><span class="line">     }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line">//y&#x8F74;&#x6837;&#x5F0F;</span><br><span class="line"> yAxis: {</span><br><span class="line">     axisLabel:{</span><br><span class="line">       fontSize: <span class="built_in">px</span>(<span class="number">12</span>)</span><br><span class="line">     }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-&#x8BBE;&#x7F6E;&#x7A7A;&#x767D;&#x533A;&#x57DF;"><a href="#3-3-&#x8BBE;&#x7F6E;&#x7A7A;&#x767D;&#x533A;&#x57DF;" class="headerlink" title="3.3 &#x8BBE;&#x7F6E;&#x7A7A;&#x767D;&#x533A;&#x57DF;"></a>3.3 &#x8BBE;&#x7F6E;&#x7A7A;&#x767D;&#x533A;&#x57DF;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">grid</span>:{</span><br><span class="line">  x: <span class="built_in">px</span>(<span class="number">40</span>),</span><br><span class="line">  y: <span class="built_in">px</span>(<span class="number">40</span>),</span><br><span class="line">  x2: <span class="built_in">px</span>(<span class="number">40</span>),</span><br><span class="line">  y2: <span class="built_in">px</span>(<span class="number">40</span>),</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-&#x4FEE;&#x6539;x&#x8F74;&#x6807;&#x7B7E;&#x6837;&#x5F0F;"><a href="#3-4-&#x4FEE;&#x6539;x&#x8F74;&#x6807;&#x7B7E;&#x6837;&#x5F0F;" class="headerlink" title="3.4 &#x4FEE;&#x6539;x&#x8F74;&#x6807;&#x7B7E;&#x6837;&#x5F0F;"></a>3.4 &#x4FEE;&#x6539;x&#x8F74;&#x6807;&#x7B7E;&#x6837;&#x5F0F;</h3><p>&#x6BCF;&#x884C;&#x4E24;&#x4E2A;&#x5B57;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">xAxis</span>: {</span><br><span class="line">  <span class="attr">axisLabel</span>: {</span><br><span class="line">      <span class="title function_">formatter</span>(<span class="params">val</span>) {</span><br><span class="line">        <span class="keyword">if</span> (val.<span class="property">length</span> &gt; <span class="number">2</span>) {</span><br><span class="line">          <span class="keyword">const</span> array = val.<span class="title function_">split</span>(<span class="string">&apos;&apos;</span>);</span><br><span class="line">          array.<span class="title function_">splice</span>(<span class="number">2</span>, <span class="number">0</span>, <span class="string">&apos;\n&apos;</span>);</span><br><span class="line">          <span class="keyword">return</span> array.<span class="title function_">join</span>(<span class="string">&apos;&apos;</span>);</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">          <span class="keyword">return</span> val;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<p>&#x6CE8;&#xFF1A;&#x8FD9;&#x6837;&#x5199;&#x4F1A;&#x62A5;&#x9519;val.splice(2,0,&#x2019;\n&#x2019;);<br>&#x56E0;&#x4E3A;val&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x6CA1;&#x6709;splice&#xFF0C;&#x8981;&#x5148;&#x8F6C;&#x6362;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x518D;&#x8FDE;&#x5728;&#x4E00;&#x8D77;</p>
+<h3 id="3-5-&#x9690;&#x85CF;x&#x8F74;&#x56FE;&#x5F62;&#x6587;&#x5B57;&#x8BF4;&#x660E;"><a href="#3-5-&#x9690;&#x85CF;x&#x8F74;&#x56FE;&#x5F62;&#x6587;&#x5B57;&#x8BF4;&#x660E;" class="headerlink" title="3.5 &#x9690;&#x85CF;x&#x8F74;&#x56FE;&#x5F62;&#x6587;&#x5B57;&#x8BF4;&#x660E;"></a>3.5 &#x9690;&#x85CF;x&#x8F74;&#x56FE;&#x5F62;&#x6587;&#x5B57;&#x8BF4;&#x660E;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xAxis: {</span><br><span class="line">	axisTick: {show: false}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-6-&#x67F1;&#x5F62;&#x56FE;&#x52A0;&#x6E10;&#x53D8;"><a href="#3-6-&#x67F1;&#x5F62;&#x56FE;&#x52A0;&#x6E10;&#x53D8;" class="headerlink" title="3.6 &#x67F1;&#x5F62;&#x56FE;&#x52A0;&#x6E10;&#x53D8;"></a>3.6 &#x67F1;&#x5F62;&#x56FE;&#x52A0;&#x6E10;&#x53D8;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">itemStyle:{</span><br><span class="line">    <span class="attribute">normal</span>:{</span><br><span class="line">      <span class="attribute">color</span>: new echarts.graphic.<span class="built_in">LinearGradient</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,[{</span><br><span class="line">        offset: <span class="number">0</span>,</span><br><span class="line">        color: <span class="string">&apos;#2034f9&apos;</span></span><br><span class="line">      },{</span><br><span class="line">      	offset: <span class="number">1</span>,</span><br><span class="line">        color: <span class="string">&apos;#04a1ff&apos;</span></span><br><span class="line">      }]),</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-7-&#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x5C0F;&#x7AD6;&#x6760;"><a href="#3-7-&#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x5C0F;&#x7AD6;&#x6760;" class="headerlink" title="3.7 &#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x5C0F;&#x7AD6;&#x6760;"></a>3.7 &#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x5C0F;&#x7AD6;&#x6760;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xAxis: {</span><br><span class="line">  axisTick: {show: false},</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h3 id="3-8-&#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x767D;&#x7EBF;"><a href="#3-8-&#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x767D;&#x7EBF;" class="headerlink" title="3.8 &#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x767D;&#x7EBF;"></a>3.8 &#x53BB;&#x6389;X&#x8F74;&#x4E0A;&#x7684;&#x767D;&#x7EBF;</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xAxis: {</span><br><span class="line">  axisLine: {show: false},</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/front-end/" rel="tag"># front-end</a>
+              <a href="/tags/echarts/" rel="tag"># echarts</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/23/Font-end/2024/Vue%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F/" rel="prev" title="Vue 数据响应式">
+                  <i class="fa fa-angle-left"></i> Vue 数据响应式
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ericasun</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"vCQiqt86gvssN3xuvsFkfPgx-gzGzoHsz","app_key":"oFcH1hpAL31rf7kOanLf6Xz8","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ericasun","repo":"ericasun.github.io","client_id":"74c3c3e6de6d77fe83a6","client_secret":"11b436aa1803400da693d80bee77f961caf0de47","admin_user":"ericasun","distraction_free_mode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3d7a5a1a5b26d95fd03edd572a2b5a03"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
