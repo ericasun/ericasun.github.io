@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D   &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件">
+<meta property="og:url" content="http://example.com/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/index.html">
+<meta property="og:site_name" content="ericasun的Hexo博客">
+<meta property="og:description" content="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons1yarn add vite-plugin-svg-icons -D   &#x6216; 1npm i vite-plugin-svg-icons -D  2&#x3001;&#x5B89;&#x88C5;glob&#x4E0D;&amp;#x5B8">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-20T17:17:10.000Z">
+<meta property="article:modified_time" content="2024-03-21T03:18:42.940Z">
+<meta property="article:author" content="ericasun">
+<meta property="article:tag" content="front-end">
+<meta property="article:tag" content="vite">
+<meta property="article:tag" content="vue">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/","path":"2024/03/21/Font-end/vue/Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件/","title":"Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件 | ericasun的Hexo博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ericasun的Hexo博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E6%8F%92%E4%BB%B6vite-plugin-svg-icons"><span class="nav-number">1.</span> <span class="nav-text">1、安装依赖插件vite-plugin-svg-icons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85glob"><span class="nav-number">2.</span> <span class="nav-text">2、安装glob</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AEvite-config-ts"><span class="nav-number">3.</span> <span class="nav-text">3、配置vite.config.ts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-iconDirs%E6%89%80%E6%9C%89%E7%9A%84-svg%E7%9A%84%E6%96%87%E4%BB%B6%E9%83%BD%E5%AD%98%E6%94%BE%E5%9C%A8%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 iconDirs所有的 svg的文件都存放在该文件夹下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-symbolId%E6%8C%87%E5%AE%9Ause%E6%A0%87%E7%AD%BE%E4%B8%ADhref%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 symbolId指定use标签中href格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%9C%A8main-ts%E6%B3%A8%E5%86%8C%E8%84%9A%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">3、在main.ts注册脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0Icon%E7%BB%84%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">4、通过svg实现Icon组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%BC%95%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">5、引用自定义Icon组件</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ericasun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件 | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-03-21 01:17:10 / Modified: 11:18:42" itemprop="dateCreated datePublished" datetime="2024-03-21T01:17:10+08:00">2024-03-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"><a href="#1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons" class="headerlink" title="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"></a>1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vite-plugin-svg-icons -D </span><br></pre></td></tr></table></figure>
+
+<p>&#x6216;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vite-plugin-svg-icons -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="2&#x3001;&#x5B89;&#x88C5;glob"><a href="#2&#x3001;&#x5B89;&#x88C5;glob" class="headerlink" title="2&#x3001;&#x5B89;&#x88C5;glob"></a>2&#x3001;&#x5B89;&#x88C5;glob</h2><p>&#x4E0D;&#x5B89;&#x88C5;&#x4F1A;&#x63D0;&#x793A;<code>Error: Cannot find module &apos;fast-glob&apos;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add fast-glob -D</span><br></pre></td></tr></table></figure>
+
+<p>&#x6216;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install fast-glob -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="3&#x3001;&#x914D;&#x7F6E;vite-config-ts"><a href="#3&#x3001;&#x914D;&#x7F6E;vite-config-ts" class="headerlink" title="3&#x3001;&#x914D;&#x7F6E;vite.config.ts"></a>3&#x3001;&#x914D;&#x7F6E;vite.config.ts</h2><h3 id="3-1-iconDirs&#x6240;&#x6709;&#x7684;-svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;"><a href="#3-1-iconDirs&#x6240;&#x6709;&#x7684;-svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;" class="headerlink" title="3.1 iconDirs&#x6240;&#x6709;&#x7684; svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;"></a>3.1 iconDirs&#x6240;&#x6709;&#x7684; svg&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E0B;</h3><h3 id="3-2-symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;"><a href="#3-2-symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;" class="headerlink" title="3.2 symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;"></a>3.2 symbolId&#x6307;&#x5B9A;use&#x6807;&#x7B7E;&#x4E2D;href&#x683C;&#x5F0F;</h3><p>&#x5BFC;&#x51FA;&#x540D;&#x4E3A;<code>createSvgIconsPlugin</code>&#x5E76;&#x52A0;&#x5927;&#x62EC;&#x53F7;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x63D0;&#x793A;<code>TypeError: (0 , import_vite_plugin_svg_icons.default) is not a function</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { defineConfig } <span class="keyword">from</span> <span class="string">&apos;vite&apos;</span></span><br><span class="line"><span class="keyword">import</span> { resolve } <span class="keyword">from</span> <span class="string">&apos;path&apos;</span></span><br><span class="line"><span class="keyword">import</span> {createSvgIconsPlugin} <span class="keyword">from</span> <span class="string">&apos;vite-plugin-svg-icons&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>({</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="title function_">createSvgIconsPlugin</span>({</span><br><span class="line">      <span class="comment">// &#x6307;&#x5B9A;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x56FE;&#x6807;&#x6587;&#x4EF6;&#x5939;</span></span><br><span class="line">      <span class="attr">iconDirs</span>: [path.<span class="title function_">resolve</span>(process.<span class="title function_">cwd</span>(), <span class="string">&apos;src/svg&apos;</span>)],</span><br><span class="line">      <span class="comment">// &#x6267;&#x884C;icon name&#x7684;&#x683C;&#x5F0F;</span></span><br><span class="line">      <span class="attr">symbolId</span>: <span class="string">&apos;icon-[name]&apos;</span>,</span><br><span class="line">    })</span><br><span class="line">  ]</span><br><span class="line">});</span><br></pre></td></tr></table></figure>
+
+<h2 id="3&#x3001;&#x5728;main-ts&#x6CE8;&#x518C;&#x811A;&#x672C;"><a href="#3&#x3001;&#x5728;main-ts&#x6CE8;&#x518C;&#x811A;&#x672C;" class="headerlink" title="3&#x3001;&#x5728;main.ts&#x6CE8;&#x518C;&#x811A;&#x672C;"></a>3&#x3001;&#x5728;main.ts&#x6CE8;&#x518C;&#x811A;&#x672C;</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&apos;virtual:svg-icons-register&apos;</span>; <span class="comment">// &#x5F15;&#x5165;svg icon&#x6CE8;&#x518C;&#x811A;&#x672C;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4&#x3001;&#x901A;&#x8FC7;svg&#x5B9E;&#x73B0;Icon&#x7EC4;&#x4EF6;"><a href="#4&#x3001;&#x901A;&#x8FC7;svg&#x5B9E;&#x73B0;Icon&#x7EC4;&#x4EF6;" class="headerlink" title="4&#x3001;&#x901A;&#x8FC7;svg&#x5B9E;&#x73B0;Icon&#x7EC4;&#x4EF6;"></a>4&#x3001;&#x901A;&#x8FC7;svg&#x5B9E;&#x73B0;Icon&#x7EC4;&#x4EF6;</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">:class</span>=<span class="string">&quot;svgClass&quot;</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">use</span> <span class="attr">:xlink:href</span>=<span class="string">&quot;iconName&quot;</span> <span class="attr">:fill</span>=<span class="string">&quot;color&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> { computed, defineComponent } <span class="keyword">from</span> <span class="string">&apos;vue&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineComponent</span>({</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">props</span>: {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">name</span>: {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">type</span>: <span class="title class_">String</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">default</span>: <span class="string">&apos;&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    },</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="attr">color</span>: {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">type</span>: <span class="title class_">String</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">default</span>: <span class="string">&apos;&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    },</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  },</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title function_">setup</span>(<span class="params">props</span>) {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">return</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">iconName</span>: <span class="title function_">computed</span>(<span class="function">() =&gt;</span> <span class="string">`#icon-<span class="subst">${props.name}</span>`</span>),</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="attr">svgClass</span>: <span class="title function_">computed</span>(<span class="function">() =&gt;</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span> (props.<span class="property">name</span>) {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="keyword">return</span> <span class="string">`gulu-icon <span class="subst">${props.name}</span>`</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">return</span> <span class="string">&apos;gulu-icon&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      })</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">})</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"><span class="selector-class">.gulu-icon</span> {</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">width</span>: <span class="number">3em</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">height</span>: <span class="number">3em</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">position</span>: relative;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  fill: currentColor;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">  <span class="attribute">vertical-align</span>: -<span class="number">2px</span>;</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml">}</span></span></span><br><span class="line"><span class="language-css"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5&#x3001;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;Icon&#x7EC4;&#x4EF6;"><a href="#5&#x3001;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;Icon&#x7EC4;&#x4EF6;" class="headerlink" title="5&#x3001;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;Icon&#x7EC4;&#x4EF6;"></a>5&#x3001;&#x5F15;&#x7528;&#x81EA;&#x5B9A;&#x4E49;Icon&#x7EC4;&#x4EF6;</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	 <span class="language-xml"><span class="tag">&lt;<span class="name">Icon</span> <span class="attr">name</span> = <span class="string">&quot;alipay&quot;</span> /&gt;</span></span></span><br><span class="line">	 <span class="language-xml"><span class="tag">&lt;<span class="name">Icon</span> <span class="attr">name</span> = <span class="string">&quot;qq&quot;</span> /&gt;</span></span></span><br><span class="line">	 <span class="language-xml"><span class="tag">&lt;<span class="name">Icon</span> <span class="attr">name</span> = <span class="string">&quot;wechat&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="title class_">Icon</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">} <span class="keyword">from</span> <span class="string">&apos;./lib/index&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">components</span>: {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title class_">Icon</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/front-end/" rel="tag"># front-end</a>
+              <a href="/tags/vite/" rel="tag"># vite</a>
+              <a href="/tags/vue/" rel="tag"># vue</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/18/hexo/2024/Hexo%E7%82%B9%E5%87%BB%E6%9F%90%E4%B8%80%E5%85%B7%E4%BD%93%E5%88%86%E7%B1%BB%E6%88%96%E6%A0%87%E7%AD%BE%E6%8A%A5404/" rel="prev" title="Hexo点击某一具体分类或标签报404">
+                  <i class="fa fa-angle-left"></i> Hexo点击某一具体分类或标签报404
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/21/Font-end/vue/Vue%20%E4%B8%AD%E7%9A%84%20.sync%20%E4%BF%AE%E9%A5%B0%E7%AC%A6%E4%BD%9C%E7%94%A8/" rel="next" title="Vue 中的 .sync 修饰符作用">
+                  Vue 中的 .sync 修饰符作用 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ericasun</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"vCQiqt86gvssN3xuvsFkfPgx-gzGzoHsz","app_key":"oFcH1hpAL31rf7kOanLf6Xz8","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ericasun","repo":"ericasun.github.io","client_id":"74c3c3e6de6d77fe83a6","client_secret":"11b436aa1803400da693d80bee77f961caf0de47","admin_user":"ericasun","distraction_free_mode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"73d243a3ef9c3611cbfd3ae75cbcfa6c"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
