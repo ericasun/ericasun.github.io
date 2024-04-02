@@ -218,7 +218,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/css/</loc>
+    <loc>http://example.com/tags/canvas/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/svg/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -232,14 +239,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/canvas/</loc>
+    <loc>http://example.com/tags/css/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/svg/</loc>
+    <loc>http://example.com/tags/echarts/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -275,13 +282,6 @@
   
   <url>
     <loc>http://example.com/tags/hexo/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/echarts/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
