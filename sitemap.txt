@@ -1,3 +1,4 @@
+http://example.com/2024/04/03/Font-end/js/DOM%20%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E6%88%96%20DOM%20%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/
 http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/
 http://example.com/2024/04/03/Font-end/js/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/
 http://example.com/2024/04/02/Font-end/css/%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/
@@ -24,7 +25,6 @@ http://example.com/2024/03/14/Font-end/vue/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93
 http://example.com/tags/index.html
 http://example.com/categories/index.html
 http://example.com/
-http://example.com/tags/hexo/
 http://example.com/tags/canvas/
 http://example.com/tags/svg/
 http://example.com/tags/front-end/
@@ -34,5 +34,6 @@ http://example.com/tags/javascript/
 http://example.com/tags/vite/
 http://example.com/tags/vue/
 http://example.com/tags/typescript/
-http://example.com/categories/Hexo/
+http://example.com/tags/hexo/
 http://example.com/categories/Front-end/
+http://example.com/categories/Hexo/
