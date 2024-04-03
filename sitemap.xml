@@ -276,14 +276,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/vue/</loc>
+    <loc>http://example.com/tags/vite/</loc>
     <lastmod>2024-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/vite/</loc>
+    <loc>http://example.com/tags/vue/</loc>
     <lastmod>2024-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
