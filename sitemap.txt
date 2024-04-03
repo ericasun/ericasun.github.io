@@ -1,3 +1,4 @@
+http://example.com/2024/04/03/Font-end/jQuery/jQuery%20%E7%9A%84%E5%8A%9F%E8%83%BD/
 http://example.com/2024/04/03/Font-end/js/DOM%20%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%E6%88%96%20DOM%20%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/
 http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/
 http://example.com/2024/04/03/Font-end/js/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/
@@ -28,9 +29,10 @@ http://example.com/
 http://example.com/tags/canvas/
 http://example.com/tags/svg/
 http://example.com/tags/front-end/
-http://example.com/tags/echarts/
 http://example.com/tags/css/
+http://example.com/tags/echarts/
 http://example.com/tags/javascript/
+http://example.com/tags/jQuery/
 http://example.com/tags/typescript/
 http://example.com/tags/vite/
 http://example.com/tags/vue/

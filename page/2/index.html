@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -158,7 +158,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -175,6 +175,105 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">TS 泛型的使用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-03-21 11:16:27" itemprop="dateCreated datePublished" datetime="2024-03-21T11:16:27+08:00">2024-03-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-23 20:47:39" itemprop="dateModified" datetime="2024-03-23T20:47:39+08:00">2024-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="TS 泛型的使用" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="&#x4E00;&#x3001;&#x6CDB;&#x578B;"><a href="#&#x4E00;&#x3001;&#x6CDB;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;&#x6CDB;&#x578B;"></a>&#x4E00;&#x3001;&#x6CDB;&#x578B;</h1><p>&#x6CDB;&#x578B;&#x7528;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x6765;&#x8868;&#x793A;&#x5E7F;&#x6CDB;&#x7C7B;&#x578B;</p>
+<h2 id="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></a>1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/01%E6%B3%9B%E5%9E%8B%E5%AE%9A%E4%B9%89.png" alt="&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></p>
+<h2 id="2&#x3001;interface"><a href="#2&#x3001;interface" class="headerlink" title="2&#x3001;interface"></a>2&#x3001;interface</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/02interface.png" alt="interface"></p>
+<h2 id="3&#x3001;return&#x6570;&#x7EC4;"><a href="#3&#x3001;return&#x6570;&#x7EC4;" class="headerlink" title="3&#x3001;return&#x6570;&#x7EC4;"></a>3&#x3001;return&#x6570;&#x7EC4;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/03return%E6%95%B0%E7%BB%84.png" alt="return&#x6570;&#x7EC4;"></p>
+<h2 id="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"><a href="#4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;" class="headerlink" title="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></a>4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/04%E5%8A%A0%E5%B0%96%E6%8B%AC%E5%8F%B7.png" alt="&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></p>
+<h2 id="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"><a href="#5&#x3001;&#x6CDB;&#x578B;&#x7C7B;" class="headerlink" title="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"></a>5&#x3001;&#x6CDB;&#x578B;&#x7C7B;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/05%E6%B3%9B%E5%9E%8B%E7%B1%BB.png" alt="&#x6CDB;&#x578B;&#x7C7B;"></p>
+<h1 id="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h1><h2 id="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/06%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F.png" alt="&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1227,124 +1326,6 @@
 <li><p>&#x95EE;&#x9898;5&#xFF1A;&#x8BC4;&#x8BBA;&#x533A;&#x70B9;&#x51FB;&#x4F7F;&#x7528;Github&#x767B;&#x9646;&#x62A5;&#x9519;404<br>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>_config.yml</code>&#x4E2D;gitalk&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x6709;&#x95EE;&#x9898;</p>
 </li>
 </ul>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/14/Font-end/vue/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ericasun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ericasun的Hexo博客">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/14/Font-end/vue/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" class="post-title-link" itemprop="url">在Vite2+Vue3渲染Markdown文档(亲测有效）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-14 17:48:54" itemprop="dateCreated datePublished" datetime="2024-03-14T17:48:54+08:00">2024-03-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-17 14:06:07" itemprop="dateModified" datetime="2024-03-17T14:06:07+08:00">2024-03-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2024/03/14/Font-end/vue/%E5%9C%A8Vite2+Vue3%E6%B8%B2%E6%9F%93Markdown%E6%96%87%E6%A1%A3(%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%89/" class="post-meta-item leancloud_visitors" data-flag-title="在Vite2+Vue3渲染Markdown文档(亲测有效）" title="Views">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;-Vite-&#x63D2;&#x4EF6;"><a href="#&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;-Vite-&#x63D2;&#x4EF6;" class="headerlink" title="&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49; Vite &#x63D2;&#x4EF6;"></a>&#x65B9;&#x6CD5;1&#xFF1A;&#x81EA;&#x5B9A;&#x4E49; Vite &#x63D2;&#x4EF6;</h2><p>&#x539F;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5230;Vite2&#x4E4B;&#x540E;&#x4F1A;&#x62A5;&#x9519;<code>plugin.configureServer is not a function</code> &#xFF0C;&#x6B64;&#x63D2;&#x4EF6;&#x4E3A;&#x4FEE;&#x6539;&#x540E;&#x7248;&#x672C;&#xFF0C;&#x4EB2;&#x6D4B;&#x6709;&#x6548;</p>
-<h3 id="1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA;-md-ts-&#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5145;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;"><a href="#1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA;-md-ts-&#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5145;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;" class="headerlink" title="1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA; md.ts &#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5145;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;"></a>1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA; md.ts &#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5145;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&apos;path&apos;</span></span><br><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">&apos;fs&apos;</span></span><br><span class="line"><span class="keyword">import</span> marked <span class="keyword">from</span> <span class="string">&apos;marked&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mdToJs</span> = str =&gt; {</span><br><span class="line">  <span class="keyword">const</span> content = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(<span class="title function_">marked</span>(str))</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`export default <span class="subst">${content}</span>`</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">md</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">return</span> {</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&apos;md&apos;</span>, </span><br><span class="line">    <span class="title function_">configureServer</span>(<span class="params"></span>){ <span class="comment">// &#x7528;&#x4E8E;&#x5F00;&#x53D1;</span></span><br><span class="line">      <span class="keyword">async</span> ({ app }) =&gt; {</span><br><span class="line">        app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; { <span class="comment">// koa</span></span><br><span class="line">          <span class="keyword">if</span> (ctx.<span class="property">path</span>.<span class="title function_">endsWith</span>(<span class="string">&apos;.md&apos;</span>)) {</span><br><span class="line">            ctx.<span class="property">type</span> = <span class="string">&apos;js&apos;</span></span><br><span class="line">            <span class="keyword">const</span> filePath = path.<span class="title function_">join</span>(process.<span class="title function_">cwd</span>(), ctx.<span class="property">path</span>)</span><br><span class="line">            ctx.<span class="property">body</span> = <span class="title function_">mdToJs</span>(fs.<span class="title function_">readFileSync</span>(filePath).<span class="title function_">toString</span>())</span><br><span class="line">          } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">await</span> <span class="title function_">next</span>()</span><br><span class="line">          }</span><br><span class="line">        })</span><br><span class="line">      }</span><br><span class="line">    },</span><br><span class="line">    <span class="title function_">transform</span>(<span class="params">code, id</span>){ <span class="comment">// &#x7528;&#x4E8E; rollup // &#x63D2;&#x4EF6;</span></span><br><span class="line">      <span class="comment">// &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;</span></span><br><span class="line">      <span class="keyword">const</span> fileArr = id.<span class="title function_">split</span>(<span class="string">&apos;.&apos;</span>) <span class="comment">//&#x6839;&#x636E;.&#x5206;&#x5272;&#x6570;&#x7EC4;</span></span><br><span class="line">      <span class="keyword">const</span> fileType = fileArr[fileArr.<span class="property">length</span> -<span class="number">1</span>]; <span class="comment">//&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(<span class="regexp">/\md$/</span>.<span class="title function_">test</span>(fileType)){</span><br><span class="line">         <span class="keyword">return</span> <span class="title function_">mdToJs</span>(code)</span><br><span class="line">      }</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<h3 id="2&#x3001;&#x63A5;&#x7740;&#x4FEE;&#x6539;-vite-config-ts&#xFF0C;&#x5F15;&#x5165;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684;&#x63D2;&#x4EF6;"><a href="#2&#x3001;&#x63A5;&#x7740;&#x4FEE;&#x6539;-vite-config-ts&#xFF0C;&#x5F15;&#x5165;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684;&#x63D2;&#x4EF6;" class="headerlink" title="2&#x3001;&#x63A5;&#x7740;&#x4FEE;&#x6539; vite.config.ts&#xFF0C;&#x5F15;&#x5165;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684;&#x63D2;&#x4EF6;"></a>2&#x3001;&#x63A5;&#x7740;&#x4FEE;&#x6539; vite.config.ts&#xFF0C;&#x5F15;&#x5165;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684;&#x63D2;&#x4EF6;</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> {md} <span class="keyword">from</span> <span class="string">&apos;./md&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">md</span>()]</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
-
-<h3 id="3&#x3001;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5BFC;&#x5165;&#x7684;-md-&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210;-js-&#x6587;&#x4EF6;&#x6E32;&#x67D3;&#x3002;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;"><a href="#3&#x3001;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5BFC;&#x5165;&#x7684;-md-&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210;-js-&#x6587;&#x4EF6;&#x6E32;&#x67D3;&#x3002;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;" class="headerlink" title="3&#x3001;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5BFC;&#x5165;&#x7684; md &#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210; js &#x6587;&#x4EF6;&#x6E32;&#x67D3;&#x3002;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;"></a>3&#x3001;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5BFC;&#x5165;&#x7684; md &#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x6210; js &#x6587;&#x4EF6;&#x6E32;&#x67D3;&#x3002;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	<span class="language-xml"><span class="tag">&lt;<span class="name">article</span> <span class="attr">v-html</span>=<span class="string">&quot;md&quot;</span> /&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> md <span class="keyword">from</span> <span class="string">&apos;./xxx.md&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="title function_">setup</span>(<span class="params"></span>){</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="keyword">return</span> {md}</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">}</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="&#x65B9;&#x6CD5;2&#xFF1A;&#x4F7F;&#x7528;-vite-plugin-markdown"><a href="#&#x65B9;&#x6CD5;2&#xFF1A;&#x4F7F;&#x7528;-vite-plugin-markdown" class="headerlink" title="&#x65B9;&#x6CD5;2&#xFF1A;&#x4F7F;&#x7528; vite-plugin-markdown"></a>&#x65B9;&#x6CD5;2&#xFF1A;&#x4F7F;&#x7528; vite-plugin-markdown</h2><p>&#x8FD9;&#x6B3E;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#x4E0D;&#x4EC5;&#x652F;&#x6301;&#x5F15;&#x5165;&#x5E76;&#x6E32;&#x67D3; Markdown &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x6E32;&#x67D3;&#x6210;&#x5404;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5165; HTML &#x5B57;&#x7B26;&#x4E32;&#x3001;React &#x6216; Vue &#x7684;&#x7EC4;&#x4EF6;&#x7B49;&#x3002;</p>
-<h3 id="1&#x3001;&#x5B89;&#x88C5;-vite-plugin-markdown"><a href="#1&#x3001;&#x5B89;&#x88C5;-vite-plugin-markdown" class="headerlink" title="1&#x3001;&#x5B89;&#x88C5; vite-plugin-markdown"></a>1&#x3001;&#x5B89;&#x88C5; vite-plugin-markdown</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i vite-plugin-markdown</span><br></pre></td></tr></table></figure>
-<p>&#x6216;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vite-plugin-markdown</span><br></pre></td></tr></table></figure>
-
-<h3 id="2&#x3001;&#x5728;-vite-config-ts-&#x4E2D;&#x4FEE;&#x6539;&#xFF1A;"><a href="#2&#x3001;&#x5728;-vite-config-ts-&#x4E2D;&#x4FEE;&#x6539;&#xFF1A;" class="headerlink" title="2&#x3001;&#x5728; vite.config.ts &#x4E2D;&#x4FEE;&#x6539;&#xFF1A;"></a>2&#x3001;&#x5728; vite.config.ts &#x4E2D;&#x4FEE;&#x6539;&#xFF1A;</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mdPlugin = <span class="built_in">require</span>(<span class="string">&apos;vite-plugin-markdown&apos;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    mdPlugin.<span class="title function_">plugin</span>({</span><br><span class="line">      <span class="attr">mode</span>: [<span class="string">&apos;html&apos;</span>],</span><br><span class="line">    })</span><br><span class="line">  ]</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<h3 id="3&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A;-options&#xFF0C;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;"><a href="#3&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A;-options&#xFF0C;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;" class="headerlink" title="3&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A; options&#xFF0C;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;"></a>3&#x3001;&#x914D;&#x7F6E;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A; options&#xFF0C;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#xFF1A;</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mode?: (<span class="string">&apos;html&apos;</span> | <span class="string">&apos;toc&apos;</span> | <span class="string">&apos;react&apos;</span> | <span class="string">&apos;vue&apos;</span>)[]</span><br><span class="line">markdown?: <span class="function">(<span class="params">body: <span class="built_in">string</span></span>) =&gt;</span> <span class="built_in">string</span></span><br><span class="line">markdownIt?: <span class="title class_">MarkdownIt</span> | <span class="title class_">MarkdownIt</span>.<span class="property">Options</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4&#x3001;&#x5404;&#x4E2A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x6E32;&#x67D3;&#x793A;&#x4F8B;&#xFF1A;"><a href="#4&#x3001;&#x5404;&#x4E2A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x6E32;&#x67D3;&#x793A;&#x4F8B;&#xFF1A;" class="headerlink" title="4&#x3001;&#x5404;&#x4E2A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x6E32;&#x67D3;&#x793A;&#x4F8B;&#xFF1A;"></a>4&#x3001;&#x5404;&#x4E2A;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x6E32;&#x67D3;&#x793A;&#x4F8B;&#xFF1A;</h3><h4 id="4-1-Import-Front-Matter-attributes"><a href="#4-1-Import-Front-Matter-attributes" class="headerlink" title="4.1 Import Front Matter attributes"></a>4.1 Import Front Matter attributes</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="attr">title</span>: <span class="title class_">Awesome</span> <span class="title class_">Title</span></span><br><span class="line"><span class="attr">description</span>: <span class="title class_">Describe</span> <span class="variable language_">this</span> awesome content</span><br><span class="line"><span class="attr">tags</span>:</span><br><span class="line">  - <span class="string">&quot;great&quot;</span></span><br><span class="line">  - <span class="string">&quot;awesome&quot;</span></span><br><span class="line">  - <span class="string">&quot;rad&quot;</span></span><br><span class="line">---</span><br><span class="line"># <span class="title class_">This</span> is awesome</span><br><span class="line"><span class="title class_">Vite</span> is an opinionated web dev build tool that serves your code via native <span class="variable constant_">ES</span> <span class="title class_">Module</span> imports during dev and bundles it <span class="keyword">with</span> <span class="title class_">Rollup</span> <span class="keyword">for</span> production.</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> { attributes } <span class="keyword">from</span> <span class="string">&apos;./contents/the-doc.md&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(attributes) <span class="comment">//=&gt; { title: &apos;Awesome Title&apos;, description: &apos;Describe this awesome content&apos;, tags: [&apos;great&apos;, &apos;awesome&apos;, &apos;rad&apos;] }</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-2-Import-compiled-HTML-Mode-HTML"><a href="#4-2-Import-compiled-HTML-Mode-HTML" class="headerlink" title="4.2 Import compiled HTML (Mode.HTML)"></a>4.2 Import compiled HTML (Mode.HTML)</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { html } <span class="keyword">from</span> <span class="string">&apos;./contents/the-doc.md&apos;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(html) </span><br><span class="line"><span class="comment">//=&gt; &quot;This is awesomeite is an opinionated web dev build tool that serves your code via native ES Module imports during dev and bundles it with Rollup for production.&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-Import-ToC-metadata-Mode-TOC"><a href="#4-3-Import-ToC-metadata-Mode-TOC" class="headerlink" title="4.3 Import ToC metadata (Mode.TOC)"></a>4.3 Import ToC metadata (Mode.TOC)</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># vite</span><br><span class="line"></span><br><span class="line"><span class="title class_">Vite</span> is an opinionated web dev build tool that serves your code via native <span class="variable constant_">ES</span> <span class="title class_">Module</span> imports during dev and bundles it <span class="keyword">with</span> <span class="title class_">Rollup</span> <span class="keyword">for</span> production.</span><br><span class="line"></span><br><span class="line">## <span class="title class_">Status</span></span><br><span class="line"></span><br><span class="line">## <span class="title class_">Getting</span> <span class="title class_">Started</span></span><br><span class="line"></span><br><span class="line"># <span class="title class_">Notes</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> { toc } <span class="keyword">from</span> <span class="string">&apos;./contents/the-doc.md&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(toc)</span><br><span class="line"><span class="comment">//=&gt; [{ level: &apos;1&apos;, content: &apos;vite&apos; }, { level: &apos;2&apos;, content: &apos;Status&apos; }, { level: &apos;2&apos;, content: &apos;Getting Started&apos; }, { level: &apos;1&apos;, content: &apos;Notes&apos; },]</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-4-Import-as-a-React-component-Mode-REACT"><a href="#4-4-Import-as-a-React-component-Mode-REACT" class="headerlink" title="4.4 Import as a React component (Mode.REACT)"></a>4.4 Import as a React component (Mode.REACT)</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&apos;react&apos;</span></span><br><span class="line"><span class="keyword">import</span> { <span class="title class_">ReactComponent</span> } <span class="keyword">from</span> <span class="string">&apos;./contents/the-doc.md&apos;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MyReactApp</span>(<span class="params"></span>) {</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">ReactComponent</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">	)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-Import-as-a-Vue-component-Mode-VUE"><a href="#4-5-Import-as-a-Vue-component-Mode-VUE" class="headerlink" title="4.5 Import as a Vue component (Mode.VUE)"></a>4.5 Import as a Vue component (Mode.VUE)</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">article</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">markdown-content</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">import</span> { <span class="title class_">VueComponent</span> } <span class="keyword">from</span> <span class="string">&apos;./contents/the-doc.md&apos;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"><span class="keyword">export</span> <span class="keyword">default</span> {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  <span class="attr">components</span>: {</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title class_">MarkdownContent</span>: <span class="title class_">VueComponent</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">  }</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">};</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
 <hr>
 
       
