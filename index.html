@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,6 +175,104 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/Font-end/js/JS%20%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/03/Font-end/js/JS%20%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="post-title-link" itemprop="url">JS 函数的执行时机</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-04-03 23:38:53 / Modified: 23:40:54" itemprop="dateCreated datePublished" datetime="2024-04-03T23:38:53+08:00">2024-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2024/04/03/Font-end/js/JS%20%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/" class="post-meta-item leancloud_visitors" data-flag-title="JS 函数的执行时机" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1&#x3001;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x6253;&#x5370;-6-&#x4E2A;-6"><a href="#1&#x3001;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x6253;&#x5370;-6-&#x4E2A;-6" class="headerlink" title="1&#x3001;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x6253;&#x5370; 6 &#x4E2A; 6"></a>1&#x3001;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x6253;&#x5370; 6 &#x4E2A; 6</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i&lt;<span class="number">6</span>; i++){</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>{</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">  },<span class="number">0</span>)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p>SetTimeout&#x5728;for&#x5FAA;&#x73AF;&#x4E4B;&#x540E;&#x624D;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x65F6;&#x5019;i&#x4E3A;6&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6253;&#x5370;&#x51FA;6&#x6B21;6</p>
+<h1 id="2&#x3001;&#x5199;&#x51FA;&#x8BA9;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x6253;&#x5370;-0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5-&#x7684;&#x65B9;&#x6CD5;"><a href="#2&#x3001;&#x5199;&#x51FA;&#x8BA9;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x6253;&#x5370;-0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5-&#x7684;&#x65B9;&#x6CD5;" class="headerlink" title="2&#x3001;&#x5199;&#x51FA;&#x8BA9;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x6253;&#x5370; 0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5 &#x7684;&#x65B9;&#x6CD5;"></a>2&#x3001;&#x5199;&#x51FA;&#x8BA9;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x6253;&#x5370; 0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5 &#x7684;&#x65B9;&#x6CD5;</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;<span class="number">6</span>; i++){</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>{</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">  },<span class="number">0</span>)</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-&#x3001;&#xFF08;&#x53EF;&#x9009;&#x5185;&#x5BB9;&#xFF09;&#x9664;&#x4E86;&#x4F7F;&#x7528;-for-let-&#x914D;&#x5408;&#xFF0C;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x51FA;-0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5199;&#x5728;&#x535A;&#x5BA2;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E94;&#x661F;&#x597D;&#x8BC4;"><a href="#3-&#x3001;&#xFF08;&#x53EF;&#x9009;&#x5185;&#x5BB9;&#xFF09;&#x9664;&#x4E86;&#x4F7F;&#x7528;-for-let-&#x914D;&#x5408;&#xFF0C;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x51FA;-0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5199;&#x5728;&#x535A;&#x5BA2;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E94;&#x661F;&#x597D;&#x8BC4;" class="headerlink" title="3 &#x3001;&#xFF08;&#x53EF;&#x9009;&#x5185;&#x5BB9;&#xFF09;&#x9664;&#x4E86;&#x4F7F;&#x7528; for let &#x914D;&#x5408;&#xFF0C;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x51FA; 0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5199;&#x5728;&#x535A;&#x5BA2;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E94;&#x661F;&#x597D;&#x8BC4; :)"></a>3 &#x3001;&#xFF08;&#x53EF;&#x9009;&#x5185;&#x5BB9;&#xFF09;&#x9664;&#x4E86;&#x4F7F;&#x7528; for let &#x914D;&#x5408;&#xFF0C;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x51FA; 0&#x3001;1&#x3001;2&#x3001;3&#x3001;4&#x3001;5&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x80FD;&#x627E;&#x5230;&#x5E76;&#x5199;&#x5728;&#x535A;&#x5BA2;&#x91CC;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E94;&#x661F;&#x597D;&#x8BC4; :)</h1><h2 id="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;"><a href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;"></a>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>){</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">  i++</span><br><span class="line">  <span class="keyword">if</span>(i&gt;<span class="number">5</span>){</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h2 id="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;"><a href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;"></a>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line"><span class="keyword">let</span> timer = <span class="built_in">setInterval</span>(<span class="function">()=&gt;</span>{ </span><br><span class="line">  <span class="keyword">if</span>(i&lt;<span class="number">6</span>){</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i); </span><br><span class="line">    i++;</span><br><span class="line">  }<span class="keyword">else</span>{</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">timer</span> = <span class="literal">null</span>;</span><br><span class="line">  }</span><br><span class="line">}, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;"><a href="#&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;" class="headerlink" title="&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;"></a>&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">6</span>).<span class="title function_">fill</span>(<span class="string">&apos;&apos;</span>)</span><br><span class="line">i.<span class="title function_">map</span>(<span class="function">(<span class="params">k,j</span>)=&gt;</span>{</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(j);</span><br><span class="line">})</span><br></pre></td></tr></table></figure>
+
+<h2 id="&#x65B9;&#x6CD5;&#x56DB;&#xFF1A;"><a href="#&#x65B9;&#x6CD5;&#x56DB;&#xFF1A;" class="headerlink" title="&#x65B9;&#x6CD5;&#x56DB;&#xFF1A;"></a>&#x65B9;&#x6CD5;&#x56DB;&#xFF1A;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line"><span class="keyword">switch</span> (i){</span><br><span class="line">  <span class="keyword">case</span> <span class="number">0</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);i++;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">1</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);i++;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">2</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);i++;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">3</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);i++;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">4</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);i++;</span><br><span class="line">  <span class="keyword">case</span> <span class="number">5</span>:<span class="variable language_">console</span>.<span class="title function_">log</span>(i);<span class="keyword">break</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1132,92 +1230,6 @@
 
 <h2 id="5&#x3001;&#x9700;&#x6C42;&#x4E94;&#xFF1A;&#x7528;&#x6237;&#x64C5;&#x81EA;&#x6539;"><a href="#5&#x3001;&#x9700;&#x6C42;&#x4E94;&#xFF1A;&#x7528;&#x6237;&#x64C5;&#x81EA;&#x6539;" class="headerlink" title="5&#x3001;&#x9700;&#x6C42;&#x4E94;&#xFF1A;&#x7528;&#x6237;&#x64C5;&#x81EA;&#x6539;"></a>5&#x3001;&#x9700;&#x6C42;&#x4E94;&#xFF1A;&#x7528;&#x6237;&#x64C5;&#x81EA;&#x6539;</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myData5 = {<span class="attr">n</span>:<span class="number">0</span>}</span><br><span class="line"><span class="keyword">let</span> data5 = <span class="title function_">proxy2</span>({ <span class="attr">data</span>:myData5})  <span class="comment">// &#x62EC;&#x53F7;&#x91CC;&#x662F;&#x533F;&#x540D;&#x5BF9;&#x8C61;&#xFF0C;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">proxy2</span>(<span class="params">{data}<span class="comment">/* &#x89E3;&#x6784;&#x8D4B;&#x503C; */</span></span>){</span><br><span class="line">  <span class="comment">// &#x8FD9;&#x91CC;&#x7684;&apos;n&apos;&#x5199;&#x6B7B;&#x4E86;&#xFF0C;&#x5929;&#x874E;&#x5EA7;&#x4E0A;&#x5E94;&#x8BE5;&#x904D;&#x5386;data&#x7684;&#x6240;&#x6709;key&#xFF0C;&#x8FD9;&#x91CC;&#x505A;&#x4E86;&#x7B80;&#x5316;</span></span><br><span class="line">  <span class="comment">// &#x56E0;&#x4E3A;&#x6211;&#x6015;&#x4F60;&#x4EEC;&#x770B;&#x4E0D;&#x61C2;</span></span><br><span class="line">  <span class="keyword">let</span> value = data.<span class="property">n</span></span><br><span class="line">  <span class="keyword">delete</span> data.<span class="property">n</span>  <span class="comment">// &#x8FD9;&#x53E5;&#x8BDD;&#x53EF;&#x4EE5;&#x4E0D;&#x5199;</span></span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(data, <span class="string">&apos;n&apos;</span>,{</span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>){</span><br><span class="line">      <span class="keyword">return</span> value</span><br><span class="line">    },</span><br><span class="line">    <span class="title function_">set</span>(<span class="params">newValue</span>){</span><br><span class="line">      <span class="keyword">if</span>(newValue&lt;<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      }</span><br><span class="line">      value = newValue</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line"><span class="comment">// &#x5C31;&#x52A0;&#x4E86;&#x4E0A;&#x9762;&#x51E0;&#x53E5;&#xFF0C;&#x8FD9;&#x51E0;&#x53E5;&#x8BDD;&#x4F1A;&#x76D1;&#x542C;data</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> obj = {}</span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, <span class="string">&apos;n&apos;</span>, {</span><br><span class="line">    <span class="title function_">get</span>(<span class="params"></span>){</span><br><span class="line">      <span class="keyword">return</span> data.<span class="property">n</span></span><br><span class="line">    },</span><br><span class="line">    <span class="title function_">set</span>(<span class="params">value</span>){</span><br><span class="line">      <span class="keyword">if</span>(value&lt;<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      }</span><br><span class="line">      data.<span class="property">n</span> = value</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> obj <span class="comment">// obj &#x5C31;&#x662F;&#x4EE3;&#x7406;</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// data3 &#x5C31;&#x662F;obj</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`&#x9700;&#x6C42;&#x4E94;&#xFF1A;<span class="subst">${data5.n}</span>`</span>)</span><br><span class="line">data5.<span class="property">n</span> = -<span class="number">1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`&#x9700;&#x6C42;&#x4E94;&#xFF1A;<span class="subst">${data5.n}</span>, &#x8BBE;&#x7F6E;&#x4E3A; -1 &#x5931;&#x8D25;`</span>)</span><br><span class="line">data5.<span class="property">n</span> = -<span class="number">1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`&#x9700;&#x6C42;&#x4E94;&#xFF1A;<span class="subst">${data5.n}</span>, &#x8BBE;&#x7F6E;&#x4E3A; 1 &#x5931;&#x8D25;`</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x8FD9;&#x4EE3;&#x7406;&#x770B;&#x7740;&#x773C;&#x719F;&#x5417;&#xFF1F;</span></span><br><span class="line"><span class="comment">// let data5 = proxy2({data:myData5})</span></span><br><span class="line"><span class="comment">// let vm = new Vue({data:{n:0}})</span></span><br></pre></td></tr></table></figure>
 <hr>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/23/Font-end/vue/%E7%AE%80%E8%BF%B0computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ericasun">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ericasun的Hexo博客">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ericasun的Hexo博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/23/Font-end/vue/%E7%AE%80%E8%BF%B0computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">简述computed和watch的区别</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-03-23 20:48:13 / Modified: 20:49:06" itemprop="dateCreated datePublished" datetime="2024-03-23T20:48:13+08:00">2024-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Front-end/" itemprop="url" rel="index"><span itemprop="name">Front-end</span></a>
-        </span>
-    </span>
-
-  
-    <span id="/2024/03/23/Font-end/vue/%E7%AE%80%E8%BF%B0computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-meta-item leancloud_visitors" data-flag-title="简述computed和watch的区别" title="Views">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">Views: </span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1&#x3001;computed&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x610F;&#x601D;"><a href="#1&#x3001;computed&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x610F;&#x601D;" class="headerlink" title="1&#x3001;computed&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x610F;&#x601D;"></a>1&#x3001;computed&#x662F;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x7684;&#x610F;&#x601D;</h2><h3 id="1-1-computed&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;"><a href="#1-1-computed&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;" class="headerlink" title="1.1 computed&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;"></a>1.1 computed&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x51FA;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;</h3><h3 id="1-2-&#x6839;&#x636E;&#x4F9D;&#x8D56;&#x4F1A;&#x81EA;&#x52A8;&#x7F13;&#x5B58;"><a href="#1-2-&#x6839;&#x636E;&#x4F9D;&#x8D56;&#x4F1A;&#x81EA;&#x52A8;&#x7F13;&#x5B58;" class="headerlink" title="1.2 &#x6839;&#x636E;&#x4F9D;&#x8D56;&#x4F1A;&#x81EA;&#x52A8;&#x7F13;&#x5B58;"></a>1.2 &#x6839;&#x636E;&#x4F9D;&#x8D56;&#x4F1A;&#x81EA;&#x52A8;&#x7F13;&#x5B58;</h3><h3 id="1-3-&#x4E0D;&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;"><a href="#1-3-&#x4E0D;&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;" class="headerlink" title="1.3 &#x4E0D;&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;"></a>1.3 &#x4E0D;&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;</h3><h2 id="2&#x3001;watch&#x662F;&#x76D1;&#x542C;&#x7684;&#x610F;&#x601D;"><a href="#2&#x3001;watch&#x662F;&#x76D1;&#x542C;&#x7684;&#x610F;&#x601D;" class="headerlink" title="2&#x3001;watch&#x662F;&#x76D1;&#x542C;&#x7684;&#x610F;&#x601D;"></a>2&#x3001;watch&#x662F;&#x76D1;&#x542C;&#x7684;&#x610F;&#x601D;</h2><h3 id="2-1-watch&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;"><a href="#2-1-watch&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;" class="headerlink" title="2.1 watch&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;"></a>2.1 watch&#x652F;&#x6301;&#x5F02;&#x6B65;&#x4EE3;&#x7801;</h3><h3 id="2-2-&#x6709;&#x4E24;&#x4E2A;&#x9009;&#x9879;"><a href="#2-2-&#x6709;&#x4E24;&#x4E2A;&#x9009;&#x9879;" class="headerlink" title="2.2 &#x6709;&#x4E24;&#x4E2A;&#x9009;&#x9879;"></a>2.2 &#x6709;&#x4E24;&#x4E2A;&#x9009;&#x9879;</h3><h4 id="2-2-1-immediate-&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6267;&#x884C;&#x51FD;&#x6570;"><a href="#2-2-1-immediate-&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6267;&#x884C;&#x51FD;&#x6570;" class="headerlink" title="2.2.1 immediate &#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6267;&#x884C;&#x51FD;&#x6570;"></a>2.2.1 immediate &#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6267;&#x884C;&#x51FD;&#x6570;</h4><h4 id="2-2-2-deep-&#x662F;&#x5426;&#x8981;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x4E86;&#x5C31;&#x6267;&#x884C;&#x51FD;&#x6570;&#x3002;"><a href="#2-2-2-deep-&#x662F;&#x5426;&#x8981;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x4E86;&#x5C31;&#x6267;&#x884C;&#x51FD;&#x6570;&#x3002;" class="headerlink" title="2.2.2 deep &#x662F;&#x5426;&#x8981;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x4E86;&#x5C31;&#x6267;&#x884C;&#x51FD;&#x6570;&#x3002;"></a>2.2.2 deep &#x662F;&#x5426;&#x8981;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x5316;&#x4E86;&#x5C31;&#x6267;&#x884C;&#x51FD;&#x6570;&#x3002;</h4><hr>
 
       
     </div>
