@@ -390,6 +390,48 @@
       </tags>
   </entry>
   <entry>
+    <title>TS 泛型的使用</title>
+    <url>/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="&#x4E00;&#x3001;&#x6CDB;&#x578B;"><a href="#&#x4E00;&#x3001;&#x6CDB;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;&#x6CDB;&#x578B;"></a>&#x4E00;&#x3001;&#x6CDB;&#x578B;</h1><p>&#x6CDB;&#x578B;&#x7528;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x6765;&#x8868;&#x793A;&#x5E7F;&#x6CDB;&#x7C7B;&#x578B;</p>
+<h2 id="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></a>1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/01%E6%B3%9B%E5%9E%8B%E5%AE%9A%E4%B9%89.png" alt="&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></p>
+<h2 id="2&#x3001;interface"><a href="#2&#x3001;interface" class="headerlink" title="2&#x3001;interface"></a>2&#x3001;interface</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/02interface.png" alt="interface"></p>
+<h2 id="3&#x3001;return&#x6570;&#x7EC4;"><a href="#3&#x3001;return&#x6570;&#x7EC4;" class="headerlink" title="3&#x3001;return&#x6570;&#x7EC4;"></a>3&#x3001;return&#x6570;&#x7EC4;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/03return%E6%95%B0%E7%BB%84.png" alt="return&#x6570;&#x7EC4;"></p>
+<h2 id="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"><a href="#4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;" class="headerlink" title="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></a>4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/04%E5%8A%A0%E5%B0%96%E6%8B%AC%E5%8F%B7.png" alt="&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></p>
+<h2 id="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"><a href="#5&#x3001;&#x6CDB;&#x578B;&#x7C7B;" class="headerlink" title="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"></a>5&#x3001;&#x6CDB;&#x578B;&#x7C7B;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/05%E6%B3%9B%E5%9E%8B%E7%B1%BB.png" alt="&#x6CDB;&#x578B;&#x7C7B;"></p>
+<h1 id="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h1><h2 id="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/06%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F.png" alt="&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>front-end</tag>
+        <tag>typescript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue 中的 .sync 修饰符作用</title>
+    <url>/2024/03/21/Font-end/vue/Vue%20%E4%B8%AD%E7%9A%84%20.sync%20%E4%BF%AE%E9%A5%B0%E7%AC%A6%E4%BD%9C%E7%94%A8/</url>
+    <content><![CDATA[<p>&#x529F;&#x80FD;&#xFF1A;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x6570;&#x636E;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x6539;prop&#x503C;&#x5E76;&#x901A;&#x77E5;&#x7236;&#x7EC4;&#x4EF6;</p>
+<h2 id="1&#x3001;&#x65E0;-sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><a href="#1&#x3001;&#x65E0;-sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;" class="headerlink" title="1&#x3001;&#x65E0;.sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"></a>1&#x3001;&#x65E0;.sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h2><h3 id="&#x5B50;&#x7EC4;&#x4EF6;"><a href="#&#x5B50;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x5B50;&#x7EC4;&#x4EF6;"></a>&#x5B50;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;child&quot;</span>&gt;</span></span><br><span class="line">	   {{money}}</span><br><span class="line">	   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$emit(&apos;update:money&apos;, money - 100)&quot;</span>&gt;</span></span><br><span class="line">	     <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#x82B1;&#x94B1;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	   <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> {</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">props</span>:[<span class="string">&quot;money&quot;</span>]</span></span><br><span class="line"><span class="language-javascript">};</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="&#x7236;&#x7EC4;&#x4EF6;"><a href="#&#x7236;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x7236;&#x7EC4;&#x4EF6;"></a>&#x7236;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    App.vue &#x6211;&#x73B0;&#x5728;&#x6709; {{total}}</span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Child</span> <span class="attr">:money</span>=<span class="string">&quot;total&quot;</span> <span class="attr">v-on:update:money</span> =<span class="string">&quot;total = $event&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
+<h2 id="2&#x3001;&#x6709;-sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><a href="#2&#x3001;&#x6709;-sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;" class="headerlink" title="2&#x3001;&#x6709;.sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"></a>2&#x3001;&#x6709;.sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h2><h3 id="&#x7236;&#x7EC4;&#x4EF6;-1"><a href="#&#x7236;&#x7EC4;&#x4EF6;-1" class="headerlink" title="&#x7236;&#x7EC4;&#x4EF6;"></a>&#x7236;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    App.vue &#x6211;&#x73B0;&#x5728;&#x6709; {{total}}</span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Child</span> <span class="attr">:money.sync</span>=<span class="string">&quot;total&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="&#x5B50;&#x7EC4;&#x4EF6;-1"><a href="#&#x5B50;&#x7EC4;&#x4EF6;-1" class="headerlink" title="&#x5B50;&#x7EC4;&#x4EF6;"></a>&#x5B50;&#x7EC4;&#x4EF6;</h3><p>&#x4E0D;&#x53D8;</p>
+<h2 id="3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;"><a href="#3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;" class="headerlink" title="3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;"></a>3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;</h2><h3 id="3-1-&#x529F;&#x80FD;"><a href="#3-1-&#x529F;&#x80FD;" class="headerlink" title="3.1 &#x529F;&#x80FD;"></a>3.1 &#x529F;&#x80FD;</h3><p>&#x5F53;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x6539;&#x53D8;&#x4E86;&#x4E00;&#x4E2A; prop &#x7684;&#x503C;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x5316;&#x4E5F;&#x4F1A;&#x540C;&#x6B65;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x6240;&#x7ED1;&#x5B9A;&#x3002;</p>
+<h3 id="3-2-&#x7F29;&#x5199;"><a href="#3-2-&#x7F29;&#x5199;" class="headerlink" title="3.2 &#x7F29;&#x5199;"></a>3.2 &#x7F29;&#x5199;</h3><p><code>:money.sync=&quot;total&quot; </code>  &#x7B49;&#x4EF7;&#x4E8E;  <code>:money=&quot;total&quot; v-on:update:money =&quot;total = $event&quot;</code>  </p>
+<h3 id="3-3-&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;"><a href="#3-3-&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;" class="headerlink" title="3.3 &#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;"></a>3.3 &#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;</h3><hr>
+]]></content>
+      <categories>
+        <category>Front-end</category>
+      </categories>
+      <tags>
+        <tag>front-end</tag>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vite2 + Vue3添加svg的使用并通过svg实现自定义Icon组件</title>
     <url>/2024/03/21/Font-end/vue/Vite2%20+%20Vue3%E6%B7%BB%E5%8A%A0svg%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%80%9A%E8%BF%87svg%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%AE%9A%E4%B9%89Icon%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<h2 id="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"><a href="#1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons" class="headerlink" title="1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons"></a>1&#x3001;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x63D2;&#x4EF6;vite-plugin-svg-icons</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add vite-plugin-svg-icons -D </span><br></pre></td></tr></table></figure>
@@ -419,30 +461,8 @@
       </categories>
       <tags>
         <tag>front-end</tag>
+        <tag>vue</tag>
         <tag>vite</tag>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 中的 .sync 修饰符作用</title>
-    <url>/2024/03/21/Font-end/vue/Vue%20%E4%B8%AD%E7%9A%84%20.sync%20%E4%BF%AE%E9%A5%B0%E7%AC%A6%E4%BD%9C%E7%94%A8/</url>
-    <content><![CDATA[<p>&#x529F;&#x80FD;&#xFF1A;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x6570;&#x636E;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x6539;prop&#x503C;&#x5E76;&#x901A;&#x77E5;&#x7236;&#x7EC4;&#x4EF6;</p>
-<h2 id="1&#x3001;&#x65E0;-sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><a href="#1&#x3001;&#x65E0;-sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;" class="headerlink" title="1&#x3001;&#x65E0;.sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"></a>1&#x3001;&#x65E0;.sync&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h2><h3 id="&#x5B50;&#x7EC4;&#x4EF6;"><a href="#&#x5B50;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x5B50;&#x7EC4;&#x4EF6;"></a>&#x5B50;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;child&quot;</span>&gt;</span></span><br><span class="line">	   {{money}}</span><br><span class="line">	   <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$emit(&apos;update:money&apos;, money - 100)&quot;</span>&gt;</span></span><br><span class="line">	     <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#x82B1;&#x94B1;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	   <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">export</span> <span class="keyword">default</span> {</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">props</span>:[<span class="string">&quot;money&quot;</span>]</span></span><br><span class="line"><span class="language-javascript">};</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="&#x7236;&#x7EC4;&#x4EF6;"><a href="#&#x7236;&#x7EC4;&#x4EF6;" class="headerlink" title="&#x7236;&#x7EC4;&#x4EF6;"></a>&#x7236;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    App.vue &#x6211;&#x73B0;&#x5728;&#x6709; {{total}}</span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Child</span> <span class="attr">:money</span>=<span class="string">&quot;total&quot;</span> <span class="attr">v-on:update:money</span> =<span class="string">&quot;total = $event&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
-
-<h2 id="2&#x3001;&#x6709;-sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"><a href="#2&#x3001;&#x6709;-sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;" class="headerlink" title="2&#x3001;&#x6709;.sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;"></a>2&#x3001;&#x6709;.sync&#x4FEE;&#x9970;&#x7B26;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h2><h3 id="&#x7236;&#x7EC4;&#x4EF6;-1"><a href="#&#x7236;&#x7EC4;&#x4EF6;-1" class="headerlink" title="&#x7236;&#x7EC4;&#x4EF6;"></a>&#x7236;&#x7EC4;&#x4EF6;</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    App.vue &#x6211;&#x73B0;&#x5728;&#x6709; {{total}}</span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Child</span> <span class="attr">:money.sync</span>=<span class="string">&quot;total&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="&#x5B50;&#x7EC4;&#x4EF6;-1"><a href="#&#x5B50;&#x7EC4;&#x4EF6;-1" class="headerlink" title="&#x5B50;&#x7EC4;&#x4EF6;"></a>&#x5B50;&#x7EC4;&#x4EF6;</h3><p>&#x4E0D;&#x53D8;</p>
-<h2 id="3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;"><a href="#3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;" class="headerlink" title="3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;"></a>3&#x3001;&#x4FEE;&#x9970;&#x7B26;sync&#x5C0F;&#x7ED3;</h2><h3 id="3-1-&#x529F;&#x80FD;"><a href="#3-1-&#x529F;&#x80FD;" class="headerlink" title="3.1 &#x529F;&#x80FD;"></a>3.1 &#x529F;&#x80FD;</h3><p>&#x5F53;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x6539;&#x53D8;&#x4E86;&#x4E00;&#x4E2A; prop &#x7684;&#x503C;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x5316;&#x4E5F;&#x4F1A;&#x540C;&#x6B65;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x6240;&#x7ED1;&#x5B9A;&#x3002;</p>
-<h3 id="3-2-&#x7F29;&#x5199;"><a href="#3-2-&#x7F29;&#x5199;" class="headerlink" title="3.2 &#x7F29;&#x5199;"></a>3.2 &#x7F29;&#x5199;</h3><p><code>:money.sync=&quot;total&quot; </code>  &#x7B49;&#x4EF7;&#x4E8E;  <code>:money=&quot;total&quot; v-on:update:money =&quot;total = $event&quot;</code>  </p>
-<h3 id="3-3-&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;"><a href="#3-3-&#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;" class="headerlink" title="3.3 &#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;"></a>3.3 &#x662F;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x7CD6;</h3><hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>front-end</tag>
-        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -518,8 +538,8 @@
       </categories>
       <tags>
         <tag>front-end</tag>
-        <tag>vite</tag>
         <tag>vue</tag>
+        <tag>vite</tag>
       </tags>
   </entry>
   <entry>
@@ -533,26 +553,6 @@
       <tags>
         <tag>front-end</tag>
         <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TS 泛型的使用</title>
-    <url>/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="&#x4E00;&#x3001;&#x6CDB;&#x578B;"><a href="#&#x4E00;&#x3001;&#x6CDB;&#x578B;" class="headerlink" title="&#x4E00;&#x3001;&#x6CDB;&#x578B;"></a>&#x4E00;&#x3001;&#x6CDB;&#x578B;</h1><p>&#x6CDB;&#x578B;&#x7528;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x6765;&#x8868;&#x793A;&#x5E7F;&#x6CDB;&#x7C7B;&#x578B;</p>
-<h2 id="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></a>1&#x3001;&#x6CDB;&#x578B;&#x5B9A;&#x4E49;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/01%E6%B3%9B%E5%9E%8B%E5%AE%9A%E4%B9%89.png" alt="&#x6CDB;&#x578B;&#x5B9A;&#x4E49;"></p>
-<h2 id="2&#x3001;interface"><a href="#2&#x3001;interface" class="headerlink" title="2&#x3001;interface"></a>2&#x3001;interface</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/02interface.png" alt="interface"></p>
-<h2 id="3&#x3001;return&#x6570;&#x7EC4;"><a href="#3&#x3001;return&#x6570;&#x7EC4;" class="headerlink" title="3&#x3001;return&#x6570;&#x7EC4;"></a>3&#x3001;return&#x6570;&#x7EC4;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/03return%E6%95%B0%E7%BB%84.png" alt="return&#x6570;&#x7EC4;"></p>
-<h2 id="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"><a href="#4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;" class="headerlink" title="4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></a>4&#x3001;&#x52A0;&#x5C16;&#x62EC;&#x53F7;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/04%E5%8A%A0%E5%B0%96%E6%8B%AC%E5%8F%B7.png" alt="&#x52A0;&#x5C16;&#x62EC;&#x53F7;"></p>
-<h2 id="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"><a href="#5&#x3001;&#x6CDB;&#x578B;&#x7C7B;" class="headerlink" title="5&#x3001;&#x6CDB;&#x578B;&#x7C7B;"></a>5&#x3001;&#x6CDB;&#x578B;&#x7C7B;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/05%E6%B3%9B%E5%9E%8B%E7%B1%BB.png" alt="&#x6CDB;&#x578B;&#x7C7B;"></p>
-<h1 id="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>&#x4E8C;&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h1><h2 id="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"><a href="#1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;" class="headerlink" title="1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></a>1&#x3001;&#x6CDB;&#x578B;&#x7EA6;&#x675F;</h2><p><img src="/2024/03/21/Font-end/ts/TS%20%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%BD%BF%E7%94%A8/06%E6%B3%9B%E5%9E%8B%E7%BA%A6%E6%9D%9F.png" alt="&#x6CDB;&#x578B;&#x7EA6;&#x675F;"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Front-end</category>
-      </categories>
-      <tags>
-        <tag>front-end</tag>
-        <tag>typescript</tag>
       </tags>
   </entry>
   <entry>
