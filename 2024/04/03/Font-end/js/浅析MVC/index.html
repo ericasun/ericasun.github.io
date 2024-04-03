@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="1&#x3001;MVC &#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;M:model&#xFF08;&#x6A21;&#x578B;&#xFF09; &#x8D1F;&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅析MVC">
+<meta property="og:url" content="http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/index.html">
+<meta property="og:site_name" content="ericasun的Hexo博客">
+<meta property="og:description" content="1&#x3001;MVC &#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;M:model&#xFF08;&#x6A21;&#x578B;&#xFF09; &#x8D1F;&amp;#x">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-04-03T05:44:17.000Z">
+<meta property="article:modified_time" content="2024-04-03T05:46:59.619Z">
+<meta property="article:author" content="ericasun">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/","path":"2024/04/03/Font-end/js/浅析MVC/","title":"浅析MVC"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>浅析MVC | ericasun的Hexo博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ericasun的Hexo博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81MVC-%E4%B8%89%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%88%86%E5%88%AB%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%8C%E7%BB%99%E5%87%BA%E4%BC%AA%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">1、MVC 三个对象分别做什么，给出伪代码示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81EventBus-%E6%9C%89%E5%93%AA%E4%BA%9B-API%EF%BC%8C%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%8C%E7%BB%99%E5%87%BA%E4%BC%AA%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">2、EventBus 有哪些 API，是做什么用的，给出伪代码示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E3%80%81%E8%A1%A8%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%88%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E6%9F%A5%E6%9F%A5%E8%B5%84%E6%96%99%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">3、表驱动编程是做什么的（可以自己查查资料）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84"><span class="nav-number">4.</span> <span class="nav-text">4、我是如何理解模块化的</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ericasun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ericasun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="浅析MVC | ericasun的Hexo博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          浅析MVC
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-04-03 13:44:17 / Modified: 13:46:59" itemprop="dateCreated datePublished" datetime="2024-04-03T13:44:17+08:00">2024-04-03</time>
+    </span>
+
+  
+    <span id="/2024/04/03/Font-end/js/%E6%B5%85%E6%9E%90MVC/" class="post-meta-item leancloud_visitors" data-flag-title="浅析MVC" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="1&#x3001;MVC-&#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><a href="#1&#x3001;MVC-&#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="1&#x3001;MVC &#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a>1&#x3001;MVC &#x4E09;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x522B;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h1><p>M:model&#xFF08;&#x6A21;&#x578B;&#xFF09; &#x8D1F;&#x8D23;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x5230;&#x7684;&#x6570;&#x636E;&#x4F20;&#x7ED9;control<br>V:View &#xFF08;&#x89C6;&#x56FE;&#xFF09; &#x8D1F;&#x8D23;&#x6240;&#x6709;UI&#x754C;&#x9762;&#xFF0C;&#x6BD4;&#x5982;el,templete&#xFF0C;render<br>C:controller&#xFF08;&#x63A7;&#x5236;&#x5668;&#xFF09;&#x8D1F;&#x8D23;&#x5176;&#x4ED6;,&#x6BD4;&#x5982;&#x521D;&#x59CB;&#x5316;&#x548C;&#x4E8B;&#x4EF6;,&#x8D1F;&#x8D23;&#x76D1;&#x542C;&#x548C;&#x5904;&#x7406;View&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x548C;&#x8C03;&#x7528; Model,&#x8D1F;&#x8D23;&#x76D1;&#x542C;Model&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;View</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** &#x6A21;&#x64EC; Model, View, Controller */</span></span><br><span class="line"><span class="keyword">var</span> M = {}, V = {}, C = {};</span><br><span class="line"></span><br><span class="line"><span class="comment">/** Model &#x8CA0;&#x8CAC;&#x5B58;&#x653E;&#x8CC7;&#x6599; */</span></span><br><span class="line">M.<span class="property">data</span> = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** View &#x8CA0;&#x8CAC;&#x5C07;&#x8CC7;&#x6599;&#x8F38;&#x51FA;&#x5230;&#x87A2;&#x5E55;&#x4E0A; */</span></span><br><span class="line">V.<span class="property">render</span> = <span class="function">(<span class="params">M</span>) =&gt;</span> { <span class="title function_">alert</span>(M.<span class="property">data</span>); }</span><br><span class="line"></span><br><span class="line"><span class="comment">/** Controller &#x4F5C;&#x70BA;&#x4E00;&#x500B; M &#x548C; V &#x7684;&#x6A4B;&#x6A11; */</span></span><br><span class="line">C.<span class="property">handleOnload</span> = <span class="function">() =&gt;</span> { V.<span class="title function_">render</span>(M); }</span><br><span class="line"></span><br><span class="line"><span class="comment">/** &#x5728;&#x7DB2;&#x9801;&#x8B80;&#x53D6;&#x7684;&#x6642;&#x5019;&#x547C;&#x53EB; Controller */</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span> = C.<span class="property">handleOnload</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> m={</span><br><span class="line">  data={},</span><br><span class="line">  <span class="title function_">create</span>(<span class="params"></span>){},</span><br><span class="line">  <span class="title function_">delete</span>(<span class="params"></span>){},</span><br><span class="line">  <span class="title function_">update</span>(<span class="params"></span>){},</span><br><span class="line">  <span class="title function_">get</span>(<span class="params"></span>){}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> v={</span><br><span class="line">  <span class="attr">el</span>:<span class="literal">null</span>,</span><br><span class="line">  <span class="attr">html</span>:<span class="string">`&#x4EE3;&#x7801;`</span>,</span><br><span class="line">  <span class="title function_">init</span>(<span class="params">container</span>){</span><br><span class="line">    v.<span class="property">el</span>=$(container)</span><br><span class="line">  },</span><br><span class="line">  <span class="title function_">render</span>(<span class="params">n</span>){}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> c={</span><br><span class="line">  <span class="title function_">init</span>(<span class="params">constainer</span>){}</span><br><span class="line">  <span class="attr">events</span>:{&#x4E8B;&#x4EF6;}</span><br><span class="line">  <span class="title function_">add</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">minus</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">update</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">get</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">autoBindEvents</span>(<span class="params"></span>){&#x903B;&#x8F91;}</span><br><span class="line">}</span><br><span class="line">&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</span><br><span class="line">&#x7248;&#x6743;&#x58F0;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x4E3A;<span class="variable constant_">CSDN</span>&#x535A;&#x4E3B;&#x300C;&#x5C0F;&#x5CF0;&#x540C;&#x5B66;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF;&#x300D;&#x7684;&#x539F;&#x521B;&#x6587;&#x7AE0;&#xFF0C;&#x9075;&#x5FAA;<span class="variable constant_">CC</span> <span class="number">4.0</span> <span class="variable constant_">BY</span>-<span class="variable constant_">SA</span>&#x7248;&#x6743;&#x534F;&#x8BAE;&#xFF0C;&#x8F6C;&#x8F7D;&#x8BF7;&#x9644;&#x4E0A;&#x539F;&#x6587;&#x51FA;&#x5904;&#x94FE;&#x63A5;&#x53CA;&#x672C;&#x58F0;&#x660E;&#x3002;</span><br><span class="line">&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<span class="attr">https</span>:<span class="comment">//blog.csdn.net/abc465200/article/details/106731890</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2&#x3001;EventBus-&#x6709;&#x54EA;&#x4E9B;-API&#xFF0C;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"><a href="#2&#x3001;EventBus-&#x6709;&#x54EA;&#x4E9B;-API&#xFF0C;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;" class="headerlink" title="2&#x3001;EventBus &#x6709;&#x54EA;&#x4E9B; API&#xFF0C;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;"></a>2&#x3001;EventBus &#x6709;&#x54EA;&#x4E9B; API&#xFF0C;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#xFF0C;&#x7ED9;&#x51FA;&#x4F2A;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">_self.<span class="property">getEventBus</span></span><br><span class="line">	&#x65B9;&#x6CD5;&#xFF1A;<span class="attr">getEventBus</span>:<span class="keyword">function</span>(<span class="params"></span>){}</span><br><span class="line">	&#x63CF;&#x8FF0;&#xFF1A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x524D;&#x7AEF;<span class="title class_">EventBus</span>&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</span><br><span class="line">	</span><br><span class="line">_self.<span class="property">subscribeEvent</span></span><br><span class="line">	&#x65B9;&#x6CD5;&#xFF1A;<span class="attr">subscribeEvent</span>:<span class="keyword">function</span>(<span class="params">event,fn,pointcut</span>){}</span><br><span class="line">	&#x63CF;&#x8FF0;&#xFF1A;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x548C;&#x63D2;&#x5165;&#x70B9;</span><br><span class="line">	&#x53C2;&#x6570;&#xFF1A;event&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x4E8B;&#x4EF6;&#x540D;&#xFF0C;&#x547D;&#x540D;&#x89C4;&#x5219;&#x4E3A;<span class="title class_">Event</span>&#x6216;<span class="title class_">ActionEvent</span>&#x7ED3;&#x5C3E;</span><br><span class="line">	      fn&#xFF1A;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</span><br><span class="line">	      &#x63D2;&#x5165;&#x70B9;&#x7C7B;&#x578B;&#xFF1A;after&#x3001;overwrite&#x3001;before</span><br><span class="line">	      </span><br><span class="line">_self.<span class="property">unSubscribeEvent</span></span><br><span class="line">	&#x65B9;&#x6CD5;&#xFF1A;<span class="attr">unSubscribeEvent</span>:<span class="keyword">function</span>(<span class="params">event</span>){}</span><br><span class="line">	&#x63CF;&#x8FF0;&#xFF1A;&#x53D6;&#x6D88;&#x6CE8;&#x518C;&#x4E8B;&#x4EF6;</span><br><span class="line">	&#x53C2;&#x6570;&#xFF1A;event&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x4E8B;&#x4EF6;&#x540D;&#xFF0C;&#x547D;&#x540D;&#x89C4;&#x5219;&#x4E3A;<span class="title class_">Event</span>&#x6216;<span class="title class_">ActionEvent</span>&#x7ED3;&#x5C3E;</span><br><span class="line">	</span><br><span class="line">_self.<span class="property">fireEvent</span></span><br><span class="line">	&#x65B9;&#x6CD5;&#xFF1A;<span class="attr">fireEvent</span>:<span class="keyword">function</span>(<span class="params">event</span>){}</span><br><span class="line">	&#x63CF;&#x8FF0;&#xFF1A;&#x89E6;&#x53D1;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x4E8B;&#x4EF6;&#xFF0C;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x4E8E;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x961F;&#x5217;</span><br><span class="line">	&#x53C2;&#x6570;&#xFF1A;event&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x4E8B;&#x4EF6;&#x540D;&#xFF0C;&#x547D;&#x540D;&#x89C4;&#x5219;&#x4E3A;<span class="title class_">Event</span>&#x6216;<span class="title class_">ActionEvent</span>&#x7ED3;&#x5C3E;</span><br><span class="line">	&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF1A;&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#x540E;&#x7EED;&#x53C2;&#x6570;</span><br><span class="line">	</span><br><span class="line"><span class="title class_">Handler</span>&#x5B9E;&#x73B0;&#x8BF4;&#x660E;&#xFF1A;</span><br><span class="line">	&#x53C2;&#x6570;&#xFF1A;&#x63A5;&#x6536;fireEvent&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x53C2;&#x6570;</span><br><span class="line">	&#x7279;&#x6B8A;&#x53C2;&#x6570;e&#xFF1A;&#x53EA;&#x6709;&#x6309;&#x94AE;&#x7ED1;&#x5B9A;&#x7684;&#x9875;&#x9762;&#x529F;&#x80FD;&#x624D;&#x6709;&#x503C;&#xFF0C;&#x624B;&#x5DE5;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#x6709;e&#x7684;&#x3002;&#x9875;&#x9762;&#x529F;&#x80FD;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x751F;&#x6210;&#x8FD9;&#x4E2A;e&#xFF0C;&#x503C;&#x4E3A;jquery.<span class="property">event</span></span><br><span class="line">	&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;&#x503C;&#x786E;&#x5B9A;&#x662F;&#x5426;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x540E;&#x7EED;&#x7684;&#x65B9;&#x6CD5;&#x961F;&#x5217;</span><br><span class="line">	        <span class="literal">true</span>/&#x65E0;&#xFF1A;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x540E;&#x7EED;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x961F;&#x5217;</span><br><span class="line">	        <span class="literal">false</span>&#xFF1A;&#x505C;&#x6B62;&#x6267;&#x884C;&#x540E;&#x7EED;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x961F;&#x5217;    </span><br><span class="line">	        &#x5176;&#x4ED6;&#xFF1A;&#x8FD4;&#x56DE;<span class="literal">true</span></span><br><span class="line">	<span class="title class_">Handle</span>&#x961F;&#x5217;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x4F20;&#x9012;&#xFF1A;&#x53EA;&#x80FD;&#x5229;&#x7528;&#x9875;&#x9762;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x5904;&#x7406;&#x673A;&#x5236;</span><br><span class="line">&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;</span><br><span class="line">&#x7248;&#x6743;&#x58F0;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x4E3A;<span class="variable constant_">CSDN</span>&#x535A;&#x4E3B;&#x300C;&#x5C0F;&#x5CF0;&#x540C;&#x5B66;&#x7684;&#x524D;&#x7AEF;&#x4E4B;&#x8DEF;&#x300D;&#x7684;&#x539F;&#x521B;&#x6587;&#x7AE0;&#xFF0C;&#x9075;&#x5FAA;<span class="variable constant_">CC</span> <span class="number">4.0</span> <span class="variable constant_">BY</span>-<span class="variable constant_">SA</span>&#x7248;&#x6743;&#x534F;&#x8BAE;&#xFF0C;&#x8F6C;&#x8F7D;&#x8BF7;&#x9644;&#x4E0A;&#x539F;&#x6587;&#x51FA;&#x5904;&#x94FE;&#x63A5;&#x53CA;&#x672C;&#x58F0;&#x660E;&#x3002;</span><br><span class="line">&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<span class="attr">https</span>:<span class="comment">//blog.csdn.net/abc465200/article/details/106731890</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3&#x3001;&#x8868;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x67E5;&#x67E5;&#x8D44;&#x6599;&#xFF09;"><a href="#3&#x3001;&#x8868;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x67E5;&#x67E5;&#x8D44;&#x6599;&#xFF09;" class="headerlink" title="3&#x3001;&#x8868;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x67E5;&#x67E5;&#x8D44;&#x6599;&#xFF09;"></a>3&#x3001;&#x8868;&#x9A71;&#x52A8;&#x7F16;&#x7A0B;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7684;&#xFF08;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x67E5;&#x67E5;&#x8D44;&#x6599;&#xFF09;</h1><p>Table-Driven Approach<br>&#x89E3;&#x51B3;if else&#x9762;&#x5BF9;&#x591A;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x4EE5;&#x8868;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x7D22;&#x5F15;&#x6765;&#x67E5;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">methods{</span><br><span class="line">  <span class="title function_">add</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">delete</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  <span class="title function_">minus</span>(<span class="params"></span>){&#x6267;&#x884C;}</span><br><span class="line">  ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h1 id="4&#x3001;&#x6211;&#x662F;&#x5982;&#x4F55;&#x7406;&#x89E3;&#x6A21;&#x5757;&#x5316;&#x7684;"><a href="#4&#x3001;&#x6211;&#x662F;&#x5982;&#x4F55;&#x7406;&#x89E3;&#x6A21;&#x5757;&#x5316;&#x7684;" class="headerlink" title="4&#x3001;&#x6211;&#x662F;&#x5982;&#x4F55;&#x7406;&#x89E3;&#x6A21;&#x5757;&#x5316;&#x7684;"></a>4&#x3001;&#x6211;&#x662F;&#x5982;&#x4F55;&#x7406;&#x89E3;&#x6A21;&#x5757;&#x5316;&#x7684;</h1><p>&#x6A21;&#x5757;&#x5316;&#x5C31;&#x662F;&#x628A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x4EE3;&#x7801;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x5F15;&#x5165;&#xFF0C;&#x7B80;&#x5316;&#x4E86;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x5F71;&#x54CD;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> string=<span class="string">`&#x5185;&#x5BB9;`</span></span><br><span class="line"><span class="keyword">import</span> <span class="keyword">default</span> string<span class="comment">//&#x5BFC;&#x51FA;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">`string`</span><span class="comment">//&#x5F15;&#x5165;</span></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/04/02/Font-end/css/%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/" rel="prev" title="七种方式实现垂直居中">
+                  <i class="fa fa-angle-left"></i> 七种方式实现垂直居中
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ericasun</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"vCQiqt86gvssN3xuvsFkfPgx-gzGzoHsz","app_key":"oFcH1hpAL31rf7kOanLf6Xz8","server_url":null,"security":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ericasun","repo":"ericasun.github.io","client_id":"74c3c3e6de6d77fe83a6","client_secret":"11b436aa1803400da693d80bee77f961caf0de47","admin_user":"ericasun","distraction_free_mode":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"686f477027ed2889aafba96e0863494c"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
